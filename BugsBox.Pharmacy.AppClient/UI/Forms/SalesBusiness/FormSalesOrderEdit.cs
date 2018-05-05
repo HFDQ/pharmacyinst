@@ -1502,7 +1502,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             dgvDrugDetailList.Columns["销售单价"].DisplayIndex = 8;
             dgvDrugDetailList.Columns["数量"].DisplayIndex = 9;
             dgvDrugDetailList.Columns["金额"].DisplayIndex = 10;
-    
+
         }
 
         private void cmbPurchase_TextChanged(object sender, EventArgs e)

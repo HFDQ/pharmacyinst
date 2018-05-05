@@ -209,10 +209,18 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ApprovalFiles\3B0CF648-C0C5-4225-84CC-5B8B09B000C9" />
-    <None Include="ApprovalFiles\54C14EA2-7456-4A5B-BF39-C441F451C35B" />
-    <None Include="ApprovalFiles\9047DBCF-CD15-4904-8786-006A76DD4799" />
-    <None Include="ApprovalFiles\A0EAA274-889E-4B77-8C77-CC395FD991EF" />
+    <None Include="ApprovalFiles\3B0CF648-C0C5-4225-84CC-5B8B09B000C9">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ApprovalFiles\54C14EA2-7456-4A5B-BF39-C441F451C35B">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ApprovalFiles\9047DBCF-CD15-4904-8786-006A76DD4799">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ApprovalFiles\A0EAA274-889E-4B77-8C77-CC395FD991EF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

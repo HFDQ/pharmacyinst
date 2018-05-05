@@ -113,7 +113,7 @@
       <Menu id="0903" Title="收货与验收记录" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
         <Menu id="090301" Title="收货记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="SHJL" DockState="" ModuleKey="医疗器械收货记录[窗体]"></Menu>
         <Menu id="090302" Title="拒收记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="JSJL" DockState="" ModuleKey="医疗器械拒收记录[窗体]"></Menu>
-
+        <Menu id="090303" Title="验收记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="YSJL" DockState="" ModuleKey="验收记录[窗体]"></Menu>
         <Menu id="090204" Title="医疗器械验收记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="YLQXYSJL" DockState="" ModuleKey="医疗器械验收记录[窗体]"></Menu>
 
       </Menu>

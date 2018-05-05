@@ -2689,10 +2689,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BugsBox.Pharmacy.AppClient.Menu.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="Resources\Add.png" />
     <None Include="Resources\Cancel.png" />
     <None Include="Resources\Delete.png" />

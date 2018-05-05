@@ -7,3 +7,5 @@ TestResults
 .DS_Store
 .vs
 packages
+_output
+*.dll
