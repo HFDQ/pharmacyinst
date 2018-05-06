@@ -335,6 +335,8 @@
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.OutInventoryDetail.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.SalesOrderDetail.datasource" />
     <None Include="Properties\DataSources\InstCategoryIdx.ImptClass.datasource" />
+    <None Include="Properties\DataSources\InstCategoryIdx.NewCategory.datasource" />
+    <None Include="Properties\DataSources\InstCategoryIdx.NewInstCategory.datasource" />
     <None Include="Resources\名称.lbx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1916,6 +1918,9 @@
     <EmbeddedResource Include="UI\Forms\BaseDataManage\FormInstrument_CategoryIndex.resx">
       <DependentUpon>FormInstrument_CategoryIndex.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormInstrument_CategoryIndexManagement.resx">
+      <DependentUpon>FormInstrument_CategoryIndexManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\BaseDataManage\FormInstrument_CategoryTable.resx">
       <DependentUpon>FormInstrument_CategoryTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -2523,9 +2528,7 @@
     <EmbeddedResource Include="UI\Reports\RptPurchaseRefuse.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptPurchaseReturnList.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptPurchaseReturnOrder.rdlc" />
-    <EmbeddedResource Include="UI\Reports\RptSaleOutInventory.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\RptSaleOutInventory.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderListYLQX.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderList.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderList000.rdlc" />

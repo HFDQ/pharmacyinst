@@ -137,7 +137,7 @@ namespace BugsBox.Pharmacy.AppClient
                     oDoc.Bookmarks["D27"].Range.Text = Inst.SalePrice.ToString();
                     oDoc.Bookmarks["D28"].Range.Text = Inst.LimitedUpPrice.ToString();
                     oDoc.Bookmarks["D29"].Range.Text = Inst.LimitedLowPrice.ToString();
-                    oDoc.Bookmarks["D31"].Range.Text = Inst.Description;
+                    //oDoc.Bookmarks["D31"].Range.Text = Inst.Description;
                     oDoc.Bookmarks["D48"].Range.Text = Inst.CreateTime.ToString();
                     oDoc.Bookmarks["D49"].Range.Text = Inst.CreateUserName;
 
