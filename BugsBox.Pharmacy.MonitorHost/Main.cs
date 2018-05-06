@@ -10,6 +10,8 @@ namespace BugsBox.Pharmacy.MonitorHost
     {
         public void Start()
         {
+
+
             //采购商主体监控
             PurchaseUnit pu = new PurchaseUnit();
 
@@ -26,6 +28,6 @@ namespace BugsBox.Pharmacy.MonitorHost
 
             SaleOrderExprire soe = new SaleOrderExprire();
         }
-        
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -19,8 +20,14 @@ namespace BugsBox.Pharmacy.Models
         /// 养护人Id
         /// </summary> 
         [DataMember(Order = 2)]
-        public Guid? UserId { get; set; } 
+        public Guid? UserId { get; set; }
 
+        /// <summary>
+        /// 养护人
+        /// </summary> 
+        [DataMember]
+        [NotMapped]
+        public string UserName { get; set; }
         /// <summary>
         /// 药物库存Id
         /// </summary> 

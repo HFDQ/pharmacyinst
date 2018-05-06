@@ -25,18 +25,24 @@ namespace BugsBox.Pharmacy.MonitorHost
         private bool IsUpdateOver { get; set; }
         private bool IsCheckLockOver { get; set; }
 
+        static object l = new object();
+
+
         public override void Start(object source, System.Timers.ElapsedEventArgs e)
         {
             aTimer.Stop();
+            lock (l)
+            {
+                IsUpdateOver = false;
+                IsCheckLockOver = false;
 
-            IsUpdateOver = false;
-            IsCheckLockOver = false;
+                Thread t_update = new Thread(Update);
+                t_update.Start(callBackDelegate);
 
-            Thread t_update = new Thread(Update);
-            t_update.Start(callBackDelegate);
+                Thread t_checklock = new Thread(CheckLock);
+                t_checklock.Start(callBackDelegate);
+            }
 
-            Thread t_checklock = new Thread(CheckLock);
-            t_checklock.Start(callBackDelegate); 
         }
 
         private void Update(object o)
@@ -86,7 +92,7 @@ namespace BugsBox.Pharmacy.MonitorHost
                     CallBackDelegate cbd = o as CallBackDelegate;
                     cbd();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     IsCheckLockOver = true;
                     LoggerHelper.Instance.Error(ex);

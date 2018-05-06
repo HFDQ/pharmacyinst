@@ -21,7 +21,7 @@ namespace BugsBox.Pharmacy.ServiceHost
 
             ////启动监控
             //BugsBox.Pharmacy.MonitorHost.Main monitor = new MonitorHost.Main();
-            ////monitor.Start(); 
+            //monitor.Start();
 
             Mutex mutex = new Mutex(false, "qwertyuiol,mnbvghyuk,yiliaoqixie");
 
@@ -37,7 +37,7 @@ namespace BugsBox.Pharmacy.ServiceHost
                 return;
             }
 
-          
+
 
             System.Windows.Forms.Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
@@ -56,7 +56,7 @@ namespace BugsBox.Pharmacy.ServiceHost
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(cultureString);
                 DoStartup(args);
                 //Splasher.Close();
-        
+
 
 
             }
