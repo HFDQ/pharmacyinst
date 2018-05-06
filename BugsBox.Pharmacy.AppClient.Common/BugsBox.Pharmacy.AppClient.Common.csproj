@@ -62,6 +62,7 @@
     <Compile Include="Commands\AdverseEvents\AddAdverseDrugEventCmd.cs" />
     <Compile Include="Commands\AdverseEvents\QueryAdverseDrugEventCmd.cs" />
     <Compile Include="Commands\ProductKeyVerifyCmd.cs" />
+    <Compile Include="Commands\QuerySalesOrderCmd.cs" />
     <Compile Include="Notification\PharmacyNotificationCallback.cs" />
     <Compile Include="PharmacyAuthorize.cs" />
     <Compile Include="PharmacyClientConfig.cs" />

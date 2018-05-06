@@ -111,6 +111,7 @@
     <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\ProductKeyVerifyCmd.cs" />
     <Compile Include="Commands\PingCmd.cs" />
+    <Compile Include="Commands\QuerySalesOrderCmd.cs" />
     <Compile Include="Commands\VerifyDrugSupplyUnitTypeCmd.cs" />
     <Compile Include="ConnectedInfoProvider.cs" />
     <Compile Include="DQService.cs" />
