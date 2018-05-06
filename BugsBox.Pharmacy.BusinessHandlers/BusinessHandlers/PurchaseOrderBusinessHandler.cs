@@ -66,6 +66,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                     ReceiveUnit = story.Name,
                                     SuplyUnit = supplyUnit.Name,
                                     Amount = purchaseDetail.Amount,
+                                    TotalMoney = purchaseDetail.Amount * purchaseDetail.PurchasePrice,
                                     Price = purchaseDetail.PurchasePrice,
                                     PurchaseDate = purchaseDetail.CreateTime,
                                     Origin = drup.Origin,
@@ -179,6 +180,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                     ReceiveUnit = story.Name,
                                     SuplyUnit = supplyUnit.Name,
                                     Amount = purchaseDetail.Amount,
+                                    TotalMoney = purchaseDetail.Amount * purchaseDetail.PurchasePrice,
                                     Price = purchaseDetail.PurchasePrice,
                                     PurchaseDate = purchaseDetail.CreateTime,
                                     Origin = drup.Origin,
@@ -232,18 +234,25 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                 where receivingDetail.CheckResult == 0
                                 select new PurchaseRCRecord
                                 {
+                                    ProductGeneralName = drup.ProductGeneralName,
+                                    DictionarySpecificationCode = drup.DictionarySpecificationCode,
+                                    SuplyUnit = supplyUnit.Name,
+                                    PurchaseDate = purchase.CreateTime,
+                                    LicensePermissionNumber = drup.LicensePermissionNumber,
+                                    FactoryName = drup.FactoryName,
+                                    Amount = receivingDetail.Amount,
+                                    TotoalMoney = receivingDetail.PurchasePrice * receivingDetail.Amount,
+                                    MeasurementUnit = drup.DictionaryMeasurementUnitCode,
+                                    PurchasePrice = receivingDetail.PurchasePrice,
+                                    ReceiveAmount = receivingDetail.ReceiveAmount,
+                                    RejectAmount = receivingDetail.RejectAmount,
                                     ArrivalAmount = receivingDetail.ActualAmount,
+                                    RejectReason = receivingDetail.RejectReason,
                                     ArrivalDate = receiving.OperateTime,
                                     DictionaryDosageCode = drup.DictionaryDosageCode,
                                     DrugInfoId = drup.Id,
-                                    DictionarySpecificationCode = drup.DictionarySpecificationCode,
-                                    FactoryName = drup.FactoryName,
-                                    LicensePermissionNumber = drup.LicensePermissionNumber,
                                     //Origin = drup.Origin,
                                     Decription = receivingDetail.Decription,
-                                    ProductGeneralName = drup.ProductGeneralName,
-                                    PurchaseDate = purchase.CreateTime,
-                                    SuplyUnit = supplyUnit.Name
                                 };
                     records = query.Where(p => p.DictionarySpecificationCode.Contains(specific) && p.FactoryName.Contains(factoryName)).OrderByDescending(p => p.ArrivalDate).ToList();
                     break;
@@ -604,7 +613,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
                 var purchaseOrderDetails = BusinessHandlerFactory.RepositoryProvider.Db.PurchaseOrderDetails.Where(queryBuilder.Expression).OrderBy(r => r.sequence);
                 var query = from i in purchaseOrderDetails
-                            //join purchase in BusinessHandlerFactory.RepositoryProvider.Db.PurchaseOrders on i.PurchaseOrderId equals purchase.Id
+                                //join purchase in BusinessHandlerFactory.RepositoryProvider.Db.PurchaseOrders on i.PurchaseOrderId equals purchase.Id
                             join d in BusinessHandlerFactory.RepositoryProvider.Db.DrugInfos on i.DrugInfoId equals d.Id
                             join s in BusinessHandlerFactory.RepositoryProvider.Db.Stores on i.StoreId equals s.Id
                             //join supply in BusinessHandlerFactory.RepositoryProvider.Db.SupplyUnits on purchase.SupplyUnitId equals supply.Id
@@ -1445,9 +1454,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 PurchaseInInventeryOrder pio = RepositoryProvider.Db.PurchaseInInventeryOrders.FirstOrDefault(r => r.PurchaseOrderId == order.PurchaseOrderId);
 
                 #region 多批次入库
-                if (pio != null )
+                if (pio != null)
                 {
-                    if ( DateTime.Now<pio.OperateTime.AddMinutes(10) )
+                    if (DateTime.Now < pio.OperateTime.AddMinutes(10))
                     {
                         return "系统发生异常信息：系统判断您在10分钟内多次提交入库操作，请刷新后再执行";
                     }
@@ -1490,7 +1499,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     {
                         d.Id = Guid.NewGuid();
 
-                        DrugInfo drugInfo = BusinessHandlerFactory.RepositoryProvider.Db.DrugInfos.FirstOrDefault(p => p.Id == d.DrugInfoId);    
+                        DrugInfo drugInfo = BusinessHandlerFactory.RepositoryProvider.Db.DrugInfos.FirstOrDefault(p => p.Id == d.DrugInfoId);
 
                         var rc = RepositoryProvider.Db.DrugInventoryRecords.Where(r => r.DrugInfoId == d.DrugInfoId && r.BatchNumber.Contains(d.BatchNumber.Trim()) && r.Decription.Equals(d.Decription));
                         int count = rc.Count();
@@ -1612,7 +1621,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 DbSet<PurchaseInInventeryOrderDetail> dbSet = BusinessHandlerFactory.RepositoryProvider.Db.Set<PurchaseInInventeryOrderDetail>();
                 #endregion
 
-               
+
                 DbSet<DrugInventoryRecord> dbSetDrugInventoryRecord = BusinessHandlerFactory.RepositoryProvider.Db.Set<DrugInventoryRecord>();
 
                 Guid supplyUnitAccountExecutiveId = Guid.Empty;
@@ -1624,7 +1633,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     DrugInfo drugInfo = BusinessHandlerFactory.RepositoryProvider.Db.DrugInfos.FirstOrDefault(p => p.Id == d.DrugInfoId);
                     PurchaseOrderDetail purchaseOrderDetail = BusinessHandlerFactory.RepositoryProvider.Db.PurchaseOrderDetails.FirstOrDefault(p => p.PurchaseOrderId == order.PurchaseOrderId);
 
-                    
+
 
                     var rc = dbSetDrugInventoryRecord.Where(r => r.DrugInfoId == d.DrugInfoId && r.BatchNumber.Contains(d.BatchNumber.Trim()) && r.Decription.Equals(d.Decription));
                     int count = rc.Count();
@@ -1929,9 +1938,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
                     if (dr.CanSaleNum < 0)
                     {
-                        outDetail=string.Format("批号：{0},采购退货数量超出库存，请重新修改退货数量！",dr.BatchNumber);
-                        
-                        throw new Exception(d.BatchNumber+ "库存数量不足");                        
+                        outDetail = string.Format("批号：{0},采购退货数量超出库存，请重新修改退货数量！", dr.BatchNumber);
+
+                        throw new Exception(d.BatchNumber + "库存数量不足");
                     }
 
                     BusinessHandlerFactory.DrugInventoryRecordBusinessHandler.Save(dr);
@@ -1942,7 +1951,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             }
             catch (Exception ex)
             {
-                return this.HandleException<string>("创建退货单失败,"+outDetail, ex);
+                return this.HandleException<string>("创建退货单失败," + outDetail, ex);
             }
         }
         //退货查询单
@@ -2143,7 +2152,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                         QualityChecker = o.Employee.Name,
                         QualityStatus = "合格",
                     };
-           
+
             return c;
         }
 

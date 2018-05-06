@@ -38,13 +38,20 @@ namespace BugsBox.Pharmacy.Business.Models
         [DataMember]
         public string SuplyUnit { get; set; }
 
-        [DisplayName("数量")]
+        [DisplayName("采购数量")]
         [DataMember]
         public decimal Amount { get; set; }
+
+
 
         [DisplayName("价格")]
         [DataMember]
         public decimal Price { get; set; }
+
+
+        [DisplayName("金额")]
+        [DataMember]
+        public decimal TotalMoney { get; set; }
 
         [DisplayName("购货日期")]
         [DataMember]

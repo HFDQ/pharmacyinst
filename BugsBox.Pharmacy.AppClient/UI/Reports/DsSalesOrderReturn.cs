@@ -1,6 +1,8 @@
-﻿namespace BugsBox.Pharmacy.AppClient.UI.Reports {
-    
-    
-    public partial class DsSalesOrderReturn {
+﻿namespace BugsBox.Pharmacy.AppClient.UI.Reports
+{
+
+
+    public partial class DsSalesOrderReturn
+    {
     }
 }

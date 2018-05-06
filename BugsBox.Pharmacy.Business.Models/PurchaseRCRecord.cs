@@ -66,6 +66,8 @@ namespace BugsBox.Pharmacy.Business.Models
         [DataMember]
         public decimal ArrivalAmount { get; set; }
 
+
+
         [DisplayName("到货日期")]
         [DataMember]
         public DateTime ArrivalDate { get; set; }
@@ -81,6 +83,46 @@ namespace BugsBox.Pharmacy.Business.Models
         [DisplayName("验收人员")]
         [DataMember]
         public string CheckMan { get; set; }
+
+        [DisplayName("单位")]
+        [DataMember]
+        public string MeasurementUnit { get; set; }
+        [DisplayName("单价")]
+        [DataMember]
+        public decimal PurchasePrice { get; set; }
+
+        [DisplayName("金额")]
+        [DataMember]
+        public decimal TotoalMoney
+        {
+
+            get;set;
+        }
+
+        [DisplayName("采购数量")]
+        [DataMember]
+        public decimal Amount { get; set; }
+        /// <summary>
+        /// 实收数量
+        /// </summary>
+        [DisplayName("实收数量")]
+        [DataMember]
+        public decimal ReceiveAmount { get; set; }
+
+        /// <summary>
+        /// 拒收数量
+        /// </summary>
+        [DisplayName("拒收数量")]
+        [DataMember]
+        public decimal RejectAmount { get; set; }
+
+        /// <summary>
+        /// 拒收原因
+        /// </summary>
+        [DisplayName("拒收原因")]
+        [DataMember]
+        public string RejectReason { get; set; }
+
 
         [DisplayName("验收员2")]
         [DataMember]
