@@ -22,9 +22,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private PurchaseCommonEntity _order = new PurchaseCommonEntity();
         private List<PurchaseInInventeryOrderDetailEntity> _orderDetails = new List<PurchaseInInventeryOrderDetailEntity>();
-        string msg=string.Empty;
-        private decimal paymentingAmount=0;
-        
+        string msg = string.Empty;
+        private decimal paymentingAmount = 0;
+
         BaseForm.BasicInfoRightMenu Bcms = null;
 
         BugsBox.Pharmacy.AppClient.UI.Ele_Lab EleModel = null;
@@ -38,7 +38,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             if (this.EleModel.IsEnabled)
             {
                 this.toolStripButton1.Visible = true;//点亮按钮显示，配置标签后，可以显示
-                if (elelab.unart_manage.com_manage.FirstOrDefault()==null)
+                if (elelab.unart_manage.com_manage.FirstOrDefault() == null)
                 {
                     int[] ss = new int[] { int.Parse(this.EleModel.PortName.Substring(3)) };
                     elelab.unart_manage.init_com_sys(ss);//初始化串口
@@ -49,7 +49,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.Bcms = new BaseForm.BasicInfoRightMenu(this.dataGridView1);
             this.Bcms.InsertDrugBasicInfo();
             this.Bcms.InsertSupplyUnitBasicInfo();
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
             this.dataGridView1.CellMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_CellMouseClick);
         }
 
@@ -94,6 +94,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             {
                 tsbtnInInventory.Visible = this.Authorize(ModuleKeys.PurchaseInInventory);
             }
+            toolStripButton2.Visible = false;
         }
 
         //创建入库单
@@ -146,7 +147,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             //选择货位
             this.dataGridView1.CellClick += (sender, e) =>
             {
-                if (e.RowIndex < 0||e.ColumnIndex<0) return;
+                if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
                 if (this.dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].OwningColumn.Name != this.PositionSelector.Name) return;
                 var c = this.dataGridView1.Rows[e.RowIndex].DataBoundItem as PurchaseInInventeryOrderDetailEntity;
                 Form_WareHouseZonePositionSelector frm = new Form_WareHouseZonePositionSelector(c.DrugInfoId);
@@ -156,14 +157,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                     var PositionModel = ex.PositionModel;
                     c.WarehouseName = ex.PositionModel.WareHouseName;
                     c.WarehouseZoneId = ex.PositionModel.WareHouseZoneId;
-                    c.WarehouseZoneName=ex.PositionModel.WareHouseZoneName;
+                    c.WarehouseZoneName = ex.PositionModel.WareHouseZoneName;
                     c.WarehouseZonePositionName = ex.PositionModel.Name;
                     c.WarehouseZonePositionId = ex.PositionModel.Id;
                     c.WarehouseZonePIndex = ex.PositionModel.WareHouseZonePIndex;
                     c.WarehouseZonePositionPIndex = ex.PositionModel.PIndex;
                     this.dataGridView1.Refresh();
                     this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                };                
+                };
             };
         }
 
@@ -174,7 +175,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             {
                 lblOrderNo.Text = "新建";
                 lblCreateDate.Text = DateTime.Now.ToString("yyyy年MM月dd日 HH时mm分");
-              
+
                 string employeeName = AppClientContext.CurrentUser.Employee.Name;
                 txt复核员名.Text = employeeName;
             }
@@ -194,7 +195,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 this.LicensePermissionNumber.HeaderText = "注册证或备案凭证编号";
                 this.Decription.Visible = false;
             }
-          
+
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.DataSource = _orderDetails;//绑定列表
 
@@ -207,7 +208,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                     {
                         this.dataGridView1.Columns[this.FactoryName.Name].Visible = false;
                     }
-                    this.tsbtnPrint.Visible = false;
+                    // this.tsbtnPrint.Visible = false;
                     break;
                 }
                 else
@@ -226,7 +227,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 int count = this._orderDetails.Where(r => r.WarehouseZonePositionId == Guid.Empty).Count();
                 if (count > 0)
                 {
-                    var re = MessageBox.Show("您还有"+count+"条入库药品没有设定货位，仍然需要继续提交吗？","提示",MessageBoxButtons.OKCancel);
+                    var re = MessageBox.Show("您还有" + count + "条入库药品没有设定货位，仍然需要继续提交吗？", "提示", MessageBoxButtons.OKCancel);
                     if (re == System.Windows.Forms.DialogResult.Cancel)
                     {
                         this.tsbtnInInventory.Enabled = true;
@@ -238,7 +239,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             {
                 string msg = String.Empty;
                 PurchaseInInventeryOrderDetailEntity[] ds = new PurchaseInInventeryOrderDetailEntity[this.dataGridView1.Rows.Count];
-               
+
                 _order.OrderStatus = OrderStatus.PurchaseInInventory.GetHashCode();
                 _order.Description = textBoxDescription.Text;
                 tsbtnInInventory.Enabled = false;
@@ -265,7 +266,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 MessageBox.Show("入库失败,请联系管理员");
             }
         }
-        
+
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
@@ -298,33 +299,19 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            FormCashOrder form = new FormCashOrder(_order, DealerMethod.PurchaseInInventory, paymentingAmount, true,OrderType.PurchaseInInventeryOrder);
+            FormCashOrder form = new FormCashOrder(_order, DealerMethod.PurchaseInInventory, paymentingAmount, true, OrderType.PurchaseInInventeryOrder);
             toolStripButtonCash.Enabled = (form.ShowDialog() != DialogResult.OK);
         }
 
-        private void tsbtnPrint_Click(object sender, EventArgs e)
-        {
-            List<object> reportData = new List<object>();
-            List<object> orderList = new List<object>();
-         
-            orderList.Add(_order);
-            reportData.Add(orderList);
-            reportData.Add(_orderDetails);
-            List<Microsoft.Reporting.WinForms.ReportParameter> ListPar = new List<Microsoft.Reporting.WinForms.ReportParameter>();
-            using (PrintHelper printHelper = new PrintHelper("BugsBox.Pharmacy.AppClient.UI.Reports.RptPurchaseInInventoryOrder.rdlc", reportData,ListPar))
-            {
-                printHelper.Print();
-            }
-        }
 
         private void dataGridView1_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
         {
-            
+
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -336,7 +323,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             reportData.Add(orderList);
             reportData.Add(_orderDetails);
             List<Microsoft.Reporting.WinForms.ReportParameter> ListPar = new List<Microsoft.Reporting.WinForms.ReportParameter>();
-            using (PrintHelper printHelper = new PrintHelper("BugsBox.Pharmacy.AppClient.UI.Reports.Report1.rdlc", reportData,ListPar))
+            using (PrintHelper printHelper = new PrintHelper("Reports\\RptPurchaseInInventoryOrder.rdlc", reportData, ListPar))
             {
                 printHelper.Print();
             }
@@ -348,7 +335,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             if (this.dataGridView1.Rows.Count <= 0) return;
 
             byte Port = byte.Parse(this.EleModel.PortName.Substring(3));
-            var c = this._orderDetails.Where(r=>r.WarehouseZonePositionId!=Guid.Empty).ToList();
+            var c = this._orderDetails.Where(r => r.WarehouseZonePositionId != Guid.Empty).ToList();
 
             List<string> LabelId = new List<string>();
             List<string> LabelAddress = new List<string>();
@@ -359,7 +346,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 LabelAddress.Add(r.WarehouseZonePositionPIndex.ToString());
                 labelNumber.Add(r.ArrivalAmount.ToString());
             }
-            byte documentNumber =byte.Parse( this._order.RelatedOrderDocumentNumber.Substring(this._order.RelatedOrderDocumentNumber.Length - 2));
+            byte documentNumber = byte.Parse(this._order.RelatedOrderDocumentNumber.Substring(this._order.RelatedOrderDocumentNumber.Length - 2));
             elelab.pick.make_data(null, this.EleModel.PurchaseInInventoryLed, documentNumber, Port, LabelId.ToArray(), LabelAddress.ToArray(), labelNumber.ToArray());
         }
 

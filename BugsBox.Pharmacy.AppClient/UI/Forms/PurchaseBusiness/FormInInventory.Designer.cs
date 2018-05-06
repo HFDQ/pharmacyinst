@@ -28,17 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInInventory));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PositionSelector = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colProductGeneralName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DictionaryDosageCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DictionarySpecificationCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Decription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LicensePermissionNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FactoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BatchNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DictionaryStorageType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PurchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DictionaryMeasurementUnitCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WarehouseZonePositionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WarehouseZone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Warehouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colArrivalDateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,10 +73,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnInInventory = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCash = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbtnPrint = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,21 +87,6 @@
             this.dataGridViewNumericUpDownColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewNumericUpDownColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PositionSelector = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colProductGeneralName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DictionaryDosageCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DictionarySpecificationCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Decription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LicensePermissionNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FactoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BatchNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DictionaryStorageType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PurchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DictionaryMeasurementUnitCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WarehouseZonePositionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WarehouseZone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Warehouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -118,10 +117,137 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 164);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1299, 305);
+            this.dataGridView1.Size = new System.Drawing.Size(1029, 305);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError_1);
+            // 
+            // PositionSelector
+            // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.NullValue = "选择";
+            this.PositionSelector.DefaultCellStyle = dataGridViewCellStyle19;
+            this.PositionSelector.HeaderText = "选择货位";
+            this.PositionSelector.Name = "PositionSelector";
+            this.PositionSelector.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PositionSelector.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.PositionSelector.Width = 80;
+            // 
+            // colProductGeneralName
+            // 
+            this.colProductGeneralName.DataPropertyName = "ProductGeneralName";
+            this.colProductGeneralName.HeaderText = "品名";
+            this.colProductGeneralName.Name = "colProductGeneralName";
+            this.colProductGeneralName.ReadOnly = true;
+            this.colProductGeneralName.Width = 56;
+            // 
+            // DictionaryDosageCode
+            // 
+            this.DictionaryDosageCode.DataPropertyName = "DictionaryDosageCode";
+            this.DictionaryDosageCode.HeaderText = "型号";
+            this.DictionaryDosageCode.Name = "DictionaryDosageCode";
+            this.DictionaryDosageCode.Width = 56;
+            // 
+            // DictionarySpecificationCode
+            // 
+            this.DictionarySpecificationCode.DataPropertyName = "DictionarySpecificationCode";
+            this.DictionarySpecificationCode.HeaderText = "规格";
+            this.DictionarySpecificationCode.Name = "DictionarySpecificationCode";
+            this.DictionarySpecificationCode.Width = 56;
+            // 
+            // Decription
+            // 
+            this.Decription.DataPropertyName = "Decription";
+            this.Decription.HeaderText = "产地";
+            this.Decription.Name = "Decription";
+            this.Decription.Width = 56;
+            // 
+            // LicensePermissionNumber
+            // 
+            this.LicensePermissionNumber.DataPropertyName = "LicensePermissionNumber";
+            this.LicensePermissionNumber.HeaderText = "批准文号";
+            this.LicensePermissionNumber.Name = "LicensePermissionNumber";
+            this.LicensePermissionNumber.Width = 80;
+            // 
+            // FactoryName
+            // 
+            this.FactoryName.DataPropertyName = "FactoryName";
+            this.FactoryName.HeaderText = "生产厂商";
+            this.FactoryName.Name = "FactoryName";
+            this.FactoryName.Width = 80;
+            // 
+            // BatchNumber
+            // 
+            this.BatchNumber.DataPropertyName = "BatchNumber";
+            this.BatchNumber.HeaderText = "生产批号";
+            this.BatchNumber.Name = "BatchNumber";
+            this.BatchNumber.ReadOnly = true;
+            this.BatchNumber.Width = 80;
+            // 
+            // DictionaryStorageType
+            // 
+            this.DictionaryStorageType.DataPropertyName = "DictionaryStorageType";
+            this.DictionaryStorageType.HeaderText = "储藏方式";
+            this.DictionaryStorageType.Name = "DictionaryStorageType";
+            this.DictionaryStorageType.ReadOnly = true;
+            this.DictionaryStorageType.Width = 80;
+            // 
+            // PurchasePrice
+            // 
+            this.PurchasePrice.DataPropertyName = "PurchasePrice";
+            this.PurchasePrice.HeaderText = "单价";
+            this.PurchasePrice.Name = "PurchasePrice";
+            this.PurchasePrice.ReadOnly = true;
+            this.PurchasePrice.Width = 56;
+            // 
+            // DictionaryMeasurementUnitCode
+            // 
+            this.DictionaryMeasurementUnitCode.DataPropertyName = "DictionaryMeasurementUnitCode";
+            this.DictionaryMeasurementUnitCode.HeaderText = "单位";
+            this.DictionaryMeasurementUnitCode.Name = "DictionaryMeasurementUnitCode";
+            this.DictionaryMeasurementUnitCode.Width = 56;
+            // 
+            // colAmount
+            // 
+            this.colAmount.DataPropertyName = "ArrivalAmount";
+            dataGridViewCellStyle20.NullValue = "0";
+            this.colAmount.DefaultCellStyle = dataGridViewCellStyle20;
+            this.colAmount.HeaderText = "入库数量";
+            this.colAmount.Name = "colAmount";
+            this.colAmount.ReadOnly = true;
+            this.colAmount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colAmount.Width = 80;
+            // 
+            // WarehouseZonePositionName
+            // 
+            this.WarehouseZonePositionName.DataPropertyName = "WarehouseZonePositionName";
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.WarehouseZonePositionName.DefaultCellStyle = dataGridViewCellStyle21;
+            this.WarehouseZonePositionName.HeaderText = "货位";
+            this.WarehouseZonePositionName.Name = "WarehouseZonePositionName";
+            this.WarehouseZonePositionName.ReadOnly = true;
+            this.WarehouseZonePositionName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.WarehouseZonePositionName.Width = 56;
+            // 
+            // WarehouseZone
+            // 
+            this.WarehouseZone.DataPropertyName = "WarehouseZoneName";
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.WarehouseZone.DefaultCellStyle = dataGridViewCellStyle22;
+            this.WarehouseZone.HeaderText = "货架";
+            this.WarehouseZone.Name = "WarehouseZone";
+            this.WarehouseZone.ReadOnly = true;
+            this.WarehouseZone.Width = 56;
+            // 
+            // Warehouse
+            // 
+            this.Warehouse.DataPropertyName = "WarehouseName";
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Warehouse.DefaultCellStyle = dataGridViewCellStyle23;
+            this.Warehouse.HeaderText = "仓库";
+            this.Warehouse.Name = "Warehouse";
+            this.Warehouse.ReadOnly = true;
+            this.Warehouse.Width = 56;
             // 
             // colArrivalDateTime
             // 
@@ -152,7 +278,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1299, 133);
+            this.panel1.Size = new System.Drawing.Size(1029, 133);
             this.panel1.TabIndex = 7;
             // 
             // label5
@@ -306,15 +432,14 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnInInventory,
+            this.toolStripButton2,
             this.toolStripButtonCash,
             this.toolStripSeparator3,
-            this.tsbtnPrint,
-            this.toolStripButton2,
             this.toolStripButton1,
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1299, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1029, 31);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -326,6 +451,15 @@
             this.tsbtnInInventory.Size = new System.Drawing.Size(60, 28);
             this.tsbtnInInventory.Text = "入库";
             this.tsbtnInInventory.Click += new System.EventHandler(this.tsbtnAccept_Click_1);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(60, 28);
+            this.toolStripButton2.Text = "打印";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButtonCash
             // 
@@ -341,24 +475,6 @@
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
-            // 
-            // tsbtnPrint
-            // 
-            this.tsbtnPrint.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
-            this.tsbtnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnPrint.Name = "tsbtnPrint";
-            this.tsbtnPrint.Size = new System.Drawing.Size(60, 28);
-            this.tsbtnPrint.Text = "打印";
-            this.tsbtnPrint.Click += new System.EventHandler(this.tsbtnPrint_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(96, 28);
-            this.toolStripButton2.Text = "打印（中）";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton1
             // 
@@ -408,33 +524,33 @@
             // 
             // dataGridViewCalendarColumn2
             // 
-            dataGridViewCellStyle6.Format = "d";
-            this.dataGridViewCalendarColumn2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Format = "d";
+            this.dataGridViewCalendarColumn2.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewCalendarColumn2.HeaderText = "生产日期";
             this.dataGridViewCalendarColumn2.Name = "dataGridViewCalendarColumn2";
             this.dataGridViewCalendarColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewCalendarColumn3
             // 
-            dataGridViewCellStyle7.Format = "d";
-            this.dataGridViewCalendarColumn3.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.Format = "d";
+            this.dataGridViewCalendarColumn3.DefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewCalendarColumn3.HeaderText = "有效期至";
             this.dataGridViewCalendarColumn3.Name = "dataGridViewCalendarColumn3";
             this.dataGridViewCalendarColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewNumericUpDownColumn1
             // 
-            dataGridViewCellStyle8.Format = "N0";
-            dataGridViewCellStyle8.NullValue = "0";
-            this.dataGridViewNumericUpDownColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Format = "N0";
+            dataGridViewCellStyle26.NullValue = "0";
+            this.dataGridViewNumericUpDownColumn1.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewNumericUpDownColumn1.HeaderText = "到货数量";
             this.dataGridViewNumericUpDownColumn1.Name = "dataGridViewNumericUpDownColumn1";
             this.dataGridViewNumericUpDownColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewNumericUpDownColumn2
             // 
-            dataGridViewCellStyle9.Format = "N0";
-            this.dataGridViewNumericUpDownColumn2.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Format = "N0";
+            this.dataGridViewNumericUpDownColumn2.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewNumericUpDownColumn2.HeaderText = "验收合格数量";
             this.dataGridViewNumericUpDownColumn2.Name = "dataGridViewNumericUpDownColumn2";
             this.dataGridViewNumericUpDownColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -444,138 +560,11 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "备注(注明不合格事项及处置措施)";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // PositionSelector
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = "选择";
-            this.PositionSelector.DefaultCellStyle = dataGridViewCellStyle1;
-            this.PositionSelector.HeaderText = "选择货位";
-            this.PositionSelector.Name = "PositionSelector";
-            this.PositionSelector.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PositionSelector.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.PositionSelector.Width = 80;
-            // 
-            // colProductGeneralName
-            // 
-            this.colProductGeneralName.DataPropertyName = "ProductGeneralName";
-            this.colProductGeneralName.HeaderText = "品名";
-            this.colProductGeneralName.Name = "colProductGeneralName";
-            this.colProductGeneralName.ReadOnly = true;
-            this.colProductGeneralName.Width = 56;
-            // 
-            // DictionaryDosageCode
-            // 
-            this.DictionaryDosageCode.DataPropertyName = "DictionaryDosageCode";
-            this.DictionaryDosageCode.HeaderText = "型号";
-            this.DictionaryDosageCode.Name = "DictionaryDosageCode";
-            this.DictionaryDosageCode.Width = 56;
-            // 
-            // DictionarySpecificationCode
-            // 
-            this.DictionarySpecificationCode.DataPropertyName = "DictionarySpecificationCode";
-            this.DictionarySpecificationCode.HeaderText = "规格";
-            this.DictionarySpecificationCode.Name = "DictionarySpecificationCode";
-            this.DictionarySpecificationCode.Width = 56;
-            // 
-            // Decription
-            // 
-            this.Decription.DataPropertyName = "Decription";
-            this.Decription.HeaderText = "产地";
-            this.Decription.Name = "Decription";
-            this.Decription.Width = 56;
-            // 
-            // LicensePermissionNumber
-            // 
-            this.LicensePermissionNumber.DataPropertyName = "LicensePermissionNumber";
-            this.LicensePermissionNumber.HeaderText = "批准文号";
-            this.LicensePermissionNumber.Name = "LicensePermissionNumber";
-            this.LicensePermissionNumber.Width = 80;
-            // 
-            // FactoryName
-            // 
-            this.FactoryName.DataPropertyName = "FactoryName";
-            this.FactoryName.HeaderText = "生产厂商";
-            this.FactoryName.Name = "FactoryName";
-            this.FactoryName.Width = 80;
-            // 
-            // BatchNumber
-            // 
-            this.BatchNumber.DataPropertyName = "BatchNumber";
-            this.BatchNumber.HeaderText = "生产批号";
-            this.BatchNumber.Name = "BatchNumber";
-            this.BatchNumber.ReadOnly = true;
-            this.BatchNumber.Width = 80;
-            // 
-            // DictionaryStorageType
-            // 
-            this.DictionaryStorageType.DataPropertyName = "DictionaryStorageType";
-            this.DictionaryStorageType.HeaderText = "储藏方式";
-            this.DictionaryStorageType.Name = "DictionaryStorageType";
-            this.DictionaryStorageType.ReadOnly = true;
-            this.DictionaryStorageType.Width = 80;
-            // 
-            // PurchasePrice
-            // 
-            this.PurchasePrice.DataPropertyName = "PurchasePrice";
-            this.PurchasePrice.HeaderText = "单价";
-            this.PurchasePrice.Name = "PurchasePrice";
-            this.PurchasePrice.ReadOnly = true;
-            this.PurchasePrice.Width = 56;
-            // 
-            // DictionaryMeasurementUnitCode
-            // 
-            this.DictionaryMeasurementUnitCode.DataPropertyName = "DictionaryMeasurementUnitCode";
-            this.DictionaryMeasurementUnitCode.HeaderText = "单位";
-            this.DictionaryMeasurementUnitCode.Name = "DictionaryMeasurementUnitCode";
-            this.DictionaryMeasurementUnitCode.Width = 56;
-            // 
-            // colAmount
-            // 
-            this.colAmount.DataPropertyName = "ArrivalAmount";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.colAmount.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colAmount.HeaderText = "入库数量";
-            this.colAmount.Name = "colAmount";
-            this.colAmount.ReadOnly = true;
-            this.colAmount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colAmount.Width = 80;
-            // 
-            // WarehouseZonePositionName
-            // 
-            this.WarehouseZonePositionName.DataPropertyName = "WarehouseZonePositionName";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.WarehouseZonePositionName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.WarehouseZonePositionName.HeaderText = "货位";
-            this.WarehouseZonePositionName.Name = "WarehouseZonePositionName";
-            this.WarehouseZonePositionName.ReadOnly = true;
-            this.WarehouseZonePositionName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.WarehouseZonePositionName.Width = 56;
-            // 
-            // WarehouseZone
-            // 
-            this.WarehouseZone.DataPropertyName = "WarehouseZoneName";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.WarehouseZone.DefaultCellStyle = dataGridViewCellStyle4;
-            this.WarehouseZone.HeaderText = "货架";
-            this.WarehouseZone.Name = "WarehouseZone";
-            this.WarehouseZone.ReadOnly = true;
-            this.WarehouseZone.Width = 56;
-            // 
-            // Warehouse
-            // 
-            this.Warehouse.DataPropertyName = "WarehouseName";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Warehouse.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Warehouse.HeaderText = "仓库";
-            this.Warehouse.Name = "Warehouse";
-            this.Warehouse.ReadOnly = true;
-            this.Warehouse.Width = 56;
-            // 
             // FormInInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 469);
+            this.ClientSize = new System.Drawing.Size(1029, 469);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
@@ -599,7 +588,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbtnInInventory;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton tsbtnPrint;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCreateDate;
         private System.Windows.Forms.Label label22;

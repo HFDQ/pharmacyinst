@@ -9,12 +9,14 @@ using System.Windows.Forms;
 using BugsBox.Pharmacy.Models;
 using BugsBox.Pharmacy.Business.Models;
 using BugsBox.Pharmacy.UI.Common;
+using System.Reflection;
 
 namespace BugsBox.Pharmacy.AppClient.UI.UserControls
 {
     public partial class ucPurchaseRecord : BaseFunctionUserControl
     {
         private string msg = String.Empty;
+        private string title = "";
         List<SupplyUnit> listSupplyer = new List<SupplyUnit>();
 
         public ucPurchaseRecord()
@@ -25,13 +27,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             BindComboBoxSupply();
             var all = PharmacyDatabaseService.AllSupplyUnits(out msg);
             listSupplyer = all.Where(r => r.Valid).ToList();
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
             this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void cmbSupply_Click(object sender, EventArgs e)
         {
-         
+
         }
         private void BindComboBoxSupply()
         {
@@ -96,12 +98,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     MessageBox.Show(msg);
                     return;
                 }
-               
-                
+
+
 
                 this.dataGridView1.DataSource = data;
                 HiddenFields();
-                
+
             }
             catch (Exception ex)
             {
@@ -110,7 +112,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
         }
         private PurchaseRecordType _PurchaseRecordType = PurchaseRecordType.CGJL;
         [Browsable(true), Description("DataGridView 数据源类型"), Category("自定义")]
-        
+
+
         public PurchaseRecordType GridPurchaseRecordType
         {
             get
@@ -120,8 +123,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             set
             {
                 _PurchaseRecordType = value;
+
+
+                title = GetEnumDesc(_PurchaseRecordType);
                 BindDataSource();
             }
+        }
+
+        public static string GetEnumDesc(Enum en)
+        {
+            Type type = en.GetType();
+            MemberInfo[] memInfo = type.GetMember(en.ToString()); if (memInfo != null && memInfo.Length > 0)
+            {
+                object[] attrs = memInfo[0].GetCustomAttributes(typeof(System.ComponentModel.DataAnnotations.DisplayAttribute), false); if (attrs != null && attrs.Length > 0) return ((System.ComponentModel.DataAnnotations.DisplayAttribute)attrs[0]).Name;
+            }
+            return en.ToString();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -143,7 +159,19 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             HiddenField("SpecialChecker");
             HiddenField("SpecialCheckMemo");
             HiddenField("OutValidDate");
-            
+            HiddenField("OutValidDateStr");
+
+            HiddenField("TotoalMoney");
+            HiddenField("MeasurementUnit");
+            HiddenField("PurchasePrice");
+            HiddenField("ReceiveAmount");
+            HiddenField("RejectAmount");
+            HiddenField("ArrivalAmount");
+            HiddenField("RejectReason");
+            HiddenField("ArrivalDate");
+            HiddenField("Amount");
+            HiddenField("TotalMoney");
+
             switch (GridPurchaseRecordType)
             {
                 case PurchaseRecordType.YLQXCGJL:
@@ -151,10 +179,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     HiddenField("BatchNumber");
                     HiddenField("ReceiveAddress");
                     HiddenField("ShippingTime");
+                    ShowField("Amount");
+                    ShowField("TotalMoney");
+                    ShowField("Price");
                     this.dataGridView1.Columns["LicensePermissionNumber"].HeaderText = "注册证或备案凭证编号";
                     break;
                 case PurchaseRecordType.YLQXYSJL:
                     HiddenField("Decription");
+                    ShowField("QualifiedAmount");
                     this.dataGridView1.Columns["LicensePermissionNumber"].HeaderText = "注册证或备案凭证编号";
                     break;
                 //采购记录
@@ -164,6 +196,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     //HiddenField("FactoryName");
                     HiddenField("ReceiveAddress");
                     HiddenField("ShippingTime");
+                    ShowField("Amount");
+                    ShowField("TotalMoney");
+                    ShowField("Price");
                     break;
                 //中药材采购记录
                 case PurchaseRecordType.ZYCCGJL:
@@ -197,6 +232,17 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     HiddenField("CheckMan");
                     HiddenField("CheckDate");
                     HiddenField("BatchNumber");
+
+
+                    ShowField("Amount");
+                    ShowField("TotoalMoney");
+                    ShowField("MeasurementUnit");
+                    ShowField("PurchasePrice");
+                    ShowField("ReceiveAmount");
+                    ShowField("RejectAmount");
+                    ShowField("ArrivalAmount");
+                    ShowField("RejectReason");
+                    ShowField("ArrivalDate");
                     break;
                 //拒收记录
                 case PurchaseRecordType.JSJL:
@@ -225,12 +271,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                         this.dataGridView1.Columns["SpecialCheckMemo"].Visible = true;
                     break;
                 case PurchaseRecordType.YSJL:
+                    ShowField("QualifiedAmount");
+
                     if (this.dataGridView1.Columns["SpecialChecker"] != null)
                         this.dataGridView1.Columns["SpecialChecker"].Visible = true;
                     if (this.dataGridView1.Columns["SpecialCheckMemo"] != null)
                         this.dataGridView1.Columns["SpecialCheckMemo"].Visible = true;
                     break;
-                
+
             }
         }
         private void HiddenField(string fieldName)
@@ -238,6 +286,19 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
 
             if (this.dataGridView1.Columns[fieldName] != null)
                 this.dataGridView1.Columns[fieldName].Visible = false;
+        }
+
+        private void ShowField(string fieldName)
+        {
+
+            if (this.dataGridView1.Columns[fieldName] != null)
+                this.dataGridView1.Columns[fieldName].Visible = true;
+
+            if (this.dataGridView1.Columns[fieldName].ValueType == typeof(Decimal))
+            {
+                this.dataGridView1.Columns[fieldName].DefaultCellStyle.Format = "N2";
+            }
+
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -319,7 +380,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UI.Forms.MyExcelUtls.DataGridview2Sheet(this.dataGridView1, "采购记录查询");
+            UI.Forms.MyExcelUtls.DataGridview2Sheet(this.dataGridView1, title);
         }
     }
 }

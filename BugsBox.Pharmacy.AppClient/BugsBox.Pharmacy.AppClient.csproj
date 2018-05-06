@@ -2523,7 +2523,9 @@
     <EmbeddedResource Include="UI\Reports\RptPurchaseRefuse.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptPurchaseReturnList.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptPurchaseReturnOrder.rdlc" />
-    <EmbeddedResource Include="UI\Reports\RptSaleOutInventory.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSaleOutInventory.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Reports\RptSalesOrderListYLQX.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderList.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderList000.rdlc" />
