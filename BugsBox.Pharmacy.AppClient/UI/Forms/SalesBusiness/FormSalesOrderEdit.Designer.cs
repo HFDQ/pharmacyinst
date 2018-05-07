@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSalesOrderEdit));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnSubmit = new System.Windows.Forms.ToolStripButton();
             this.tsbtnSave = new System.Windows.Forms.ToolStripButton();
@@ -145,9 +145,9 @@
             this.toolStripButton2,
             this.toolStripSeparator4,
             this.toolStripButton3,
+            this.toolStripButton7,
             this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripButton7});
+            this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(978, 31);
@@ -282,7 +282,7 @@
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(60, 28);
+            this.toolStripButton5.Size = new System.Drawing.Size(60, 21);
             this.toolStripButton5.Text = "重审申请";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -293,7 +293,7 @@
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(72, 28);
+            this.toolStripButton6.Size = new System.Drawing.Size(72, 21);
             this.toolStripButton6.Text = "导出销售单";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
@@ -371,7 +371,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(337, 3);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(288, 16);
             this.checkBox2.TabIndex = 155;
@@ -534,7 +534,7 @@
             // 
             this.ucbcSalesOrderBalance.BackColor = System.Drawing.Color.Transparent;
             this.ucbcSalesOrderBalance.Location = new System.Drawing.Point(651, 102);
-            this.ucbcSalesOrderBalance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ucbcSalesOrderBalance.Margin = new System.Windows.Forms.Padding(4);
             this.ucbcSalesOrderBalance.Name = "ucbcSalesOrderBalance";
             this.ucbcSalesOrderBalance.Size = new System.Drawing.Size(130, 20);
             this.ucbcSalesOrderBalance.TabIndex = 139;
@@ -546,7 +546,7 @@
             // 
             this.ucbcSalesOrderCancel.BackColor = System.Drawing.Color.Transparent;
             this.ucbcSalesOrderCancel.Location = new System.Drawing.Point(606, 23);
-            this.ucbcSalesOrderCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ucbcSalesOrderCancel.Margin = new System.Windows.Forms.Padding(4);
             this.ucbcSalesOrderCancel.Name = "ucbcSalesOrderCancel";
             this.ucbcSalesOrderCancel.Size = new System.Drawing.Size(130, 20);
             this.ucbcSalesOrderCancel.TabIndex = 138;
@@ -558,7 +558,7 @@
             // 
             this.ucbcSalesOrder.BackColor = System.Drawing.Color.Transparent;
             this.ucbcSalesOrder.Location = new System.Drawing.Point(651, 79);
-            this.ucbcSalesOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ucbcSalesOrder.Margin = new System.Windows.Forms.Padding(4);
             this.ucbcSalesOrder.Name = "ucbcSalesOrder";
             this.ucbcSalesOrder.Size = new System.Drawing.Size(209, 20);
             this.ucbcSalesOrder.TabIndex = 121;
@@ -826,8 +826,8 @@
             // 规格
             // 
             this.规格.DataPropertyName = "SpecificationCode";
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.规格.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.规格.DefaultCellStyle = dataGridViewCellStyle1;
             this.规格.HeaderText = "规格";
             this.规格.Name = "规格";
             this.规格.ReadOnly = true;
@@ -846,8 +846,8 @@
             // 生产厂商
             // 
             this.生产厂商.DataPropertyName = "FactoryName";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.生产厂商.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.生产厂商.DefaultCellStyle = dataGridViewCellStyle2;
             this.生产厂商.HeaderText = "生产厂商";
             this.生产厂商.Name = "生产厂商";
             this.生产厂商.ReadOnly = true;
@@ -856,8 +856,8 @@
             // 单位
             // 
             this.单位.DataPropertyName = "MeasurementUnit";
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.单位.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.单位.DefaultCellStyle = dataGridViewCellStyle3;
             this.单位.HeaderText = "单位";
             this.单位.Name = "单位";
             this.单位.ReadOnly = true;
@@ -867,8 +867,8 @@
             // 数量
             // 
             this.数量.DataPropertyName = "Amount";
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Yellow;
-            this.数量.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow;
+            this.数量.DefaultCellStyle = dataGridViewCellStyle4;
             this.数量.HeaderText = "销售数量";
             this.数量.Name = "数量";
             this.数量.Visible = false;
@@ -876,8 +876,8 @@
             // 销售单价
             // 
             this.销售单价.DataPropertyName = "ActualUnitPrice";
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Yellow;
-            this.销售单价.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Yellow;
+            this.销售单价.DefaultCellStyle = dataGridViewCellStyle5;
             this.销售单价.HeaderText = "销售价格";
             this.销售单价.Name = "销售单价";
             this.销售单价.Visible = false;
@@ -893,8 +893,8 @@
             // 采购单价
             // 
             this.采购单价.DataPropertyName = "UnitPrice";
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.采购单价.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.采购单价.DefaultCellStyle = dataGridViewCellStyle6;
             this.采购单价.HeaderText = "采购单价";
             this.采购单价.Name = "采购单价";
             this.采购单价.ReadOnly = true;
@@ -921,8 +921,8 @@
             // 有效期至
             // 
             this.有效期至.DataPropertyName = "OutValidDate";
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.有效期至.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.有效期至.DefaultCellStyle = dataGridViewCellStyle7;
             this.有效期至.HeaderText = "有效期至";
             this.有效期至.Name = "有效期至";
             this.有效期至.ReadOnly = true;
@@ -931,8 +931,8 @@
             // 生产日期
             // 
             this.生产日期.DataPropertyName = "PruductDate";
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.生产日期.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.生产日期.DefaultCellStyle = dataGridViewCellStyle8;
             this.生产日期.HeaderText = "生产日期";
             this.生产日期.Name = "生产日期";
             this.生产日期.ReadOnly = true;
@@ -940,8 +940,8 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column1.Frozen = true;
             this.Column1.HeaderText = "付款单价";
             this.Column1.Name = "Column1";
@@ -971,7 +971,7 @@
             this.ClientSize = new System.Drawing.Size(978, 470);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSalesOrderEdit";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

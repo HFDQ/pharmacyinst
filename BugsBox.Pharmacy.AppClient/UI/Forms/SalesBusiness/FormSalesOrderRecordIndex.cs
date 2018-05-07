@@ -24,7 +24,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         private List<SalesOrderRecordOutput> _salesOrderList = new List<SalesOrderRecordOutput>();
         private PagerInfo pageInfo = new PagerInfo();
         private string message = string.Empty;
-        
+
         BugsBox.Pharmacy.UI.Common.BaseRightMenu BM = null;
 
         Common.GoodsTypeClass GoodsType { get; set; }
@@ -34,7 +34,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             try
             {
                 InitializeComponent();
-                this.dgvMain.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+                this.dgvMain.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
 
                 var t = this.PharmacyDatabaseService.AllBusinessScopes(out message).Where(r => !r.Deleted).OrderBy(r => r.Name).ToList();
                 t.Insert(0, new BusinessScope { Id = Guid.Empty, Name = "全部" });
@@ -45,16 +45,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 this.cmbGoodsType.SelectedIndex = 0;
 
                 this.comboBoxSpeci.SelectedIndex = 0;
-                
+
                 DefineGridColumn();
             }
             catch (Exception ex)
             {
                 Log.Error(ex);
-               // MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void HiddenField(string fieldName)
+        {
 
+            if (this.dgvMain.Columns[fieldName] != null)
+                this.dgvMain.Columns[fieldName].Visible = false;
+        }
         /// <summary>
         ///  传入药品类型的构造函数
         /// </summary>
@@ -67,7 +72,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 if (goodsType.ToString() == "ylqx")
                     this.GoodsType = GoodsTypeClass.医疗器械;
 
-                this.dgvMain.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+                this.dgvMain.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
                 DefineGridColumn();
 
                 this.lblDrugTyp.Visible = false;
@@ -77,9 +82,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             }
             catch (Exception ex)
             {
-                 Log.Error(ex);
+                Log.Error(ex);
             }
-            
+
 
         }
 
@@ -135,12 +140,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             dgvMain.AutoGenerateColumns = false;
             Dictionary<string, string> dicGridViewTilte = new Dictionary<string, string>();
 
-            dicGridViewTilte.Add("id","id");
+            dicGridViewTilte.Add("id", "id");
             dicGridViewTilte.Add("DrugInventoryRecordID", "DrugInventoryRecordID");
             dicGridViewTilte.Add("ProductGeneralName", "通用名称");
             dicGridViewTilte.Add("permitCode", "国药准字");
             dicGridViewTilte.Add("productCode", "规格");
-            dicGridViewTilte.Add("drugType", "剂型");
+            //dicGridViewTilte.Add("drugType", "剂型");
             dicGridViewTilte.Add("BatchNumber", "批号");
             dicGridViewTilte.Add("OutValidDate", "有效期");
             dicGridViewTilte.Add("FactoryName", "生产厂商");
@@ -151,7 +156,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             dicGridViewTilte.Add("ActualUnitPrice", "单价");
             dicGridViewTilte.Add("Price", "金额");
             dicGridViewTilte.Add("SalesDate", "销售日期");
-            dicGridViewTilte.Add("Saler","销售员");
+            dicGridViewTilte.Add("Saler", "销售员");
 
             //根据字典构造DataGridView 列
             foreach (KeyValuePair<string, string> kv in dicGridViewTilte)
@@ -166,7 +171,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             this.dgvMain.Columns[0].Visible = false;
             this.dgvMain.Columns[1].Visible = false;
 
-            this.dgvMain.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dgvMain.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
 
         }
 
@@ -180,11 +185,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 int pageIndex = this.pcMain.PageIndex;
                 int pageSize = this.pcMain.PageSize;
                 GetSalesOrderList(pageIndex, pageSize);
-                dgvMain.DataSource =new BindingCollection<Business.Models.SalesOrderRecordOutput>( _salesOrderList);
+                dgvMain.DataSource = new BindingCollection<Business.Models.SalesOrderRecordOutput>(_salesOrderList);
             }
             catch (Exception ex)
             {
-                 Log.Error(ex);
+                Log.Error(ex);
             }
         }
 
@@ -212,17 +217,17 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         /// 初始化查询条件
         /// </summary>
         /// <returns></returns>
-        private SalesOrderRecordInput InitSalesOrderRecordInput() 
+        private SalesOrderRecordInput InitSalesOrderRecordInput()
         {
             SalesOrderRecordInput sori = new SalesOrderRecordInput();
-            
+
             sori.SalesFromDate = dtFrom.Value.Date;
             sori.SalesToDate = dtTo.Value.AddDays(1).Date;
-            
+
             sori.productName = this.txtDrugName.Text;
             sori.BatchNumber = this.txtBatchNo.Text;
             sori.FactoryName = this.txtFactoryName.Text.Trim();
-            
+
             if (cmbPurchase.SelectedValue != null)
                 sori.PurchaseUnitID = (Guid)cmbPurchase.SelectedValue;
             else
@@ -230,7 +235,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
             if (this.GoodsType == GoodsTypeClass.药品)
                 sori.GoodsTypeValue = cmbGoodsType.SelectedValue.ToString() == "全部" ? string.Empty : cmbGoodsType.SelectedValue.ToString();
-            else if(this.GoodsType == GoodsTypeClass.医疗器械)
+            else if (this.GoodsType == GoodsTypeClass.医疗器械)
             {
                 sori.GoodsTypeValue = "医疗器械";
             }
@@ -278,12 +283,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         private void dgvMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            
+
         }
 
         private void dgvMain_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
+
         }
 
         void miBatch_Click()
@@ -291,7 +296,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             Guid saleOrderDetailID = Guid.Empty;
             var c = this.dgvMain.CurrentRow.DataBoundItem as Business.Models.SalesOrderRecordOutput;
             saleOrderDetailID = c.id;
-            Storage.Form_DrugPath frm = new Storage.Form_DrugPath(saleOrderDetailID,1);
+            Storage.Form_DrugPath frm = new Storage.Form_DrugPath(saleOrderDetailID, 1);
             frm.ShowDialog();
         }
 
@@ -315,13 +320,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
             SalesOrder so = this.PharmacyDatabaseService.GetSalesOrder(out message, soro.SalesOrderId);
 
-            SalesBusiness.FormSalesOrderEdit frm = new FormSalesOrderEdit(so,true);
+            SalesBusiness.FormSalesOrderEdit frm = new FormSalesOrderEdit(so, true);
             frm.ShowDialog();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            MyExcelUtls.DataGridview2Sheet(this.dgvMain,"药品销售记录查询单");
+            MyExcelUtls.DataGridview2Sheet(this.dgvMain, "药品销售记录查询单");
         }
 
         private void txtDrugName_KeyPress(object sender, KeyPressEventArgs e)
@@ -339,7 +344,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 int pageIndex = this.pcMain.PageIndex;
                 int pageSize = this.pcMain.PageSize;
                 GetSalesOrderList(pageIndex, pageSize);
-                dgvMain.DataSource = new BindingCollection<Business.Models.SalesOrderRecordOutput>( _salesOrderList);
+                dgvMain.DataSource = new BindingCollection<Business.Models.SalesOrderRecordOutput>(_salesOrderList);
 
                 //将总记录数赋值给分页控件
                 pcMain.RecordCount = pageInfo.RecordCount;

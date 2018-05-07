@@ -160,7 +160,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             HiddenField("SpecialCheckMemo");
             HiddenField("OutValidDate");
             HiddenField("OutValidDateStr");
-
+            HiddenField("DictionaryDosageCode");
             HiddenField("TotoalMoney");
             HiddenField("MeasurementUnit");
             HiddenField("PurchasePrice");

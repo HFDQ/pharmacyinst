@@ -251,10 +251,10 @@
             this.ClientSize = new System.Drawing.Size(811, 464);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DrugMaintainRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "药品养护记录维护";
+            this.Text = "医疗器械养护记录维护";
             this.Load += new System.EventHandler(this.DrugMaintenanceRecord_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

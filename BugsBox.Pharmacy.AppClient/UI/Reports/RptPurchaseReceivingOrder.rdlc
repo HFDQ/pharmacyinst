@@ -1814,7 +1814,7 @@
               <TextRuns>
                 <TextRun>
                   <Label>药品退货申请表</Label>
-                  <Value>药　品　收　货　单</Value>
+                  <Value>医疗器械收货单</Value>
                   <Style>
                     <FontFamily>宋体</FontFamily>
                     <FontSize>12pt</FontSize>
