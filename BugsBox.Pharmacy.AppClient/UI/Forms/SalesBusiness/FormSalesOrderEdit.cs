@@ -1205,7 +1205,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     ds.ExtendedProperties.Add("Date", _salesOrder.CreateTime.ToString("yyyy-MM-dd HH:mm")); //记录建立日期
                     ds.ExtendedProperties.Add("Addr", addr);
                     ds.ExtendedProperties.Add("Pay", pay);
-                    ds.ExtendedProperties.Add("ComAddr", PharmacyClientConfig.Config.Store.Address);//公司地址                    
+                    ds.ExtendedProperties.Add("ComAddr", PharmacyClientConfig.Config.Store.Address);//公司地址  
+                    ds.ExtendedProperties.Add("PurchaseUnitTEL", _purchaseUnit.ContactTel);
+
                     string[] tel = PharmacyClientConfig.Config.Store.Tel.Split(',');//服务器端需要设置两个电话,用英文半角符号‘,’隔开
                     string tel1 = "";
                     string tel2 = " ";
@@ -1312,7 +1314,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         decimal price = qty * unitPrice;
                         string Quanlity = detail.Description;
 
-                        string PermitNumber = inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo.LicensePermissionNumber;
+                        var drug = inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo;
+                        string PermitNumber = drug.LicensePermissionNumber;
+                        var storagecode = drug.DrugStorageTypeCode;
 
                         if (this.GoodsType == GoodsTypeClass.医疗器械)
                         {
@@ -1321,7 +1325,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                             //PermitNumber += "^" + inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo.DrugStorageTypeCode;
                         }
 
-                        OrderDetailTable.Rows.Add(new object[] { part, _partType, specialCode, productUnit, Origin, batchNumber, ValidDate, unit, qty, unitPrice, price, Quanlity, PermitNumber });
+                        OrderDetailTable.Rows.Add(new object[] { part, _partType, specialCode, productUnit, Origin, batchNumber, ValidDate, unit, qty, unitPrice, price, Quanlity, PermitNumber, storagecode });
                         OrderDetailTable.AcceptChanges();
                     }
                     ds.Tables.Add(OrderDetailTable);

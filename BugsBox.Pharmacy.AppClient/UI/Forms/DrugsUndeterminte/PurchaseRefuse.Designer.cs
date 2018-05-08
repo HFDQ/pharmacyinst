@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -48,14 +48,6 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.source = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderDocumentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DocumentNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.batchNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
@@ -94,6 +86,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.t1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.source = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderDocumentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DocumentNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.batchNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -144,7 +144,7 @@
             this.toolStripButton1.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Refresh;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(52, 22);
             this.toolStripButton1.Text = "刷新";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -156,7 +156,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(41, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(44, 22);
             this.toolStripLabel1.Text = "来源：";
             // 
             // toolStripComboBox1
@@ -179,7 +179,7 @@
             this.toolStripButton2.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Save1;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(73, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(76, 22);
             this.toolStripButton2.Text = "提交意见";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -217,7 +217,7 @@
             this.toolStripButton3.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Search;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButton3.Size = new System.Drawing.Size(52, 22);
             this.toolStripButton3.Text = "查询";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -263,14 +263,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.source,
@@ -281,14 +281,14 @@
             this.batchNumber,
             this.createtime,
             this.creator});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -298,62 +298,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // source
-            // 
-            this.source.DataPropertyName = "source";
-            this.source.HeaderText = "来源";
-            this.source.Name = "source";
-            this.source.ReadOnly = true;
-            // 
-            // OrderDocumentID
-            // 
-            this.OrderDocumentID.DataPropertyName = "OrderDocumentID";
-            this.OrderDocumentID.HeaderText = "单号";
-            this.OrderDocumentID.Name = "OrderDocumentID";
-            this.OrderDocumentID.ReadOnly = true;
-            // 
-            // DocumentNumber
-            // 
-            this.DocumentNumber.DataPropertyName = "DocumentNumber";
-            this.DocumentNumber.HeaderText = "收货单号";
-            this.DocumentNumber.Name = "DocumentNumber";
-            this.DocumentNumber.ReadOnly = true;
-            // 
-            // drugName
-            // 
-            this.drugName.DataPropertyName = "drugName";
-            this.drugName.HeaderText = "药品名称";
-            this.drugName.Name = "drugName";
-            this.drugName.ReadOnly = true;
-            // 
-            // quantity
-            // 
-            this.quantity.DataPropertyName = "RefuseQuantity";
-            this.quantity.HeaderText = "拒收数量";
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            // 
-            // batchNumber
-            // 
-            this.batchNumber.DataPropertyName = "BatchNumber";
-            this.batchNumber.HeaderText = "批次号";
-            this.batchNumber.Name = "batchNumber";
-            this.batchNumber.ReadOnly = true;
-            // 
-            // createtime
-            // 
-            this.createtime.DataPropertyName = "createTime";
-            this.createtime.HeaderText = "填报日期";
-            this.createtime.Name = "createtime";
-            this.createtime.ReadOnly = true;
-            // 
-            // creator
-            // 
-            this.creator.DataPropertyName = "creater";
-            this.creator.HeaderText = "填报人";
-            this.creator.Name = "creator";
-            this.creator.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -585,7 +529,7 @@
             this.groupBox1.Size = new System.Drawing.Size(787, 94);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "药品基本信息";
+            this.groupBox1.Text = "基本信息";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // t5
@@ -738,7 +682,63 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 0;
-            this.label4.Text = "药品名称：";
+            this.label4.Text = "产品名称：";
+            // 
+            // source
+            // 
+            this.source.DataPropertyName = "source";
+            this.source.HeaderText = "来源";
+            this.source.Name = "source";
+            this.source.ReadOnly = true;
+            // 
+            // OrderDocumentID
+            // 
+            this.OrderDocumentID.DataPropertyName = "OrderDocumentID";
+            this.OrderDocumentID.HeaderText = "单号";
+            this.OrderDocumentID.Name = "OrderDocumentID";
+            this.OrderDocumentID.ReadOnly = true;
+            // 
+            // DocumentNumber
+            // 
+            this.DocumentNumber.DataPropertyName = "DocumentNumber";
+            this.DocumentNumber.HeaderText = "收货单号";
+            this.DocumentNumber.Name = "DocumentNumber";
+            this.DocumentNumber.ReadOnly = true;
+            // 
+            // drugName
+            // 
+            this.drugName.DataPropertyName = "drugName";
+            this.drugName.HeaderText = "产品名称";
+            this.drugName.Name = "drugName";
+            this.drugName.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "RefuseQuantity";
+            this.quantity.HeaderText = "拒收数量";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            // 
+            // batchNumber
+            // 
+            this.batchNumber.DataPropertyName = "BatchNumber";
+            this.batchNumber.HeaderText = "批次号";
+            this.batchNumber.Name = "batchNumber";
+            this.batchNumber.ReadOnly = true;
+            // 
+            // createtime
+            // 
+            this.createtime.DataPropertyName = "createTime";
+            this.createtime.HeaderText = "填报日期";
+            this.createtime.Name = "createtime";
+            this.createtime.ReadOnly = true;
+            // 
+            // creator
+            // 
+            this.creator.DataPropertyName = "creater";
+            this.creator.HeaderText = "填报人";
+            this.creator.Name = "creator";
+            this.creator.ReadOnly = true;
             // 
             // PurchaseRefuse
             // 
@@ -839,6 +839,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn batchNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn createtime;
         private System.Windows.Forms.DataGridViewTextBoxColumn creator;
-
     }
 }

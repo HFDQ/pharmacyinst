@@ -142,9 +142,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
             dicGridViewTilte.Add("id", "id");
             dicGridViewTilte.Add("DrugInventoryRecordID", "DrugInventoryRecordID");
-            dicGridViewTilte.Add("ProductGeneralName", "通用名称");
+            dicGridViewTilte.Add("ProductGeneralName", "产品名称");
             dicGridViewTilte.Add("permitCode", "国药准字");
-            dicGridViewTilte.Add("productCode", "规格");
+            dicGridViewTilte.Add("productCode", "规格型号");
             //dicGridViewTilte.Add("drugType", "剂型");
             dicGridViewTilte.Add("BatchNumber", "批号");
             dicGridViewTilte.Add("OutValidDate", "有效期");
@@ -209,7 +209,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             {
                 this.dgvMain.Columns["permitCode"].HeaderText = "注册证或备案凭证编号";
                 this.dgvMain.Columns["productCode"].HeaderText = "规格(型号)";
-                this.dgvMain.Columns["drugType"].Visible = false;
+                // this.dgvMain.Columns["drugType"].Visible = false;
             }
         }
 

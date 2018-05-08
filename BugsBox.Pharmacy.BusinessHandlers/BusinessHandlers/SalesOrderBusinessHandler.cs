@@ -1316,8 +1316,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 pageInfo.RecordCount = result.Count();
                 pager = pageInfo;
                 result = result.OrderBy(o => o.SalesDate);
-                result = (skipCount == 0 ? result.Take(pageSize) : result.Skip(skipCount).Take(pageSize));
-                return result.AsQueryable().ToList();
+                var resultList = (skipCount == 0 ? result.Take(pageSize) : result.Skip(skipCount).Take(pageSize)).ToList();
+                return resultList;
             }
             catch (Exception ex)
             {

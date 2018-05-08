@@ -81,21 +81,20 @@
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1509, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1006, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(118, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(80, 22);
             this.toolStripLabel1.Text = "查询时间起：";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(46, 28);
+            this.toolStripLabel2.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel2.Text = "至：";
             // 
             // toolStripButton1
@@ -103,28 +102,28 @@
             this.toolStripButton1.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Refresh;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(66, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(52, 22);
             this.toolStripButton1.Text = "查询";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton2
             // 
             this.toolStripButton2.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.data;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(119, 28);
+            this.toolStripButton2.Size = new System.Drawing.Size(88, 22);
             this.toolStripButton2.Text = "导出EXCEL";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripButton3.Size = new System.Drawing.Size(6, 25);
             // 
             // statusStrip1
             // 
@@ -137,59 +136,58 @@
             this.toolStripStatusLabel6,
             this.toolStripStatusLabel7,
             this.toolStripStatusLabel8});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 615);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 407);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1509, 29);
+            this.statusStrip1.Size = new System.Drawing.Size(1006, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(100, 24);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(68, 17);
             this.toolStripStatusLabel1.Text = "药品名称：";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(64, 24);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(44, 17);
             this.toolStripStatusLabel2.Text = "通用名";
             // 
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(100, 24);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(68, 17);
             this.toolStripStatusLabel3.Text = "记录数量：";
             // 
             // toolStripStatusLabel4
             // 
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(21, 24);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(15, 17);
             this.toolStripStatusLabel4.Text = "0";
             // 
             // toolStripStatusLabel5
             // 
             this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(118, 24);
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(80, 17);
             this.toolStripStatusLabel5.Text = "当前库存量：";
             // 
             // toolStripStatusLabel6
             // 
             this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            this.toolStripStatusLabel6.Size = new System.Drawing.Size(21, 24);
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(15, 17);
             this.toolStripStatusLabel6.Text = "0";
             // 
             // toolStripStatusLabel7
             // 
             this.toolStripStatusLabel7.Name = "toolStripStatusLabel7";
-            this.toolStripStatusLabel7.Size = new System.Drawing.Size(100, 24);
+            this.toolStripStatusLabel7.Size = new System.Drawing.Size(68, 17);
             this.toolStripStatusLabel7.Text = "销售总量：";
             // 
             // toolStripStatusLabel8
             // 
             this.toolStripStatusLabel8.Name = "toolStripStatusLabel8";
-            this.toolStripStatusLabel8.Size = new System.Drawing.Size(21, 24);
+            this.toolStripStatusLabel8.Size = new System.Drawing.Size(15, 17);
             this.toolStripStatusLabel8.Text = "0";
             // 
             // dataGridView1
@@ -220,11 +218,10 @@
             this.Column13,
             this.Column14});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1509, 584);
+            this.dataGridView1.Size = new System.Drawing.Size(1006, 382);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -235,15 +232,15 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Visible = false;
-            this.Column1.Width = 96;
+            this.Column1.Width = 72;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "drugName";
-            this.Column2.HeaderText = "品名";
+            this.Column2.HeaderText = "产品名称";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 69;
+            this.Column2.Width = 78;
             // 
             // Column11
             // 
@@ -251,7 +248,7 @@
             this.Column11.HeaderText = "供应商";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 87;
+            this.Column11.Width = 66;
             // 
             // Column18
             // 
@@ -259,7 +256,7 @@
             this.Column18.HeaderText = "采购单号";
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
-            this.Column18.Width = 105;
+            this.Column18.Width = 78;
             // 
             // Column3
             // 
@@ -267,15 +264,16 @@
             this.Column3.HeaderText = "剂型";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 69;
+            this.Column3.Visible = false;
+            this.Column3.Width = 54;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "specific";
-            this.Column4.HeaderText = "规格";
+            this.Column4.HeaderText = "规格型号";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 69;
+            this.Column4.Width = 78;
             // 
             // Column20
             // 
@@ -283,7 +281,7 @@
             this.Column20.HeaderText = "计量单位";
             this.Column20.Name = "Column20";
             this.Column20.ReadOnly = true;
-            this.Column20.Width = 105;
+            this.Column20.Width = 78;
             // 
             // Column5
             // 
@@ -291,7 +289,7 @@
             this.Column5.HeaderText = "生产厂家";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 105;
+            this.Column5.Width = 78;
             // 
             // Column6
             // 
@@ -299,7 +297,8 @@
             this.Column6.HeaderText = "国药准字号";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 123;
+            this.Column6.Visible = false;
+            this.Column6.Width = 90;
             // 
             // Column7
             // 
@@ -307,7 +306,7 @@
             this.Column7.HeaderText = "批号";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 69;
+            this.Column7.Width = 54;
             // 
             // Column8
             // 
@@ -315,7 +314,7 @@
             this.Column8.HeaderText = "现有库存";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 105;
+            this.Column8.Width = 78;
             // 
             // Column9
             // 
@@ -323,7 +322,7 @@
             this.Column9.HeaderText = "入库数量";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 105;
+            this.Column9.Width = 78;
             // 
             // Column10
             // 
@@ -331,7 +330,7 @@
             this.Column10.HeaderText = "入库日期";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 105;
+            this.Column10.Width = 78;
             // 
             // Column12
             // 
@@ -339,7 +338,7 @@
             this.Column12.HeaderText = "业务员";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            this.Column12.Width = 87;
+            this.Column12.Width = 66;
             // 
             // Column16
             // 
@@ -347,7 +346,7 @@
             this.Column16.HeaderText = "销售单号";
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
-            this.Column16.Width = 105;
+            this.Column16.Width = 78;
             // 
             // Column19
             // 
@@ -355,7 +354,7 @@
             this.Column19.HeaderText = "销售日期";
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
-            this.Column19.Width = 105;
+            this.Column19.Width = 78;
             // 
             // Column15
             // 
@@ -363,7 +362,7 @@
             this.Column15.HeaderText = "销售数量";
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
-            this.Column15.Width = 105;
+            this.Column15.Width = 78;
             // 
             // Column17
             // 
@@ -371,7 +370,7 @@
             this.Column17.HeaderText = "销售价";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
-            this.Column17.Width = 87;
+            this.Column17.Width = 66;
             // 
             // Column13
             // 
@@ -379,7 +378,7 @@
             this.Column13.HeaderText = "购货商";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
-            this.Column13.Width = 87;
+            this.Column13.Width = 66;
             // 
             // Column14
             // 
@@ -387,19 +386,19 @@
             this.Column14.HeaderText = "销售员";
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
-            this.Column14.Width = 87;
+            this.Column14.Width = 66;
             // 
             // Form_DrugPath
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1509, 644);
+            this.ClientSize = new System.Drawing.Size(1006, 429);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form_DrugPath";
-            this.Text = "药品流向查询";
+            this.Text = "流向查询";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_DrugPath_Load);
             this.toolStrip1.ResumeLayout(false);

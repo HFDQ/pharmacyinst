@@ -1729,6 +1729,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="UI\Report\DsSalesOrder.cs">
+      <DependentUpon>DsSalesOrder.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\Report\DsSalesOrder1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
