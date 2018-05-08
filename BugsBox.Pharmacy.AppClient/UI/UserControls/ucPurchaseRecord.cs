@@ -171,7 +171,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             HiddenField("ArrivalDate");
             HiddenField("Amount");
             HiddenField("TotalMoney");
-
+            HiddenField("Origin");
+            HiddenField("ReceiveUnit");
+            HiddenField("MeasureUnit");
             switch (GridPurchaseRecordType)
             {
                 case PurchaseRecordType.YLQXCGJL:
@@ -191,14 +193,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     break;
                 //采购记录
                 case PurchaseRecordType.CGJL:
-                    //HiddenField("Origin");
+                    HiddenField("Origin");
                     HiddenField("BatchNumber");
-                    //HiddenField("FactoryName");
                     HiddenField("ReceiveAddress");
                     HiddenField("ShippingTime");
                     ShowField("Amount");
                     ShowField("TotalMoney");
                     ShowField("Price");
+                    ShowField("MeasureUnit");
                     break;
                 //中药材采购记录
                 case PurchaseRecordType.ZYCCGJL:

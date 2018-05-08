@@ -71,7 +71,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                     PurchaseDate = purchaseDetail.CreateTime,
                                     Origin = drup.Origin,
                                     FactoryName = drup.FactoryName,
-                                    LicensePermissionNumber = drup.LicensePermissionNumber
+                                    LicensePermissionNumber = drup.LicensePermissionNumber ,
+                                    MeasureUnit= drup.DictionaryMeasurementUnitCode
                                 };
                     records = query.Where(p => p.DictionarySpecificationCode.Contains(specific) && p.FactoryName.Contains(factoryName) && p.Origin.Contains(origin)).OrderByDescending(p => p.PurchaseDate).ToList();
                 }

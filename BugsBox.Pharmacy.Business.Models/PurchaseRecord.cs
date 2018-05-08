@@ -13,7 +13,7 @@ namespace BugsBox.Pharmacy.Business.Models
         [DataMember]
         public Guid DrugInfoId { get; set; }
 
-        [DisplayName("通用名称")]
+        [DisplayName("产品名称")]
         [DataMember]
         public string ProductGeneralName { get; set; }
 
@@ -21,11 +21,11 @@ namespace BugsBox.Pharmacy.Business.Models
         [DataMember]
         public string DictionaryDosageCode { get; set; }
 
-        [DisplayName("规格")]
+        [DisplayName("规格型号")]
         [DataMember]
         public string DictionarySpecificationCode { get; set; }
 
-        [DisplayName("批准文号")]
+        [DisplayName("产品注册号")]
         [DataMember]
         public string LicensePermissionNumber { get; set; }
 
@@ -64,6 +64,10 @@ namespace BugsBox.Pharmacy.Business.Models
         [DisplayName("批号")]
         [DataMember]
         public string BatchNumber { get; set; }
+        [DisplayName("产品单位")]
+
+        [DataMember]
+        public string MeasureUnit { get; set; }
 
         [DisplayName("生产厂商")]
         [DataMember]

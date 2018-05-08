@@ -353,9 +353,6 @@
                                 <Width>1.12928in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.65628in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
                                 <Width>0.52662in</Width>
                               </TablixColumn>
                               <TablixColumn>
@@ -414,60 +411,6 @@
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox159</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>Solid</Style>
-                                          </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
-                                          <VerticalAlign>Middle</VerticalAlign>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox161">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>剂型</Value>
-                                                <Style>
-                                                  <FontFamily>宋体</FontFamily>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox161</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -1132,36 +1075,6 @@
                                   </TablixCell>
                                   <TablixCell>
                                     <CellContents>
-                                      <Textbox Name="DictionaryDosageCode">
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>=Fields!DictionaryDosageCode.Value</Value>
-                                                <Style>
-                                                  <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>DictionaryDosageCode</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>Solid</Style>
-                                          </Border>
-                                          <VerticalAlign>Middle</VerticalAlign>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
                                       <Textbox Name="DictionarySpecificationCode">
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
@@ -1556,7 +1469,7 @@
                                   </TablixCell>
                                   <TablixCell>
                                     <CellContents>
-                                      <Textbox Name="Textbox8">
+                                      <Textbox Name="Textbox25">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
@@ -1570,7 +1483,7 @@
                                                 </Style>
                                               </TextRun>
                                               <TextRun>
-                                                <Value>　　　　　　　　　　　　　　　　　小写：￥</Value>
+                                                <Value>                            小写：￥</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1581,7 +1494,6 @@
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
                                                   <FontSize>9pt</FontSize>
-                                                  <Format>f2</Format>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1590,7 +1502,7 @@
                                             </Style>
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox8</rd:DefaultName>
+                                        <rd:DefaultName>Textbox25</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -1622,7 +1534,7 @@
                                           <PaddingBottom>2pt</PaddingBottom>
                                         </Style>
                                       </Textbox>
-                                      <ColSpan>9</ColSpan>
+                                      <ColSpan>7</ColSpan>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell />
@@ -1631,8 +1543,61 @@
                                   <TablixCell />
                                   <TablixCell />
                                   <TablixCell />
-                                  <TablixCell />
-                                  <TablixCell />
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox32">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value />
+                                                <Style>
+                                                  <FontFamily>宋体</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Left</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox32</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
                                   <TablixCell>
                                     <CellContents>
                                       <Textbox Name="Textbox13">
@@ -1717,7 +1682,6 @@
                               <TablixMember />
                               <TablixMember />
                               <TablixMember />
-                              <TablixMember />
                             </TablixMembers>
                           </TablixColumnHierarchy>
                           <TablixRowHierarchy>
@@ -1738,8 +1702,8 @@
                           </TablixRowHierarchy>
                           <DataSetName>DSOrderDetail</DataSetName>
                           <Top>0.1cm</Top>
-                          <Height>2.15cm</Height>
-                          <Width>22.90419cm</Width>
+                          <Height>2.15001cm</Height>
+                          <Width>21.23722cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1782,7 +1746,7 @@
         <DataSetName>DSOrderDetail</DataSetName>
         <Top>0.1cm</Top>
         <Left>0.1cm</Left>
-        <Height>2.25cm</Height>
+        <Height>2.25001cm</Height>
         <Width>23.07278cm</Width>
         <Style>
           <Border>
@@ -2600,7 +2564,7 @@ End Function
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>注：白联-存根，红联-财务，蓝联-验收，黄联-仓库，绿联-业务
+                  <Value>注：白联-存根 红联-财务 黄联-仓库 蓝联-客户 绿联-业务 白联-回执
 
 </Value>
                   <Style>
