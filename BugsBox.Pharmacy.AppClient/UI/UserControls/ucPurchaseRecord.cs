@@ -174,6 +174,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             HiddenField("Origin");
             HiddenField("ReceiveUnit");
             HiddenField("MeasureUnit");
+            HiddenField("Decription");
+            
             switch (GridPurchaseRecordType)
             {
                 case PurchaseRecordType.YLQXCGJL:
@@ -234,7 +236,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     HiddenField("CheckMan");
                     HiddenField("CheckDate");
                     HiddenField("BatchNumber");
-
+                    HiddenField("Decription");
 
                     ShowField("Amount");
                     ShowField("TotoalMoney");

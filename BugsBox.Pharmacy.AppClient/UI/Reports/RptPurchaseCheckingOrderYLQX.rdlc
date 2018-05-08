@@ -315,12 +315,12 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>9.70836in</Width>
+              <Width>9.72524in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>2.00787in</Height>
+              <Height>0.47597in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -374,7 +374,7 @@
                             </TablixColumns>
                             <TablixRows>
                               <TablixRow>
-                                <Height>0.31496in</Height>
+                                <Height>0.20038in</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -1704,10 +1704,9 @@
                             </TablixMembers>
                           </TablixRowHierarchy>
                           <DataSetName>DSOrderDetail</DataSetName>
-                          <Top>0.1cm</Top>
-                          <Left>0.1cm</Left>
-                          <Height>1.5cm</Height>
-                          <Width>24.55924cm</Width>
+                          <Left>0.14285cm</Left>
+                          <Height>1.20896cm</Height>
+                          <Width>24.55926cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1749,8 +1748,8 @@
         </TablixRowHierarchy>
         <DataSetName>DSOrderDetail</DataSetName>
         <Left>0.17015cm</Left>
-        <Height>5.09999cm</Height>
-        <Width>24.65924cm</Width>
+        <Height>1.20896cm</Height>
+        <Width>24.70211cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1758,7 +1757,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>5.2cm</Height>
+    <Height>1.20896cm</Height>
     <Style />
   </Body>
   <ReportParameters>
@@ -1836,7 +1835,7 @@
   End If 
 End Function
 </Code>
-  <Width>25.06752cm</Width>
+  <Width>24.98815cm</Width>
   <Page>
     <PageHeader>
       <Height>1.79063cm</Height>
@@ -2573,28 +2572,17 @@ End Function
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox223">
+        <Textbox Name="Textbox231">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value> 收货</Value>
+                  <Value>收货员：</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
-                    <FontFamily>Times New Roman</FontFamily>
-                    <FontSize>10.5pt</FontSize>
-                    <FontWeight>Normal</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                    <Color>#000000</Color>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>员：</Value>
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>宋体</FontFamily>
+                    <FontFamily>仿宋</FontFamily>
                     <FontSize>10.5pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
@@ -2606,16 +2594,16 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
-          <Top>0.05292cm</Top>
-          <Left>13.9642cm</Left>
+          <Top>0.07056cm</Top>
+          <Left>13.98714cm</Left>
           <Height>0.6cm</Height>
-          <Width>1.80421cm</Width>
+          <Width>2.44803cm</Width>
           <ZIndex>13</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
-            <VerticalAlign>Bottom</VerticalAlign>
+            <VerticalAlign>Middle</VerticalAlign>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
