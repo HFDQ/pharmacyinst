@@ -1206,7 +1206,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     ds.ExtendedProperties.Add("Addr", addr);
                     ds.ExtendedProperties.Add("Pay", pay);
                     ds.ExtendedProperties.Add("ComAddr", PharmacyClientConfig.Config.Store.Address);//公司地址  
-                    ds.ExtendedProperties.Add("PurchaseUnitTEL", _purchaseUnit.ContactTel);
+                    ds.ExtendedProperties.Add("PurchaseUnitTEL", _purchaseUnit.ContactTel ?? "");
 
                     string[] tel = PharmacyClientConfig.Config.Store.Tel.Split(',');//服务器端需要设置两个电话,用英文半角符号‘,’隔开
                     string tel1 = "";
@@ -1332,16 +1332,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
                     if (((ToolStripButton)sender).Name == this.tsbtnPrint.Name)
                     {
-                        if (this.GoodsType == GoodsTypeClass.药品)
-                            using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderList.rdlc", ds))
-                            {
-                                printHelper.Print();
-                            }
                         if (this.GoodsType == GoodsTypeClass.医疗器械)
+                        {
                             using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListYLQX.rdlc", ds))
                             {
                                 printHelper.Print();
                             }
+                        }
                     }
                     else
                     {
@@ -1410,17 +1407,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             }
             ds.Tables.Add(OrderDetailTable);
 
-            if (this.GoodsType == GoodsTypeClass.药品)
-                using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListEmpty.rdlc", ds))
-                {
-                    printHelper.Print();
-                }
+
             if (this.GoodsType == GoodsTypeClass.医疗器械)
+            {
                 using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListYLQXEmpty.rdlc", ds))
                 {
                     printHelper.Print();
                 }
-
+            }
         }
         private void txtTotalMoney_TextChanged(object sender, EventArgs e)
         {
