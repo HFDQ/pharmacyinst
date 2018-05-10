@@ -68,6 +68,10 @@
           <DataField>存储条件</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="生产许可证编号">
+          <DataField>生产许可证编号</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>DsSalesOrder</DataSourceName>
@@ -104,7 +108,7 @@
                                 <Width>0.3937in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.9685in</Width>
+                                <Width>1.22583in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.80709in</Width>
@@ -122,7 +126,7 @@
                                 <Width>0.59055in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.84646in</Width>
+                                <Width>0.60488in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.84646in</Width>
@@ -132,6 +136,9 @@
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>1.63054in</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>0.98425in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>1.04661in</Width>
@@ -471,6 +478,37 @@
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox31</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox4">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>生产许可证编号</Value>
+                                                <Style>
+                                                  <FontFamily>宋体</FontFamily>
+                                                  <FontSize>8pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox4</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -1048,6 +1086,38 @@
                                   </TablixCell>
                                   <TablixCell>
                                     <CellContents>
+                                      <Textbox Name="生产许可证编号">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!生产许可证编号.Value</Value>
+                                                <Style>
+                                                  <FontFamily>宋体</FontFamily>
+                                                  <FontSize>8pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>生产许可证编号</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
                                       <Textbox Name="批准文号">
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
@@ -1271,9 +1341,10 @@
                                           <PaddingBottom>2pt</PaddingBottom>
                                         </Style>
                                       </Textbox>
-                                      <ColSpan>2</ColSpan>
+                                      <ColSpan>3</ColSpan>
                                     </CellContents>
                                   </TablixCell>
+                                  <TablixCell />
                                   <TablixCell />
                                 </TablixCells>
                               </TablixRow>
@@ -1281,6 +1352,7 @@
                           </TablixBody>
                           <TablixColumnHierarchy>
                             <TablixMembers>
+                              <TablixMember />
                               <TablixMember />
                               <TablixMember />
                               <TablixMember />
@@ -1440,6 +1512,11 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="InstrumentsBusinessLicense">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <Code>Function CNMoney(num As String) As String
      If IsNumeric(num) = False Or num = "" Then
@@ -1488,7 +1565,7 @@
    CNMoney= resultStr
   End If 
 End Function</Code>
-  <Width>27.18573cm</Width>
+  <Width>27.13641cm</Width>
   <Page>
     <PageHeader>
       <Height>2.7cm</Height>
@@ -1912,9 +1989,9 @@ End Function</Code>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
           <Top>1.97614cm</Top>
-          <Left>12.72972cm</Left>
+          <Left>12.25347cm</Left>
           <Height>0.6cm</Height>
-          <Width>7.32618cm</Width>
+          <Width>7.80243cm</Width>
           <ZIndex>11</ZIndex>
           <Style>
             <Border>
@@ -1986,15 +2063,26 @@ End Function</Code>
                     <Color>#000000</Color>
                   </Style>
                 </TextRun>
+                <TextRun>
+                  <Value>=Parameters!InstrumentsBusinessLicense.Value</Value>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontFamily>宋体</FontFamily>
+                    <FontSize>10.5pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                    <Color>#000000</Color>
+                  </Style>
+                </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
           <Top>0.88225cm</Top>
-          <Left>12.72972cm</Left>
+          <Left>12.25347cm</Left>
           <Height>0.6cm</Height>
-          <Width>7.32618cm</Width>
+          <Width>7.80243cm</Width>
           <ZIndex>13</ZIndex>
           <Style>
             <Border>

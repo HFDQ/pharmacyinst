@@ -25,6 +25,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         private List<SalesOrderDetail> newList;
         private List<DrugInventoryRecord> _drugInventoryRecordlList = new List<DrugInventoryRecord>();
         private PurchaseUnit _purchaseUnit;
+        private InstrumentsBusinessLicense _InstrumentsBusinessLicense;
         private FormOperation _operation;
         private bool _IsReadOnly = false;
         private List<User> userList = new List<User>();
@@ -553,6 +554,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     this.tsbtnSave.Enabled = false;
 
                 _purchaseUnit = PharmacyDatabaseService.GetPurchaseUnit(out msg, _salesOrder.PurchaseUnitId);
+
+
 
                 this.lblOrderNo.Text = _salesOrder.OrderCode;
                 this.lblCreateDate.Text = _salesOrder.CreateTime.Date.ToString("yyyy-MM-dd");
@@ -1195,6 +1198,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         MessageBox.Show("该定单未审核，暂无法打印！");
                         return;
                     }
+
+                    _InstrumentsBusinessLicense = PharmacyDatabaseService.GetInstrumentsBusinessLicense(out msg, _purchaseUnit.InstrumentsBusinessLicenseId);
+
+
+                    if (_InstrumentsBusinessLicense == null)
+                    {
+                        MessageBox.Show("器械经营许可证证书号未设置");
+                    }
+
+
                     //结算前打印的结算方式id为空00000,所以默认为现金方式结算,否则按结算员结算时选择结算方式提交.
                     var payment = this.PharmacyDatabaseService.GetPaymentMethod(out msg, _salesOrder.payMentMethodID);
                     string pay = payment == null ? "现金" : payment.Name;
@@ -1207,6 +1220,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     ds.ExtendedProperties.Add("Pay", pay);
                     ds.ExtendedProperties.Add("ComAddr", PharmacyClientConfig.Config.Store.Address);//公司地址  
                     ds.ExtendedProperties.Add("PurchaseUnitTEL", _purchaseUnit.ContactTel ?? "");
+                    ds.ExtendedProperties.Add("InstrumentsBusinessLicense", _InstrumentsBusinessLicense.LicenseCode);
 
                     string[] tel = PharmacyClientConfig.Config.Store.Tel.Split(',');//服务器端需要设置两个电话,用英文半角符号‘,’隔开
                     string tel1 = "";
@@ -1317,6 +1331,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         var drug = inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo;
                         string PermitNumber = drug.LicensePermissionNumber;
                         var storagecode = drug.DrugStorageTypeCode;
+                        var InstEntpermitNumber = drug.InstEntProductLiscencePermitNumber;
+
 
                         if (this.GoodsType == GoodsTypeClass.医疗器械)
                         {
@@ -1325,7 +1341,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                             //PermitNumber += "^" + inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo.DrugStorageTypeCode;
                         }
 
-                        OrderDetailTable.Rows.Add(new object[] { part, _partType, specialCode, productUnit, Origin, batchNumber, ValidDate, unit, qty, unitPrice, price, Quanlity, PermitNumber, storagecode });
+                        OrderDetailTable.Rows.Add(new object[] { part, _partType, specialCode, productUnit, Origin, batchNumber, ValidDate, unit, qty, unitPrice, price, Quanlity, PermitNumber, storagecode, InstEntpermitNumber });
                         OrderDetailTable.AcceptChanges();
                     }
                     ds.Tables.Add(OrderDetailTable);
