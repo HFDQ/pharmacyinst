@@ -134,21 +134,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         }
         private void FormatRows()
         {
-            foreach (DataGridViewRow row in this.dgvMain.Rows)
-            {
-                var entity = row.DataBoundItem as SaleOrderModel;
-                if (entity != null)
-                {
-                    try
-                    {
-                        row.Cells["PickUserName"].Value = BugsBoxApplication.Instance.InventoryKeeper;
-                    }
-                    catch (Exception ex)
-                    {
-                        Log.Warning(ex, string.Format("{0}行的数据格式化失败!!!", row.Index));
-                    }
-                }
-            }
+            //foreach (DataGridViewRow row in this.dgvMain.Rows)
+            //{
+            //    var entity = row.DataBoundItem as SaleOrderModel;
+            //    if (entity != null)
+            //    {
+            //        try
+            //        {
+            //            row.Cells["PickUserName"].Value = BugsBoxApplication.Instance.InventoryKeeper;
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            Log.Warning(ex, string.Format("{0}行的数据格式化失败!!!", row.Index));
+            //        }
+            //    }
+            //}
         }
         private void cmbOperator_SelectedIndexChanged(object sender, EventArgs e)
         {
