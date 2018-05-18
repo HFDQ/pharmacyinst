@@ -315,12 +315,12 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>9.72524in</Width>
+              <Width>9.25789in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.47597in</Height>
+              <Height>0.62639in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -330,51 +330,48 @@
                           <TablixBody>
                             <TablixColumns>
                               <TablixColumn>
-                                <Width>1.21741in</Width>
+                                <Width>1.17349in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.77067in</Width>
+                                <Width>0.60588in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.11062in</Width>
+                                <Width>0.99211in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.48103in</Width>
+                                <Width>1.67457in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.36126in</Width>
+                                <Width>0.37611in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.45695in</Width>
+                                <Width>0.4718in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.48862in</Width>
+                                <Width>0.50347in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.52089in</Width>
+                                <Width>0.53574in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.51763in</Width>
+                                <Width>0.53248in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.6462in</Width>
+                                <Width>0.66105in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.63291in</Width>
+                                <Width>0.6356in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.59509in</Width>
+                                <Width>0.59397in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.34883in</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>0.52089in</Width>
+                                <Width>0.36298in</Width>
                               </TablixColumn>
                             </TablixColumns>
                             <TablixRows>
                               <TablixRow>
-                                <Height>0.20038in</Height>
+                                <Height>0.3219in</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -894,21 +891,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>生产</Value>
-                                                <Style>
-                                                  <FontFamily>宋体</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>日期</Value>
+                                                <Value>生产日期</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -963,21 +946,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>生产</Value>
-                                                <Style>
-                                                  <FontFamily>宋体</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>批号</Value>
+                                                <Value>生产批号</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1089,7 +1058,7 @@
                                                 <Value>质量状况</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>9pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1112,59 +1081,10 @@
                                       </Textbox>
                                     </CellContents>
                                   </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox11">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>验收</Value>
-                                                <Style>
-                                                  <FontFamily>宋体</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>结论</Value>
-                                                <Style>
-                                                  <FontFamily>宋体</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox11</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>Solid</Style>
-                                          </Border>
-                                          <VerticalAlign>Middle</VerticalAlign>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
                                 </TablixCells>
                               </TablixRow>
                               <TablixRow>
-                                <Height>0.27559in</Height>
+                                <Height>0.30448in</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -1177,7 +1097,7 @@
                                                 <Value>=Fields!ProductGeneralName.Value</Value>
                                                 <Style>
                                                   <FontFamily>仿宋_GB2312</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1211,7 +1131,7 @@
                                                 <Value>=Fields!DictionarySpecificationCode.Value</Value>
                                                 <Style>
                                                   <FontFamily>仿宋</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1245,7 +1165,7 @@
                                                 <Value>=Fields!LicensePermissionNumber.Value</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1271,6 +1191,8 @@
                                   <TablixCell>
                                     <CellContents>
                                       <Textbox Name="FactoryName">
+                                        <CanGrow>true</CanGrow>
+                                        <CanShrink>true</CanShrink>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
@@ -1279,7 +1201,7 @@
                                                 <Value>=Fields!FactoryName.Value</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1313,7 +1235,7 @@
                                                 <Value>=Fields!DictionaryMeasurementUnitCode.Value</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1348,7 +1270,8 @@
                                                 <Value>=Fields!PurchasePrice.Value</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
+                                                  <Format>0.00;(0.00)</Format>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1382,7 +1305,8 @@
                                                 <Value>=round(Fields!QualifiedAmount.Value,2)</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
+                                                  <Format>0;(0)</Format>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1417,7 +1341,8 @@
                                                 <Value>=Fields!PurchasePrice.Value*Fields!ArrivalAmount.Value</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
+                                                  <Format>0.00;(0.00)</Format>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1451,7 +1376,8 @@
                                                 <Value>=round(Fields!QualifiedAmount.Value,2）</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
+                                                  <Format>0;(0)</Format>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1485,7 +1411,7 @@
                                                 <Value>=Fields!PruductDate.Value</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                   <Format>d</Format>
                                                 </Style>
                                               </TextRun>
@@ -1520,7 +1446,7 @@
                                                 <Value>=Fields!BatchNumber.Value</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1554,7 +1480,7 @@
                                                 <Value>=Fields!OutValidDate.Value</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                   <Format>d</Format>
                                                 </Style>
                                               </TextRun>
@@ -1590,7 +1516,7 @@
                                                 <Value>合格</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1600,61 +1526,6 @@
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>CheckResult</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>Solid</Style>
-                                          </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
-                                          <VerticalAlign>Middle</VerticalAlign>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox12">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>可入库</Value>
-                                                <Style>
-                                                  <FontFamily>宋体</FontFamily>
-                                                  <FontSize>8pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox12</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -1687,7 +1558,6 @@
                               <TablixMember />
                               <TablixMember />
                               <TablixMember />
-                              <TablixMember />
                             </TablixMembers>
                           </TablixColumnHierarchy>
                           <TablixRowHierarchy>
@@ -1704,9 +1574,8 @@
                             </TablixMembers>
                           </TablixRowHierarchy>
                           <DataSetName>DSOrderDetail</DataSetName>
-                          <Left>0.14285cm</Left>
-                          <Height>1.20896cm</Height>
-                          <Width>24.55926cm</Width>
+                          <Height>1.59103cm</Height>
+                          <Width>23.16292cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1747,9 +1616,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DSOrderDetail</DataSetName>
-        <Left>0.17015cm</Left>
-        <Height>1.20896cm</Height>
-        <Width>24.70211cm</Width>
+        <Left>0.948cm</Left>
+        <Height>1.59103cm</Height>
+        <Width>23.51505cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1757,7 +1626,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.20896cm</Height>
+    <Height>1.59103cm</Height>
     <Style />
   </Body>
   <ReportParameters>
@@ -1835,10 +1704,10 @@
   End If 
 End Function
 </Code>
-  <Width>24.98815cm</Width>
+  <Width>24.46305cm</Width>
   <Page>
     <PageHeader>
-      <Height>1.79063cm</Height>
+      <Height>1.47313cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1852,8 +1721,8 @@ End Function
                   <Value>=Parameters!ReportTitle.Value</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
-                    <FontFamily>微软雅黑</FontFamily>
-                    <FontSize>12pt</FontSize>
+                    <FontFamily>黑体</FontFamily>
+                    <FontSize>18pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#000000</Color>
@@ -1863,8 +1732,8 @@ End Function
                   <Value>医疗器械验收入库单</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
-                    <FontFamily>微软雅黑</FontFamily>
-                    <FontSize>12pt</FontSize>
+                    <FontFamily>黑体</FontFamily>
+                    <FontSize>18pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#000000</Color>
@@ -1876,10 +1745,9 @@ End Function
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>0.29577cm</Top>
-          <Left>0.31477cm</Left>
+          <Left>0.94977cm</Left>
           <Height>0.83813cm</Height>
-          <Width>24.34447cm</Width>
+          <Width>23.364cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1910,8 +1778,8 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>1.1339cm</Top>
-          <Left>0.31477cm</Left>
+          <Top>0.8164cm</Top>
+          <Left>0.94977cm</Left>
           <Height>0.6cm</Height>
           <Width>1.94401cm</Width>
           <ZIndex>1</ZIndex>
@@ -1934,7 +1802,7 @@ End Function
                 <TextRun>
                   <Value>到货日期：</Value>
                   <Style>
-                    <FontFamily>仿宋</FontFamily>
+                    <FontFamily>宋体</FontFamily>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1942,8 +1810,8 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>1.10611cm</Top>
-          <Left>17.32125cm</Left>
+          <Top>0.78861cm</Top>
+          <Left>17.95625cm</Left>
           <Height>0.6cm</Height>
           <Width>2.11604cm</Width>
           <ZIndex>2</ZIndex>
@@ -1966,7 +1834,7 @@ End Function
                 <TextRun>
                   <Value>单据编号：</Value>
                   <Style>
-                    <FontFamily>仿宋</FontFamily>
+                    <FontFamily>宋体</FontFamily>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1974,8 +1842,8 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>1.1339cm</Top>
-          <Left>10.71119cm</Left>
+          <Top>0.8164cm</Top>
+          <Left>11.34619cm</Left>
           <Height>0.6cm</Height>
           <Width>2.18705cm</Width>
           <ZIndex>3</ZIndex>
@@ -2004,8 +1872,8 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.19063cm</Top>
-          <Left>2.32934cm</Left>
+          <Top>0.87313cm</Top>
+          <Left>2.96434cm</Left>
           <Height>0.6cm</Height>
           <Width>8.00691cm</Width>
           <ZIndex>4</ZIndex>
@@ -2036,10 +1904,10 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.1339cm</Top>
-          <Left>19.43729cm</Left>
+          <Top>0.8164cm</Top>
+          <Left>20.07229cm</Left>
           <Height>0.6cm</Height>
-          <Width>5.22196cm</Width>
+          <Width>4.24148cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
@@ -2066,8 +1934,8 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>1.15563cm</Top>
-          <Left>12.96879cm</Left>
+          <Top>0.83813cm</Top>
+          <Left>13.60379cm</Left>
           <Height>0.6cm</Height>
           <Width>4.37542cm</Width>
           <ZIndex>6</ZIndex>
@@ -2089,7 +1957,7 @@ End Function
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.53587cm</Height>
+      <Height>2cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2104,7 +1972,6 @@ End Function
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>宋体</FontFamily>
-                    <FontSize>10.5pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#000000</Color>
@@ -2116,9 +1983,9 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
           <Top>0.08837cm</Top>
-          <Left>18.43214cm</Left>
+          <Left>19.06714cm</Left>
           <Height>0.6cm</Height>
-          <Width>5.88163cm</Width>
+          <Width>5.04378cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -2153,7 +2020,7 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
           <Top>0.08837cm</Top>
-          <Left>0.31477cm</Left>
+          <Left>0.94977cm</Left>
           <Height>0.6cm</Height>
           <Width>1.83818cm</Width>
           <ZIndex>1</ZIndex>
@@ -2177,7 +2044,8 @@ End Function
                 <TextRun>
                   <Value>=Parameters!rName.Value</Value>
                   <Style>
-                    <FontSize>10.5pt</FontSize>
+                    <FontFamily>宋体</FontFamily>
+                    <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2186,7 +2054,7 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox59</rd:DefaultName>
           <Top>0.08837cm</Top>
-          <Left>2.32934cm</Left>
+          <Left>2.96434cm</Left>
           <Height>0.6cm</Height>
           <Width>2.08549cm</Width>
           <ZIndex>2</ZIndex>
@@ -2208,22 +2076,11 @@ End Function
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value xml:space="preserve"> </Value>
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>Times New Roman</FontFamily>
-                    <FontSize>10.5pt</FontSize>
-                    <FontWeight>Normal</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                    <Color>#000000</Color>
-                  </Style>
-                </TextRun>
-                <TextRun>
                   <Value>验收员：</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>宋体</FontFamily>
-                    <FontSize>10.5pt</FontSize>
+                    <FontSize>11pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#000000</Color>
@@ -2234,8 +2091,8 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
-          <Top>0.05891cm</Top>
-          <Left>4.4517cm</Left>
+          <Top>0.03528cm</Top>
+          <Left>5.0867cm</Left>
           <Height>0.6cm</Height>
           <Width>1.80421cm</Width>
           <ZIndex>3</ZIndex>
@@ -2260,7 +2117,7 @@ End Function
                   <Value>=Parameters!checkman.Value</Value>
                   <Style>
                     <FontFamily>宋体</FontFamily>
-                    <FontSize>9pt</FontSize>
+                    <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2269,7 +2126,7 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox59</rd:DefaultName>
           <Top>0.08837cm</Top>
-          <Left>6.4323cm</Left>
+          <Left>7.0673cm</Left>
           <Height>0.6cm</Height>
           <Width>2.41182cm</Width>
           <ZIndex>4</ZIndex>
@@ -2309,9 +2166,9 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
           <Top>0.68837cm</Top>
-          <Left>14.76316cm</Left>
+          <Left>15.03656cm</Left>
           <Height>0.6cm</Height>
-          <Width>9.55061cm</Width>
+          <Width>9.07436cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
@@ -2333,8 +2190,8 @@ End Function
                   <Value>保管员：</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
-                    <FontFamily>仿宋</FontFamily>
-                    <FontSize>10.5pt</FontSize>
+                    <FontFamily>宋体</FontFamily>
+                    <FontSize>12pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#000000</Color>
@@ -2346,7 +2203,7 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
           <Top>0.08837cm</Top>
-          <Left>8.77535cm</Left>
+          <Left>9.41035cm</Left>
           <Height>0.6cm</Height>
           <Width>2.44803cm</Width>
           <ZIndex>6</ZIndex>
@@ -2371,7 +2228,7 @@ End Function
                   <Value>=Parameters!bgyName.Value</Value>
                   <Style>
                     <FontFamily>宋体</FontFamily>
-                    <FontSize>9pt</FontSize>
+                    <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2380,7 +2237,7 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox59</rd:DefaultName>
           <Top>0.08837cm</Top>
-          <Left>11.32922cm</Left>
+          <Left>11.96422cm</Left>
           <Height>0.6cm</Height>
           <Width>2.48153cm</Width>
           <ZIndex>7</ZIndex>
@@ -2403,15 +2260,17 @@ End Function
               <TextRuns>
                 <TextRun>
                   <Value>=First(Fields!PurchaseOrderDocumentNumber.Value, "DSOrder")</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>宋体</FontFamily>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PurchaseOrderDocumentNumber</rd:DefaultName>
-          <Top>0.68837cm</Top>
-          <Left>3.65885cm</Left>
+          <Top>0.65891cm</Top>
+          <Left>3.66062cm</Left>
           <Height>0.6cm</Height>
           <Width>5.1835cm</Width>
           <ZIndex>8</ZIndex>
@@ -2447,7 +2306,7 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
           <Top>0.68837cm</Top>
-          <Left>0.313cm</Left>
+          <Left>0.948cm</Left>
           <Height>0.6cm</Height>
           <Width>2.89822cm</Width>
           <ZIndex>9</ZIndex>
@@ -2472,8 +2331,7 @@ End Function
                   <Value>验收日期：</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
-                    <FontFamily>仿宋</FontFamily>
-                    <FontSize>10.5pt</FontSize>
+                    <FontFamily>宋体</FontFamily>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#000000</Color>
@@ -2484,8 +2342,8 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
-          <Top>0.68837cm</Top>
-          <Left>9.12886cm</Left>
+          <Top>0.67056cm</Top>
+          <Left>9.44636cm</Left>
           <Height>0.6cm</Height>
           <Width>2.19455cm</Width>
           <ZIndex>10</ZIndex>
@@ -2522,8 +2380,8 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
-          <Top>0.68837cm</Top>
-          <Left>11.35869cm</Left>
+          <Top>0.67056cm</Top>
+          <Left>12.02897cm</Left>
           <Height>0.6cm</Height>
           <Width>3.36919cm</Width>
           <ZIndex>11</ZIndex>
@@ -2548,7 +2406,7 @@ End Function
                   <Value />
                   <Style>
                     <FontFamily>宋体</FontFamily>
-                    <FontSize>9pt</FontSize>
+                    <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2556,8 +2414,7 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox59</rd:DefaultName>
-          <Top>0.05292cm</Top>
-          <Left>15.77422cm</Left>
+          <Left>16.40922cm</Left>
           <Height>0.6cm</Height>
           <Width>2.41182cm</Width>
           <ZIndex>12</ZIndex>
@@ -2582,8 +2439,8 @@ End Function
                   <Value>收货员：</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
-                    <FontFamily>仿宋</FontFamily>
-                    <FontSize>10.5pt</FontSize>
+                    <FontFamily>宋体</FontFamily>
+                    <FontSize>12pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <TextDecoration>None</TextDecoration>
                     <Color>#000000</Color>
@@ -2595,7 +2452,7 @@ End Function
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
           <Top>0.07056cm</Top>
-          <Left>13.98714cm</Left>
+          <Left>14.62214cm</Left>
           <Height>0.6cm</Height>
           <Width>2.44803cm</Width>
           <ZIndex>13</ZIndex>
