@@ -529,6 +529,7 @@
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "经营范围（列表中没有的可以手工录入）";
+            this.groupBox4.Visible = false;
             // 
             // checkBox17
             // 
