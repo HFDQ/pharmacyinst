@@ -40,10 +40,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvMain = new System.Windows.Forms.DataGridView();
-            this.EventTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EventDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OccurrenceTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pcMain = new PagerControl.PagerControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -140,11 +136,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMain.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EventTitle,
-            this.Id,
-            this.EventDescription,
-            this.OccurrenceTime});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -169,42 +160,6 @@
             this.dgvMain.Size = new System.Drawing.Size(961, 502);
             this.dgvMain.TabIndex = 14;
             this.dgvMain.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMain_CellContentDoubleClick);
-            // 
-            // EventTitle
-            // 
-            this.EventTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.EventTitle.DataPropertyName = "EventTitle";
-            this.EventTitle.HeaderText = "事件名称";
-            this.EventTitle.Name = "EventTitle";
-            this.EventTitle.ReadOnly = true;
-            this.EventTitle.Width = 200;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 42;
-            // 
-            // EventDescription
-            // 
-            this.EventDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.EventDescription.DataPropertyName = "EventDescription";
-            this.EventDescription.HeaderText = "事件描述";
-            this.EventDescription.Name = "EventDescription";
-            this.EventDescription.ReadOnly = true;
-            this.EventDescription.Width = 400;
-            // 
-            // OccurrenceTime
-            // 
-            this.OccurrenceTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.OccurrenceTime.DataPropertyName = "OccurrenceTime";
-            this.OccurrenceTime.HeaderText = "发生时间";
-            this.OccurrenceTime.Name = "OccurrenceTime";
-            this.OccurrenceTime.ReadOnly = true;
-            this.OccurrenceTime.Width = 150;
             // 
             // pcMain
             // 
@@ -245,10 +200,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private PagerControl.PagerControl pcMain;
         private System.Windows.Forms.DataGridView dgvMain;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EventTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EventDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OccurrenceTime;
         private System.Windows.Forms.Button button2;
     }
 }

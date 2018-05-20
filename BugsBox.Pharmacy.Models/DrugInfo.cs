@@ -538,6 +538,7 @@ namespace BugsBox.Pharmacy.Models
         [DataMember]
         public int GoodsTypeValue { get; set; }
 
+        [NotMapped]
         /// <summary>
         /// 商品类型
         /// </summary>
@@ -555,7 +556,7 @@ namespace BugsBox.Pharmacy.Models
 
         [DataMember]
         public int ApprovalStatusValue { get; set; }
-
+        [NotMapped]
         public ApprovalStatus ApprovalStatus
         {
             get { return (ApprovalStatus)ApprovalStatusValue; }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -102,6 +103,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 药品销售类型
         /// </summary>
+        [NotMapped]
         public SalesDrugType SalesDrugType
         {
             get { return (SalesDrugType)SalesDrugTypeValue; }
@@ -118,6 +120,7 @@ namespace BugsBox.Pharmacy.Models
         /// 提货方式
         /// </summary>
         [DataMember]
+        [NotMapped]
         public PickUpGoodType PickUpGoodType
         {
             get { return (PickUpGoodType)PickUpGoodTypeValue; }
@@ -162,6 +165,7 @@ namespace BugsBox.Pharmacy.Models
         /// 订单状态
        /// </summary>
        [DataMember]
+       [NotMapped]
         public OrderStatus OrderStatus 
         {
             get

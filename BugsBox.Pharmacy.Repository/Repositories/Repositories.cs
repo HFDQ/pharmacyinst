@@ -33,6 +33,18 @@ namespace BugsBox.Pharmacy.Repository
 	}
     
 	/// <summary>
+    /// 仓储实现
+    /// </summary>
+    public partial class AfterSaleRecordRepository :CFRepository<AfterSaleRecord>,IAfterSaleRecordRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public AfterSaleRecordRepository(Db db)
+            : base(db)
+        { 
+        }
+	}
+    
+	/// <summary>
     /// 审批结点仓储实现
     /// </summary>
     public partial class ApprovalFlowRepository :CFRepository<ApprovalFlow>,IApprovalFlowRepository
@@ -135,6 +147,18 @@ namespace BugsBox.Pharmacy.Repository
     { 
 		 public RepositoryProvider RepositoryProvider { get; set; }
 		 public BusinessTypeManageCategoryDetailRepository(Db db)
+            : base(db)
+        { 
+        }
+	}
+    
+	/// <summary>
+    /// 仓储实现
+    /// </summary>
+    public partial class CarryOutExaminationRepository :CFRepository<CarryOutExamination>,ICarryOutExaminationRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public CarryOutExaminationRepository(Db db)
             : base(db)
         { 
         }
@@ -1101,6 +1125,30 @@ namespace BugsBox.Pharmacy.Repository
 	}
     
 	/// <summary>
+    /// 仓储实现
+    /// </summary>
+    public partial class ReCallCaseRepository :CFRepository<ReCallCase>,IReCallCaseRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public ReCallCaseRepository(Db db)
+            : base(db)
+        { 
+        }
+	}
+    
+	/// <summary>
+    /// 仓储实现
+    /// </summary>
+    public partial class ReCallEventRepository :CFRepository<ReCallEvent>,IReCallEventRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public ReCallEventRepository(Db db)
+            : base(db)
+        { 
+        }
+	}
+    
+	/// <summary>
     /// 零售会员仓储实现
     /// </summary>
     public partial class RetailMemberRepository :CFRepository<RetailMember>,IRetailMemberRepository
@@ -1418,7 +1466,7 @@ namespace BugsBox.Pharmacy.Repository
     public partial class WareHouseZonePositionRepository :CFRepository<WareHouseZonePosition>,IWareHouseZonePositionRepository
     { 
 		 public RepositoryProvider RepositoryProvider { get; set; }
-         public WareHouseZonePositionRepository(Db db)
+		 public WareHouseZonePositionRepository(Db db)
             : base(db)
         { 
         }

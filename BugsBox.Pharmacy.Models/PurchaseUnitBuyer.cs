@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BugsBox.Pharmacy.Models
 {
@@ -28,6 +29,8 @@ namespace BugsBox.Pharmacy.Models
         [Required]
         [DataMember]
         public int PurchaseLimitTypeValue { get; set; }
+
+        [NotMapped]
 
         public PurchaseLimitType PurchaseLimitType
         {

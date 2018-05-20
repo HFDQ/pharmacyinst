@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
@@ -505,7 +506,7 @@ namespace BugsBox.Pharmacy.Models
 
         [DataMember]
         public int ApprovalStatusValue { get; set; }
-
+        [NotMapped]
         public ApprovalStatus ApprovalStatus
         {
             get { return (ApprovalStatus)ApprovalStatusValue; }

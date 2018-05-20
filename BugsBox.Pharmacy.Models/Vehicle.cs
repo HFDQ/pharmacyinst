@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -15,7 +16,7 @@ namespace BugsBox.Pharmacy.Models
     /// </summary>
     [Description("车辆")]
     [DataContract(IsReference = true)]
-    public class Vehicle : Entity,IStore
+    public class Vehicle : Entity, IStore
     {
         #region Entiy Property
 
@@ -24,7 +25,7 @@ namespace BugsBox.Pharmacy.Models
 
         [DataMember]
         public DateTime? CreateTime { get; set; }
-        
+
         /// <summary>
         /// 车类型
         /// </summary>
@@ -37,7 +38,7 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>  
         [DataMember(Order = 0)]
         public int VehicleCategoryValue { get; set; }
-
+        [NotMapped]
         /// <summary>
         /// 类别
         /// </summary>
@@ -101,15 +102,15 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public int? ApprovalStatusValue { get; set; }
-
-        //public ApprovalStatus ApprovalStatus
-        //{
-        //    get { return (ApprovalStatus)ApprovalStatusValue; }
-        //    set
-        //    {
-        //        ApprovalStatusValue = (int)value;
-        //    }
-        //}
+        [NotMapped]
+        public ApprovalStatus ApprovalStatus
+        {
+            get { return (ApprovalStatus)ApprovalStatusValue; }
+            set
+            {
+                ApprovalStatusValue = (int)value;
+            }
+        }
 
         /// <summary>
         /// 审批流程
@@ -167,7 +168,7 @@ namespace BugsBox.Pharmacy.Models
 
         #endregion
 
-        
+
 
         #region Navigation Property
 

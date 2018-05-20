@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -123,6 +124,8 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 证书类型
         /// </summary> 
+        /// 
+        [NotMapped]
         public LicenseType LicenseType
         {
             get

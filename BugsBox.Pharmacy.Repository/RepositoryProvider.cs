@@ -48,6 +48,25 @@ namespace BugsBox.Pharmacy.Repository
 				}
 			}
 		} 
+		private IAfterSaleRecordRepository _AfterSaleRecordRepository=null;
+	    /// <summary> 
+		/// (AfterSaleRecord) 仓储对象
+        /// </summary>
+		public IAfterSaleRecordRepository AfterSaleRecordRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _AfterSaleRecordRepository==null)
+					{
+						_AfterSaleRecordRepository=new AfterSaleRecordRepository(Db);
+						_AfterSaleRecordRepository.RepositoryProvider = this;
+					}
+					return _AfterSaleRecordRepository;
+				}
+			}
+		} 
 		private IApprovalFlowRepository _ApprovalFlowRepository=null;
 	    /// <summary> 
 		/// 审批结点(ApprovalFlow) 仓储对象
@@ -216,6 +235,25 @@ namespace BugsBox.Pharmacy.Repository
 						_BusinessTypeManageCategoryDetailRepository.RepositoryProvider = this;
 					}
 					return _BusinessTypeManageCategoryDetailRepository;
+				}
+			}
+		} 
+		private ICarryOutExaminationRepository _CarryOutExaminationRepository=null;
+	    /// <summary> 
+		/// (CarryOutExamination) 仓储对象
+        /// </summary>
+		public ICarryOutExaminationRepository CarryOutExaminationRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _CarryOutExaminationRepository==null)
+					{
+						_CarryOutExaminationRepository=new CarryOutExaminationRepository(Db);
+						_CarryOutExaminationRepository.RepositoryProvider = this;
+					}
+					return _CarryOutExaminationRepository;
 				}
 			}
 		} 
@@ -1739,6 +1777,44 @@ namespace BugsBox.Pharmacy.Repository
 				}
 			}
 		} 
+		private IReCallCaseRepository _ReCallCaseRepository=null;
+	    /// <summary> 
+		/// (ReCallCase) 仓储对象
+        /// </summary>
+		public IReCallCaseRepository ReCallCaseRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _ReCallCaseRepository==null)
+					{
+						_ReCallCaseRepository=new ReCallCaseRepository(Db);
+						_ReCallCaseRepository.RepositoryProvider = this;
+					}
+					return _ReCallCaseRepository;
+				}
+			}
+		} 
+		private IReCallEventRepository _ReCallEventRepository=null;
+	    /// <summary> 
+		/// (ReCallEvent) 仓储对象
+        /// </summary>
+		public IReCallEventRepository ReCallEventRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _ReCallEventRepository==null)
+					{
+						_ReCallEventRepository=new ReCallEventRepository(Db);
+						_ReCallEventRepository.RepositoryProvider = this;
+					}
+					return _ReCallEventRepository;
+				}
+			}
+		} 
 		private IRetailMemberRepository _RetailMemberRepository=null;
 	    /// <summary> 
 		/// 零售会员(RetailMember) 仓储对象
@@ -2298,6 +2374,10 @@ namespace BugsBox.Pharmacy.Repository
 			{
 				_AdverseDrugEventRepository.Dispose();
 			}  
+			if( _AfterSaleRecordRepository!=null)
+			{
+				_AfterSaleRecordRepository.Dispose();
+			}  
 			if( _ApprovalFlowRepository!=null)
 			{
 				_ApprovalFlowRepository.Dispose();
@@ -2333,6 +2413,10 @@ namespace BugsBox.Pharmacy.Repository
 			if( _BusinessTypeManageCategoryDetailRepository!=null)
 			{
 				_BusinessTypeManageCategoryDetailRepository.Dispose();
+			}  
+			if( _CarryOutExaminationRepository!=null)
+			{
+				_CarryOutExaminationRepository.Dispose();
 			}  
 			if( _DirectSalesOrderRepository!=null)
 			{
@@ -2653,6 +2737,14 @@ namespace BugsBox.Pharmacy.Repository
 			if( _RarewordRepository!=null)
 			{
 				_RarewordRepository.Dispose();
+			}  
+			if( _ReCallCaseRepository!=null)
+			{
+				_ReCallCaseRepository.Dispose();
+			}  
+			if( _ReCallEventRepository!=null)
+			{
+				_ReCallEventRepository.Dispose();
 			}  
 			if( _RetailMemberRepository!=null)
 			{

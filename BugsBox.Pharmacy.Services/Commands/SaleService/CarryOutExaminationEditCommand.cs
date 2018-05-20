@@ -12,20 +12,21 @@ namespace BugsBox.Pharmacy.Commands.SaleService
     [DataContract(Namespace = "http://www.dqinfo.net/2017/dqinfo")]
     public class CarryOutExaminationEditCommand : Command
     {
-
+        [DataMember]
         public CarryOutExamination Record { get; set; }
         public override object Execute()
         {
             using (var db = new Db())
             {
-                if (Record.Id == Guid.Empty)
+                var originItem = db.CarryOutExaminations.FirstOrDefault(o => o.Id == Record.Id);
+                if (originItem == null)
                 {
                     Record.CreateTime = DateTime.Now;
+                    Record.UpdateTime = DateTime.Now;
                     db.CarryOutExaminations.Add(Record);
                 }
                 else
                 {
-                    var originItem = db.CarryOutExaminations.FirstOrDefault(o => o.Id == Record.Id);
                     originItem.DateYear = Record.DateYear;
                     originItem.ExaminedDepartMent = Record.ExaminedDepartMent;
                     originItem.Verifier = Record.Verifier;

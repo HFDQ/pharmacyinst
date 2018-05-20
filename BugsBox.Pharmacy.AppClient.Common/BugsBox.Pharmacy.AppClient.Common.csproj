@@ -115,6 +115,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="PharmacyDatabaseService.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PharmacyDatabaseService.cs</LastGenOutput>

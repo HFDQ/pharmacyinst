@@ -62,6 +62,8 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 配送方式
         /// </summary>
+        /// 
+        [NotMapped]
         public DeliveryMethod DeliveryMethod
         {
             get { return (DeliveryMethod)this.DeliveryMethodValue; }
@@ -75,6 +77,8 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 运输方式
         /// </summary>
+        /// 
+        [NotMapped]
         public TransportMethod TransportMethod
         {
             get { return (TransportMethod)this.TransportMethodValue; }
@@ -115,6 +119,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 配送状态
         /// </summary>
+        [NotMapped]
         public DeliveryStatus DeliveryStatus 
         {
             get { return (DeliveryStatus)this.DeliveryStatusValue; } 

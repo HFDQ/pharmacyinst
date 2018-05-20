@@ -23,7 +23,7 @@ namespace BugsBox.Pharmacy.Commands.SaleService
         {
             using (var db = new Db())
             {
-
+                EndDate = EndDate.AddDays(1);
                 //处理排序
                 var query = db.AfterSaleRecords.Where(o => o.ServiceDate >= BeginDate && o.ServiceDate <= EndDate);//过滤一下 
 
@@ -33,7 +33,7 @@ namespace BugsBox.Pharmacy.Commands.SaleService
                 var records = query
                      .Skip((Pager.Index - 1) * Pager.Size)
                      .Take(Pager.Size)
-                     .ToList();
+                     .ToArray();
                 return records;
             }
 

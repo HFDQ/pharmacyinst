@@ -26,6 +26,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SaleService
         }
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.bindingSource1.EndEdit();
 
             if (record.CreateUserId == Guid.Empty)
             {

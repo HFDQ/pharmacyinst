@@ -26,10 +26,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SaleService
 
         private void LoadData()
         {
-            dgvMain.AutoGenerateColumns = false;
+        
             AfterSaleRecordListCommand cmd = new AfterSaleRecordListCommand();
 
-            cmd.BeginDate = dateTimePicker2.Value;
+            cmd.BeginDate = dateTimePicker1.Value;
             cmd.EndDate = dateTimePicker2.Value;
 
             cmd.Pager = new Application.Core.PagerInfo
@@ -41,6 +41,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SaleService
             var result = cmd.Execute() as AfterSaleRecord[];
 
             dgvMain.DataSource = result;
+            this.dgvMain.Columns["Id"].Visible = false;
+            this.dgvMain.Columns["CreateTime"].Visible = false;
+            this.dgvMain.Columns["CreateUserId"].Visible = false;
+            this.dgvMain.Columns["UpdateUserId"].Visible = false;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

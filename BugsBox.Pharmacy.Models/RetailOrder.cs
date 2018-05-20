@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -17,7 +18,7 @@ namespace BugsBox.Pharmacy.Models
     /// 4.金额总计=(零售单明细金额+零售单明细金额1+...)
     /// </summary>
     [DataContract(IsReference = true)]
-    public class RetailOrder : Entity, ILEntity,IStore
+    public class RetailOrder : Entity, ILEntity, IStore
     {
         #region Entiy Property
 
@@ -112,7 +113,7 @@ namespace BugsBox.Pharmacy.Models
         [DataMember]
         public decimal RealPayMoney { get; set; }
 
-        
+
         /// <summary>
         /// 付款方式值
         /// </summary>
@@ -122,6 +123,9 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 付款方式
         /// </summary>
+        /// 
+
+        [NotMapped]
         public RetailCustomerType RetailCustomerType
         {
             get { return (RetailCustomerType)RetailCustomerTypeValue; }
@@ -137,6 +141,8 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 付款方式
         /// </summary>
+        /// 
+        [NotMapped]
         public RetailPaymentMethod RetailPaymentMethod
         {
             get { return (RetailPaymentMethod)RetailPaymentMethodValue; }

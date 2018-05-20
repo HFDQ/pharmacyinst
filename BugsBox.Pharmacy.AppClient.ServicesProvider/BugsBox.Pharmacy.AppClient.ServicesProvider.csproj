@@ -76,6 +76,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="BugsBox.Application.Core.PagerInfo.datasource" />
     <None Include="BugsBox.Pharmacy.Business.Models.ApprovalDetailsModel.datasource" />
     <None Include="BugsBox.Pharmacy.Business.Models.BusinessPersonModel.datasource" />

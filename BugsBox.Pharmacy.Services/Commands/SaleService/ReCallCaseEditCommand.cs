@@ -12,19 +12,23 @@ namespace BugsBox.Pharmacy.Commands.SaleService
     [DataContract(Namespace = "http://www.dqinfo.net/2017/dqinfo")]
     public class ReCallCaseEditCommand : Command
     {
+        [DataMember]
         public ReCallCase Record { get; set; }
         public override object Execute()
         {
             using (var db = new Db())
             {
-                if (Record.Id == Guid.Empty)
+                var originItem = db.ReCallCases.FirstOrDefault(o => o.Id == Record.Id);
+                if (originItem == null)
                 {
                     Record.CreateTime = DateTime.Now;
+                    Record.UpdateTime = DateTime.Now;
+
                     db.ReCallCases.Add(Record);
                 }
                 else
                 {
-                    var originItem = db.ReCallCases.FirstOrDefault(o => o.Id == Record.Id);
+
                     originItem.DrugName = Record.DrugName;
                     originItem.LisenceNum = Record.LisenceNum;
                     originItem.Manufacturing = Record.Manufacturing;

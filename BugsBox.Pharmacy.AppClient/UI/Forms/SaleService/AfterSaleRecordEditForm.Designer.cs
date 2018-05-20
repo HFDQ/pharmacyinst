@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -71,9 +72,8 @@
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -92,6 +92,10 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 21);
             this.textBox2.TabIndex = 10;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(BugsBox.Pharmacy.Models.AfterSaleRecord);
             // 
             // textBox1
             // 
@@ -392,6 +396,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "ArrivalDate", true));
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "ArrivalDate", true));
             this.dateTimePicker1.Location = new System.Drawing.Point(128, 213);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(170, 21);
@@ -400,6 +405,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "GetFeedBackDate", true));
+            this.dateTimePicker2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "GetFeedBackDate", true));
             this.dateTimePicker2.Location = new System.Drawing.Point(128, 141);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(170, 21);
@@ -408,6 +414,7 @@
             // dateTimePicker3
             // 
             this.dateTimePicker3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "HandleCompleteDate", true));
+            this.dateTimePicker3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "HandleCompleteDate", true));
             this.dateTimePicker3.Location = new System.Drawing.Point(128, 291);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(170, 21);
@@ -416,6 +423,7 @@
             // dateTimePicker4
             // 
             this.dateTimePicker4.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "ReturnVisitDate", true));
+            this.dateTimePicker4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "ReturnVisitDate", true));
             this.dateTimePicker4.Location = new System.Drawing.Point(374, 473);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(170, 21);
@@ -424,6 +432,7 @@
             // dateTimePicker5
             // 
             this.dateTimePicker5.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "CustomerConfirmDate", true));
+            this.dateTimePicker5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "CustomerConfirmDate", true));
             this.dateTimePicker5.Location = new System.Drawing.Point(301, 444);
             this.dateTimePicker5.Name = "dateTimePicker5";
             this.dateTimePicker5.Size = new System.Drawing.Size(170, 21);
@@ -432,14 +441,11 @@
             // dateTimePicker6
             // 
             this.dateTimePicker6.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "ServiceDate", true));
+            this.dateTimePicker6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "ServiceDate", true));
             this.dateTimePicker6.Location = new System.Drawing.Point(128, 92);
             this.dateTimePicker6.Name = "dateTimePicker6";
             this.dateTimePicker6.Size = new System.Drawing.Size(170, 21);
             this.dateTimePicker6.TabIndex = 54;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(BugsBox.Pharmacy.Models.AfterSaleRecord);
             // 
             // AfterSaleRecordEditForm
             // 
@@ -490,9 +496,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AfterSaleRecordEditForm";
             this.Text = "售后服务记录编辑";
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

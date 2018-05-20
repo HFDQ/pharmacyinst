@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -95,7 +96,7 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public int PurchaseReturnSourceValue { get; set; }
-
+        [NotMapped]
         /// <summary>
         /// 采购退货来源
         /// </summary>
@@ -127,6 +128,7 @@ namespace BugsBox.Pharmacy.Models
         /// 退货处理方式
         /// </summary>
         [DataMember]
+        [NotMapped]
         public ReturnHandledMethod ReturnHandledMethod
         {
             get

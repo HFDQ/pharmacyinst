@@ -26,10 +26,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SaleService
 
         private void LoadData()
         {
-            dgvMain.AutoGenerateColumns = false;
+      
             ReCallCaseListCommand cmd = new ReCallCaseListCommand();
 
-            cmd.BeginDate = dateTimePicker2.Value;
+            cmd.BeginDate = dateTimePicker1.Value;
             cmd.EndDate = dateTimePicker2.Value;
 
             cmd.Pager = new Application.Core.PagerInfo

@@ -19,14 +19,17 @@ namespace BugsBox.Pharmacy.Commands.SaleService
         {
             using (var db = new Db())
             {
-                if (Record.Id == Guid.Empty)
+
+                var originItem = db.AfterSaleRecords.FirstOrDefault(o => o.Id == Record.Id);
+
+                if (originItem == null)
                 {
                     Record.CreateTime = DateTime.Now;
+                    Record.UpdateTime = DateTime.Now;
                     db.AfterSaleRecords.Add(Record);
                 }
                 else
                 {
-                    var originItem = db.AfterSaleRecords.FirstOrDefault(o => o.Id == Record.Id);
                     originItem.Customer = Record.Customer;
                     originItem.ServiceStuff = Record.ServiceStuff;
                     originItem.DrugName = Record.DrugName;

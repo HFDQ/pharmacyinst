@@ -141,6 +141,8 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 出库类型
         /// </summary>
+        /// 
+        [NotMapped]
         public OutInventoryType OutInventoryType
         {
             get { return (OutInventoryType)OutInventoryTypeValue; }
@@ -156,6 +158,9 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 出库状态
         /// </summary>
+        /// 
+
+            [NotMapped]
         public OutInventoryStatus OutInventoryStatus
         {
             get { return (OutInventoryStatus)OutInventoryStatusValue; }

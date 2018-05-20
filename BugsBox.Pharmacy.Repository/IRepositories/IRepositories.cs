@@ -28,6 +28,14 @@ namespace BugsBox.Pharmacy.Repository
 	}
     
 	/// <summary>
+    /// 仓储接口
+    /// </summary>
+    public partial interface IAfterSaleRecordRepository : IRepository<AfterSaleRecord> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
+    
+	/// <summary>
     /// 审批结点仓储接口
     /// </summary>
     public partial interface IApprovalFlowRepository : IRepository<ApprovalFlow> 
@@ -95,6 +103,14 @@ namespace BugsBox.Pharmacy.Repository
     /// 经营方式的管理要求分类详细仓储接口
     /// </summary>
     public partial interface IBusinessTypeManageCategoryDetailRepository : IRepository<BusinessTypeManageCategoryDetail> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
+    
+	/// <summary>
+    /// 仓储接口
+    /// </summary>
+    public partial interface ICarryOutExaminationRepository : IRepository<CarryOutExamination> 
     { 
 		 RepositoryProvider RepositoryProvider { get; set; }
 	}
@@ -735,6 +751,22 @@ namespace BugsBox.Pharmacy.Repository
     /// 不常用字(生僻字)仓储接口
     /// </summary>
     public partial interface IRarewordRepository : IRepository<Rareword> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
+    
+	/// <summary>
+    /// 仓储接口
+    /// </summary>
+    public partial interface IReCallCaseRepository : IRepository<ReCallCase> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
+    
+	/// <summary>
+    /// 仓储接口
+    /// </summary>
+    public partial interface IReCallEventRepository : IRepository<ReCallEvent> 
     { 
 		 RepositoryProvider RepositoryProvider { get; set; }
 	}
