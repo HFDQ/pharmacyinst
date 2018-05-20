@@ -21,12 +21,33 @@ namespace BugsBox.Pharmacy.Commands.SaleService
             {
                 if (Record.Id == Guid.Empty)
                 {
+                    Record.CreateTime = DateTime.Now;
                     db.AfterSaleRecords.Add(Record);
                 }
                 else
                 {
                     var originItem = db.AfterSaleRecords.FirstOrDefault(o => o.Id == Record.Id);
-
+                    originItem.Customer = Record.Customer;
+                    originItem.ServiceStuff = Record.ServiceStuff;
+                    originItem.DrugName = Record.DrugName;
+                    originItem.DrugModel = Record.DrugModel;
+                    originItem.ServiceDate = Record.ServiceDate;
+                    originItem.ServiceAddress = Record.ServiceAddress;
+                    originItem.ContactPhone = Record.ContactPhone;
+                    originItem.GetFeedBackDate = Record.GetFeedBackDate;
+                    originItem.FeedBack = Record.FeedBack;
+                    originItem.ArrivalDate = Record.ArrivalDate;
+                    originItem.SceneInfo = Record.SceneInfo;
+                    originItem.ScenehandleInfo = Record.ScenehandleInfo;
+                    originItem.HandleCompleteDate = Record.HandleCompleteDate;
+                    originItem.Evaluation = Record.Evaluation;
+                    originItem.CustomerConfirm = Record.CustomerConfirm;
+                    originItem.CustomerConfirmDate = Record.CustomerConfirmDate;
+                    originItem.CustomerConfirmPhone = Record.CustomerConfirmPhone;
+                    originItem.ReturnVisitDate = Record.ReturnVisitDate;
+                    originItem.ReturnVisitor = Record.ReturnVisitor;
+                    originItem.UpdateTime = DateTime.Now;
+                    originItem.UpdateUserId = Record.UpdateUserId;
                 }
                 return db.SaveChanges();
             }

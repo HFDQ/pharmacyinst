@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BugsBox.Pharmacy.Models
 {
-    public class ReCallCase: Entity, ILEntity
+    public class ReCallCase : Entity, ILEntity
     {
         /// <summary>
         /// 产品名称
@@ -41,7 +41,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 承担召回责任的收货人  通知时间
         /// </summary>
-        public string DutyReceiverNotificationDate { get; set; }
+        public DateTime DutyReceiverNotificationDate { get; set; }
         /// <summary>
         /// 承担召回责任的收货人  通知方式
         /// </summary>
@@ -59,7 +59,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 其他收货人  通知时间
         /// </summary>
-        public string OtherReceiverNotificationDate { get; set; }
+        public DateTime OtherReceiverNotificationDate { get; set; }
         /// <summary>
         /// 其他收货人  通知方式
         /// </summary>

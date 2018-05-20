@@ -90,7 +90,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 报告日期
         /// </summary>
-        public string ReportDate { get; set; }
+        public DateTime ReportDate { get; set; }
 
         public DateTime CreateTime { get; set; }
         public Guid CreateUserId { get; set; }

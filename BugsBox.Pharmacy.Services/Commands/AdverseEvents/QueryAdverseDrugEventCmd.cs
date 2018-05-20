@@ -20,9 +20,15 @@ namespace BugsBox.Pharmacy.Services
 
         [DataMember]
         public string Keyword { get; set; }
+
+        [DataMember]
+        public DateTime BeginDate { get; set; }
+        [DataMember]
+        public DateTime EndDate { get; set; }
+
         public override object Execute()
         {
-            return base.HandlerFactory.AdverseDrugEventBusinessHandler.QueryAdverseDrugEventsByKeyWords((o) => o.EventTitle.Contains(Keyword), Pager).ToArray();
+            return base.HandlerFactory.AdverseDrugEventBusinessHandler.QueryAdverseDrugEventsByKeyWords((o) => o.EventTitle.Contains(Keyword) && o.CreateTime >= BeginDate && o.CreateTime <= EndDate, Pager).ToArray();
         }
     }
 }

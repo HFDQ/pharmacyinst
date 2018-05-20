@@ -24,7 +24,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 考核时间
         /// </summary>
-        public string VerifierDate { get; set; }
+        public DateTime VerifierDate { get; set; }
 
 
         /// <summary>

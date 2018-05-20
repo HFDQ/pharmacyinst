@@ -181,5 +181,11 @@
       <Menu id="110101" Title="不良事件登记" Hotkeys="" Name="UI.Forms.AdverseEvents.AddAdverseEvent" Image="" Params="" DockState="" ModuleKey="不良事件登记[窗体]"></Menu>
       <Menu id="110102" Title="不良事件查询" Hotkeys="" Name="UI.Forms.AdverseEvents.QueryAdverseEvent" Image="" Params="" DockState="" ModuleKey="不良事件查询[窗体]"></Menu>
     </Menu>
+    <Menu id="12" Title="售后服务" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="130101" Title="召回计划实施情况" Hotkeys="" Name="UI.Forms.SaleService.ReCallEventListForm" Image="" Params="" DockState="" ModuleKey="召回计划实施情况[窗体]"></Menu>
+      <Menu id="140102" Title="事件召回报告表" Hotkeys="" Name="UI.Forms.SaleService.ReCallCaseListForm" Image="" Params="" DockState="" ModuleKey="事件召回报告表[窗体]"></Menu>
+      <Menu id="140102" Title="制度实施考核检查记录" Hotkeys="" Name="UI.Forms.SaleService.CarryOutExaminationListForm" Image="" Params="" DockState="" ModuleKey="制度实施考核检查记录[窗体]"></Menu>
+      <Menu id="140102" Title="售后服务记录" Hotkeys="" Name="UI.Forms.SaleService.AfterSaleRecordListForm" Image="" Params="" DockState="" ModuleKey="售后服务记录[窗体]"></Menu>
+    </Menu>
   </Menu>
 </MenusGroup>

@@ -142,6 +142,7 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
@@ -326,6 +327,8 @@
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.QualityFilesWarningModel.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.AfterSaleRecord.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.CarryOutExamination.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.DocumentRefuse.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.DrugInfo.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.DrugsUndeterminate.datasource" />
@@ -333,6 +336,8 @@
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.GMPLicense.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.GSPLicense.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.OutInventoryDetail.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.ReCallCase.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.ReCallEvent.datasource" />
     <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.SalesOrderDetail.datasource" />
     <None Include="Properties\DataSources\InstCategoryIdx.ImptClass.datasource" />
     <None Include="Properties\DataSources\InstCategoryIdx.NewCategory.datasource" />

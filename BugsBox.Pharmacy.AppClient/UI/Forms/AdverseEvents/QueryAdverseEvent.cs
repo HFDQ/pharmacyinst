@@ -36,7 +36,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.AdverseEvents
         {
             dgvMain.AutoGenerateColumns = false;
             QueryAdverseDrugEventCmd cmd = new QueryAdverseDrugEventCmd();
-            cmd.Keyword = "";
+            cmd.Keyword = textBox1.Text;
+            cmd.BeginDate = dtFrom.Value;
+            cmd.EndDate = dtTo.Value;
+
             cmd.Pager = new Application.Core.PagerInfo
             {
                 Index = pcMain.PageIndex,

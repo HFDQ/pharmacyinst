@@ -11,6 +11,12 @@ namespace BugsBox.Pharmacy.Commands.SaleService
     [DataContract(Namespace = "http://www.dqinfo.net/2017/dqinfo")]
     public class ReCallCaseListCommand : ServerCommand
     {
-       
+        [DataMember]
+        public PagerInfo Pager { get; set; }
+
+        [DataMember]
+        public DateTime BeginDate { get; set; }
+        [DataMember]
+        public DateTime EndDate { get; set; }
     }
 }

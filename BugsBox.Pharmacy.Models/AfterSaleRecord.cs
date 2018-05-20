@@ -29,7 +29,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 服务时间
         /// </summary>
-        public string ServiceDate { get; set; }
+        public DateTime ServiceDate { get; set; }
         /// <summary>
         /// 服务地址
         /// </summary>

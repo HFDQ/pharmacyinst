@@ -17,5 +17,11 @@ namespace BugsBox.Pharmacy.AppClient.Common.Commands
         [DataMember]
         public string Keyword { get; set; }
 
+        [DataMember]
+        public DateTime BeginDate { get; set; }
+        [DataMember]
+        public DateTime EndDate { get; set; }
+
+
     }
 }
