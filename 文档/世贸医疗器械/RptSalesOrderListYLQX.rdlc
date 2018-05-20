@@ -90,7 +90,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>9.21325in</Width>
+              <Width>9.19099in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -111,7 +111,7 @@
                                 <Width>0.88712in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.82005in</Width>
+                                <Width>0.69656in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.32067in</Width>
@@ -123,25 +123,28 @@
                                 <Width>0.35747in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.59376in</Width>
+                                <Width>0.5053in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.59418in</Width>
+                                <Width>0.38783in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.6205in</Width>
+                                <Width>0.4955in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.65412in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.26082in</Width>
+                                <Width>1.21545in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.84148in</Width>
+                                <Width>0.8373in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.34356in</Width>
+                                <Width>1.39312in</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>0.58694in</Width>
                               </TablixColumn>
                             </TablixColumns>
                             <TablixRows>
@@ -538,6 +541,36 @@
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox4</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox11">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>质量状况</Value>
+                                                <Style>
+                                                  <FontFamily>宋体</FontFamily>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox11</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -964,6 +997,37 @@
                                       </Textbox>
                                     </CellContents>
                                   </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox15">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>合格</Value>
+                                                <Style>
+                                                  <FontFamily>宋体</FontFamily>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox15</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
                                 </TablixCells>
                               </TablixRow>
                               <TablixRow>
@@ -1196,12 +1260,47 @@
                                       </Textbox>
                                     </CellContents>
                                   </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox16">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value />
+                                                <Style>
+                                                  <FontFamily>宋体</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Left</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox16</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
                                 </TablixCells>
                               </TablixRow>
                             </TablixRows>
                           </TablixBody>
                           <TablixColumnHierarchy>
                             <TablixMembers>
+                              <TablixMember />
                               <TablixMember />
                               <TablixMember />
                               <TablixMember />
@@ -1235,8 +1334,8 @@
                           </TablixRowHierarchy>
                           <DataSetName>DsSalesOrder_table</DataSetName>
                           <Left>0.26915cm</Left>
-                          <Height>2.09416cm</Height>
-                          <Width>22.96512cm</Width>
+                          <Height>2.09415cm</Height>
+                          <Width>23.07597cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1278,8 +1377,8 @@
         </TablixRowHierarchy>
         <DataSetName>DsSalesOrder_table</DataSetName>
         <Left>0.7585cm</Left>
-        <Height>2.22645cm</Height>
-        <Width>23.40166cm</Width>
+        <Height>2.22646cm</Height>
+        <Width>23.34512cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1287,7 +1386,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.22645cm</Height>
+    <Height>2.22646cm</Height>
     <Style />
   </Body>
   <ReportParameters>
@@ -1414,7 +1513,7 @@
    CNMoney= resultStr
   End If 
 End Function</Code>
-  <Width>24.16017cm</Width>
+  <Width>24.37195cm</Width>
   <Page>
     <PageHeader>
       <Height>1.69431cm</Height>
@@ -1855,7 +1954,7 @@ End Function</Code>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>备案凭证号：</Value>
+                  <Value>证书号：</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>宋体</FontFamily>
@@ -1941,7 +2040,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
-          <Top>0.34369cm</Top>
+          <Top>0.34368cm</Top>
           <Left>1.02765cm</Left>
           <Height>0.57991cm</Height>
           <Width>14.21263cm</Width>
@@ -1988,6 +2087,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
+          <Top>-0.00001cm</Top>
           <Left>14.09747cm</Left>
           <Height>0.6cm</Height>
           <Width>4.55135cm</Width>
@@ -2037,7 +2137,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
-          <Top>0.28832cm</Top>
+          <Top>0.28831cm</Top>
           <Left>11.73896cm</Left>
           <Height>0.6cm</Height>
           <Width>11.72966cm</Width>
@@ -2085,6 +2185,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
+          <Top>-0.00001cm</Top>
           <Left>1.0102cm</Left>
           <Height>0.6cm</Height>
           <Width>3.94924cm</Width>
@@ -2132,6 +2233,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
+          <Top>-0.00001cm</Top>
           <Left>10.33939cm</Left>
           <Height>0.6cm</Height>
           <Width>4.25197cm</Width>
@@ -2179,6 +2281,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
+          <Top>-0.00001cm</Top>
           <Left>4.99472cm</Left>
           <Height>0.6cm</Height>
           <Width>5.27411cm</Width>
@@ -2216,6 +2319,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
+          <Top>-0.00001cm</Top>
           <Left>17.55521cm</Left>
           <Height>0.6cm</Height>
           <Width>4.72917cm</Width>
@@ -2251,6 +2355,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
+          <Top>-0.00001cm</Top>
           <Left>21.35905cm</Left>
           <Height>0.6cm</Height>
           <Width>2.42707cm</Width>

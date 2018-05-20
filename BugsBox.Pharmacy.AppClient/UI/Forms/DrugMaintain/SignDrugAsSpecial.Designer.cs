@@ -114,7 +114,8 @@
             // toolStripComboBox1
             // 
             this.toolStripComboBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripComboBox1.Items.AddRange(new object[] { "医疗器械" });
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "医疗器械"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 31);
@@ -238,7 +239,7 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "permitionCode";
-            this.Column2.HeaderText = "批准文号";
+            this.Column2.HeaderText = "备案凭证号";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -326,7 +327,7 @@
             this.ClientSize = new System.Drawing.Size(1072, 424);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignDrugAsSpecial";
             this.Text = "近效期医疗器械列表";
             this.Load += new System.EventHandler(this.SignDrugAsSpecial_Load);

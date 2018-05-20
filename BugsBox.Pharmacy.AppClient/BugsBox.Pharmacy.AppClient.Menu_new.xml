@@ -91,7 +91,6 @@
         <Menu id="010408" Title="销退销售员审核" Name="UI.Forms.SalesBusiness.FormOrderReturnCenter" Params="Waitting" Image="1" DockState="" ModuleKey="销退销售员审核[窗体]"></Menu>
         <Menu id="010409" Title="销退营业部审核" Name="UI.Forms.SalesBusiness.FormOrderReturnCenter" Params="SellerApproved" Image="1" DockState="" ModuleKey="销退营业部审核[窗体]"></Menu>
         <Menu id="010410" Title="销退质管部审核" Name="UI.Forms.SalesBusiness.FormOrderReturnCenter" Params="TradeApproved" Image="1" DockState="" ModuleKey="销退质管部审核通过[窗体]"></Menu>
-
         <Menu id="06061201" Title="待处理医疗器械质管员复核" Hotkeys="" Name="UI.Forms.DrugsUndeterminte.DrugsUndeterminte" Image="" Params="0" DockState="" ModuleKey="待处理医疗器械质管员复核[窗体]"></Menu>
         <Menu id="06061202" Title="待处理医疗器械质管部复核结论" Hotkeys="" Name="UI.Forms.DrugsUndeterminte.DrugsUndeterminte" Image="" Params="1" DockState="" ModuleKey="待处理医疗器械质管部复核结论[窗体]"></Menu>
       </Menu>

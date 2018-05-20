@@ -63,6 +63,14 @@
     <Compile Include="Commands\AdverseEvents\QueryAdverseDrugEventCmd.cs" />
     <Compile Include="Commands\ProductKeyVerifyCmd.cs" />
     <Compile Include="Commands\QuerySalesOrderCmd.cs" />
+    <Compile Include="Commands\SaleService\AfterSaleRecordEditCommand.cs" />
+    <Compile Include="Commands\SaleService\AfterSaleRecordListCommand.cs" />
+    <Compile Include="Commands\SaleService\CarryOutExaminationEditCommand.cs" />
+    <Compile Include="Commands\SaleService\CarryOutExaminationListCommand.cs" />
+    <Compile Include="Commands\SaleService\ReCallCaseEditCommand.cs" />
+    <Compile Include="Commands\SaleService\ReCallCaseListCommand.cs" />
+    <Compile Include="Commands\SaleService\ReCallEventEditCommand.cs" />
+    <Compile Include="Commands\SaleService\ReCallEventListCommand.cs" />
     <Compile Include="Notification\PharmacyNotificationCallback.cs" />
     <Compile Include="PharmacyAuthorize.cs" />
     <Compile Include="PharmacyClientConfig.cs" />

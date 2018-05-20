@@ -215,6 +215,7 @@
     <None Include="ApprovalFiles\54C14EA2-7456-4A5B-BF39-C441F451C35B">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ApprovalFiles\54C14EA2-7456-4A5B-BF39-C441F451C35B111" />
     <None Include="ApprovalFiles\9047DBCF-CD15-4904-8786-006A76DD4799">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -287,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="applications.ico" />
+    <Content Include="ApprovalFiles\新建文本文档.txt" />
     <Content Include="logo.ico" />
     <EmbeddedResource Include="Resources\Icon\about.ico" />
     <EmbeddedResource Include="Resources\Icon\accept.ico" />

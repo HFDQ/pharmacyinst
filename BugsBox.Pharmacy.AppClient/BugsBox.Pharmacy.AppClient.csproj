@@ -1530,6 +1530,54 @@
     <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnCancelIndex.Designer.cs">
       <DependentUpon>FormOrderReturnCancelIndex.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Forms\SaleService\AfterSaleRecordEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\AfterSaleRecordEditForm.Designer.cs">
+      <DependentUpon>AfterSaleRecordEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\AfterSaleRecordListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\AfterSaleRecordListForm.Designer.cs">
+      <DependentUpon>AfterSaleRecordListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\CarryOutExaminationEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\CarryOutExaminationEditForm.Designer.cs">
+      <DependentUpon>CarryOutExaminationEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\CarryOutExaminationListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\CarryOutExaminationListForm.Designer.cs">
+      <DependentUpon>CarryOutExaminationListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\ReCallCaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\ReCallCaseEditForm.Designer.cs">
+      <DependentUpon>ReCallCaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\ReCallCaseListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\ReCallCaseListForm.Designer.cs">
+      <DependentUpon>ReCallCaseListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\ReCallEventEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\ReCallEventEditForm.Designer.cs">
+      <DependentUpon>ReCallEventEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\ReCallEventListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SaleService\ReCallEventListForm.Designer.cs">
+      <DependentUpon>ReCallEventListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\Storage\FormHisInventeryChecking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2483,6 +2531,30 @@
     <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOrderReturnCancelIndex.resx">
       <DependentUpon>FormOrderReturnCancelIndex.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SaleService\AfterSaleRecordEditForm.resx">
+      <DependentUpon>AfterSaleRecordEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SaleService\AfterSaleRecordListForm.resx">
+      <DependentUpon>AfterSaleRecordListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SaleService\CarryOutExaminationEditForm.resx">
+      <DependentUpon>CarryOutExaminationEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SaleService\CarryOutExaminationListForm.resx">
+      <DependentUpon>CarryOutExaminationListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SaleService\ReCallCaseEditForm.resx">
+      <DependentUpon>ReCallCaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SaleService\ReCallCaseListForm.resx">
+      <DependentUpon>ReCallCaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SaleService\ReCallEventEditForm.resx">
+      <DependentUpon>ReCallEventEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SaleService\ReCallEventListForm.resx">
+      <DependentUpon>ReCallEventListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\Storage\FormHisInventeryChecking.resx">
       <DependentUpon>FormHisInventeryChecking.cs</DependentUpon>
     </EmbeddedResource>
@@ -3359,6 +3431,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

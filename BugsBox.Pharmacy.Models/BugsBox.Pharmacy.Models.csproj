@@ -64,6 +64,7 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AdverseDrugEvent.cs" />
+    <Compile Include="AfterSaleRecord.cs" />
     <Compile Include="ApprovalFlow.cs" />
     <Compile Include="ApprovalFlowNode.cs" />
     <Compile Include="ApprovalFlowType.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="BusinessScopeCategory.cs" />
     <Compile Include="BusinessType.cs" />
     <Compile Include="BusinessTypeManageCategoryDetail.cs" />
+    <Compile Include="CarryOutExamination.cs" />
     <Compile Include="Config\PharmacyServiceConfig.cs" />
     <Compile Include="Config\ResourceStrings.cs" />
     <Compile Include="DirectSalesOrder.cs" />
@@ -152,6 +154,8 @@
     <Compile Include="PurchasingPlan.cs" />
     <Compile Include="PurchasingPlanDetail.cs" />
     <Compile Include="Rareword.cs" />
+    <Compile Include="ReCallCase.cs" />
+    <Compile Include="ReCallEvent.cs" />
     <Compile Include="RetailMember.cs" />
     <Compile Include="RetailOrder.cs" />
     <Compile Include="RetailOrderDetail.cs" />

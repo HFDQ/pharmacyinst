@@ -15,7 +15,7 @@ using BugsBox.Pharmacy.Config;
 namespace BugsBox.Pharmacy.BusinessHandlers
 {
     public abstract class BaseBusinessHandler<T> : Service<T>
-         where T : Entity,new()
+         where T : Entity, new()
     {
         // ReSharper disable StaticFieldInGenericType
         /// <summary>
@@ -63,7 +63,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         static BaseBusinessHandler()
         {
             CurrentStore = PharmacyServiceConfig.Config.CurrentStore;
-            CurrentSystemType = CurrentStore.StoreType; 
+            CurrentSystemType = CurrentStore.StoreType;
         }
 
         /// <summary>
@@ -81,20 +81,20 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 RepositoryProvider = repositoryProvider;
                 ConnectedInfoProvider = connectedInfoProvider;
                 repository.Queryable = this.IncludeNavigationProperties(repository.Queryable);
-               // LoggerHelper.Instance.Warning(string.Format("成功创建[{0}]BusinessHandler", EntityName));
+                // LoggerHelper.Instance.Warning(string.Format("成功创建[{0}]BusinessHandler", EntityName));
             }
             catch (Exception ex)
-            {              
+            {
                 this.HandleException(string.Format("创建[{0}]BusinessHandler出错", EntityName), ex);
             }
-           
-        } 
+
+        }
 
         /// <summary>
         /// 当前系统的门店信息
         /// 系统初始化的
         /// </summary>
-        public static Store CurrentStore { get; private set; } 
+        public static Store CurrentStore { get; private set; }
 
         /// <summary>
         /// 系统类型
@@ -105,7 +105,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         /// <summary>
         /// 客户端连接信息
         /// </summary>
-        public IConnectedInfoProvider ConnectedInfoProvider { get;protected set; }
+        public IConnectedInfoProvider ConnectedInfoProvider { get; protected set; }
 
         /// <summary>
         /// 连接进总店服务端的分店服务端的分店信息提供者
@@ -119,15 +119,15 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 if (ConnectedInfoProvider != null) return ConnectedInfoProvider.Store;
                 return null;
             }
-        } 
- 
+        }
+
 
         /// <summary>
         /// 从客户端登录进来的用户信息
         /// 根据Session ID获取的
         /// 用于客户端连接服务端
         /// </summary>
-        public  User ConnectedUser
+        public User ConnectedUser
         {
             get
             {
@@ -176,7 +176,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     var propertyInfos = typeof(T).GetProperties().Where(t => t.PropertyType == typeof(DateTime));
                     foreach (var propertyInfo in propertyInfos)
                     {
-                        var obj = propertyInfo.GetValue(value,null);
+                        var obj = propertyInfo.GetValue(value, null);
                         bool needTime = false;
                         if (obj != null)
                         {
@@ -188,7 +188,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                             propertyInfo.SetValue(value, DateTime.Now, null);
                             log.Warning(string.Format("FixTime:{0}.{1}", typeof(T).FullName, propertyInfo.Name));
                         }
-                    } 
+                    }
                     //FixTime
                     base.Save(value);
                     //if (!(value is UserLog))
@@ -199,12 +199,12 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     //    });
                     //} 
                 }
-            }            
+            }
             catch (Exception ex)
-            { 
+            {
                 this.HandleException(string.Format("保存实体{0}不提交出错", EntityName), ex);
             }
-           
+
         }
 
         /// <summary>
@@ -265,13 +265,13 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     Log.Warning(msg);
                     return false;
                 }
-            } 
+            }
             catch (Exception ex)
             {
-                msg=string.Format("保存实体{0}并提交出错", EntityName);
+                msg = string.Format("保存实体{0}并提交出错", EntityName);
                 return this.HandleException<bool>(msg, ex);
             }
-           
+
         }
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             {
                 this.HandleException(string.Format("添加实体{0}不提交出错", EntityName), ex);
             }
-            
+
         }
 
         /// <summary>
@@ -402,7 +402,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 msg = string.Format("添加实体{0}并提交出错", EntityName);
                 return this.HandleException<bool>(msg, ex);
             }
-          
+
         }
 
         /// <summary>
@@ -477,7 +477,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 msg = string.Format("删除实体{0}并提交出错", EntityName);
                 return this.HandleException<bool>(msg, ex);
             }
-           
+
         }
 
         /// <summary>
@@ -515,7 +515,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             {
                 return this.HandleException<Expression<Func<T, bool>>>(string.Format("准备实体{0}查询表达式", EntityName), ex);
             }
-           
+
         }
 
         /// <summary>
@@ -552,7 +552,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             {
                 return this.HandleException<T>(string.Format("为添加实体{0}做准备", EntityName), ex);
             }
-           
+
         }
 
         /// <summary>
@@ -569,19 +569,19 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         {
             try
             {
-               // LoggerHelper.Instance.Warning(string.Format("开始销毁[{0}]BusinessHandler", EntityName));
+                // LoggerHelper.Instance.Warning(string.Format("开始销毁[{0}]BusinessHandler", EntityName));
                 //if (BusinessHandlerFactory!=null) BusinessHandlerFactory.Dispose();
-               // LoggerHelper.Instance.Warning(string.Format("成功销毁[{0}]BusinessHandler", EntityName));
+                // LoggerHelper.Instance.Warning(string.Format("成功销毁[{0}]BusinessHandler", EntityName));
                 //if (BusinessHandlerFactory != null) BusinessHandlerFactory.Dispose();
             }
             catch (Exception ex)
-            { 
-               this.HandleException(string.Format("销毁[{0}]BusinessHandler出错", EntityName), ex);
+            {
+                this.HandleException(string.Format("销毁[{0}]BusinessHandler出错", EntityName), ex);
             }
-          
+
         }
 
-    } 
+    }
 
     /// <summary>
     /// 连接进总店服务端的分店服务端的分店信息提供者
@@ -619,7 +619,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
     public interface IConnectedInfoProvider : IConnectedUserProvider, IConnectedStoreProvider
     {
-        
+
     }
 
     public abstract class BaseBusinessHandler
