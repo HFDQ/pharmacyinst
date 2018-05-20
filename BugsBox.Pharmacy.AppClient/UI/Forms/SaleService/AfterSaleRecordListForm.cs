@@ -56,12 +56,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SaleService
 
         private void dgvMain_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Guid g = Guid.Parse(dgvMain.Rows[e.RowIndex].Cells["Id"].Value.ToString());
-            var source = dgvMain.DataSource as AfterSaleRecord[];
-
-            var eventItem = source.FirstOrDefault(o => o.Id == g);
-
-            EditForm(eventItem);
+       
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -75,6 +70,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SaleService
             var sk = new AfterSaleRecordEditForm(eventItem);
             sk.StartPosition = FormStartPosition.CenterParent;
             sk.ShowDialog();
+        }
+
+        private void dgvMain_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Guid g = Guid.Parse(dgvMain.Rows[e.RowIndex].Cells["Id"].Value.ToString());
+            var source = dgvMain.DataSource as AfterSaleRecord[];
+
+            var eventItem = source.FirstOrDefault(o => o.Id == g);
+
+            EditForm(eventItem);
         }
     }
 }

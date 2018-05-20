@@ -39,6 +39,18 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SaleService
             command.Execute();
             MessageBox.Show("保存成功");
 
+            this.Close();
+        }
+
+
+
+        private void 图片ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Forms.BaseDataManage.Form_Photo frm = new Forms.BaseDataManage.Form_Photo(16, record.Id))
+            {
+                frm.ShowDialog();
+
+            }
         }
     }
 }
