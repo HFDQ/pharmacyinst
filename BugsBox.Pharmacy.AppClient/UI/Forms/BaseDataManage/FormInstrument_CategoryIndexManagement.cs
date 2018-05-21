@@ -40,15 +40,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
             codeList1.Add(new Tuple<int, string>(1, "I级管理"));
             codeList1.Add(new Tuple<int, string>(2, "II级管理"));
             codeList1.Add(new Tuple<int, string>(3, "III级管理"));
+            codeList1.Add(new Tuple<int, string>(4, "其他"));
             #endregion
             this.comboBox1.SelectedIndex = 0;
 
             #region 器械分类文件读入
-            if (!File.Exists("Category.data"))
+            if (!File.Exists("InstCategories.bin"))
             {
                 MessageBox.Show("医疗器械分类文件丢失，请联系管理员！"); return;
             }
-            this._instCategory = SearialiserHelper<InstCategoryIdx.NewInstCategory>.DeSerializeFileToObj("Category.data");
+            this._instCategory = SearialiserHelper<InstCategoryIdx.NewInstCategory>.DeSerializeFileToObj("InstCategories.bin");
             #endregion
 
 
@@ -97,7 +98,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
                         this._instCategory.ListCategory.Add(this.CurrentImptClass);
                     }
 
-                    SearialiserHelper<NewInstCategory>.SerializeObjToFile(this._instCategory, "Category.data");
+                    SearialiserHelper<NewInstCategory>.SerializeObjToFile(this._instCategory, "InstCategories.bin");
                     MessageBox.Show("保存成功！");
                     this.CurrentImptClass = new NewCategory
                     {
@@ -119,7 +120,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
             this.toolStripButton2.Click += (s, e) =>
                 {
                     if (this.treeView1.SelectedNode == null) return;
-                    if (((ImptClass)this.treeView1.SelectedNode.Tag) == null) return;
+                    if (((NewCategory)this.treeView1.SelectedNode.Tag) == null) return;
                     var re = MessageBox.Show("删除分类节点吗？", "提示", MessageBoxButtons.OKCancel);
                     if (re == System.Windows.Forms.DialogResult.Cancel) return;
                     var selectedImpt = (NewCategory)this.treeView1.SelectedNode.Tag;
