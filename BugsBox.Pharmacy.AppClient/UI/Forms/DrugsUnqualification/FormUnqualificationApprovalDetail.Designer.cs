@@ -60,7 +60,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormUnqualificationApprovalDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "不合格药品审批详情";
+            this.Text = "不合格医疗器械审批详情";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

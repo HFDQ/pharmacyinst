@@ -322,7 +322,14 @@ namespace BugsBox.Pharmacy.AppClient
             oDoc.Bookmarks["GSP6"].Range.Text = gsp.IssuanceDate.ToLongDateString();
             oDoc.Bookmarks["GSP7"].Range.Text = gsp.OutDate.ToLongDateString();
 
-            oDoc.Bookmarks["GSP8"].Range.Text = baseform.PharmacyDatabaseService.GetBusinessType(out msg, gsp.BusinessTypeId).Name;
+            var btype = baseform.PharmacyDatabaseService.GetBusinessType(out msg, gsp.BusinessTypeId);
+
+            if (btype == null)
+            {
+                throw new Exception("BusinessType");
+            }
+
+            oDoc.Bookmarks["GSP8"].Range.Text = btype.Name;
             oDoc.Bookmarks["GSP9"].Range.Text = gsp.Header;
             oDoc.Bookmarks["GSP10"].Range.Text = gsp.LegalPerson;
             oDoc.Bookmarks["GSP11"].Range.Text = gsp.QualityHeader;
