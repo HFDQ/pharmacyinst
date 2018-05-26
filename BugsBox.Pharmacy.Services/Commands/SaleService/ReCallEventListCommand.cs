@@ -24,6 +24,7 @@ namespace BugsBox.Pharmacy.Commands.SaleService
             using (var db = new Db())
             {
                 EndDate = EndDate.AddDays(1);
+                BeginDate = BeginDate.AddDays(-1); 
                 //处理排序
                 var query = db.ReCallEvents.Where(o => o.ReportDate >= BeginDate && o.ReportDate <= EndDate);//过滤一下 
 
