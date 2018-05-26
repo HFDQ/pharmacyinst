@@ -506,7 +506,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>产品注册证号</Value>
+                                                <Value>注册证号或备案凭证号</Value>
                                                 <Style>
                                                   <FontFamily>宋体</FontFamily>
                                                 </Style>
@@ -1438,7 +1438,7 @@
                           <DataSetName>DsSalesOrder_table</DataSetName>
                           <Left>0.26915cm</Left>
                           <Height>2.09415cm</Height>
-                          <Width>25.29847cm</Width>
+                          <Width>25.29848cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -2458,7 +2458,6 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox217</rd:DefaultName>
-          <Top>0cm</Top>
           <Left>21.35905cm</Left>
           <Height>0.6cm</Height>
           <Width>2.42707cm</Width>
