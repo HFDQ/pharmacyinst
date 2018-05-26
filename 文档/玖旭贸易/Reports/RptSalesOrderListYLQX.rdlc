@@ -94,7 +94,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>10.47051in</Width>
+              <Width>10.06599in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -145,7 +145,7 @@
                                 <Width>0.8373in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.39312in</Width>
+                                <Width>1.10318in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.58694in</Width>
@@ -1438,7 +1438,7 @@
                           <DataSetName>DsSalesOrder_table</DataSetName>
                           <Left>0.26915cm</Left>
                           <Height>2.09415cm</Height>
-                          <Width>26.03492cm</Width>
+                          <Width>25.29847cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1481,7 +1481,7 @@
         <DataSetName>DsSalesOrder_table</DataSetName>
         <Left>0.7585cm</Left>
         <Height>2.22646cm</Height>
-        <Width>26.5951cm</Width>
+        <Width>25.56762cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1616,7 +1616,7 @@
    CNMoney= resultStr
   End If 
 End Function</Code>
-  <Width>27.38006cm</Width>
+  <Width>26.53339cm</Width>
   <Page>
     <PageHeader>
       <Height>1.69431cm</Height>
@@ -2036,7 +2036,7 @@ End Function</Code>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox49</rd:DefaultName>
-          <Left>22.60259cm</Left>
+          <Left>21.96759cm</Left>
           <Height>0.75906cm</Height>
           <Width>4.35853cm</Width>
           <ZIndex>11</ZIndex>

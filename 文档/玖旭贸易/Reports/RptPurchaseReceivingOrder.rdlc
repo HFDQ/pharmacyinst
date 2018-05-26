@@ -477,7 +477,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>产品注册号</Value>
+                                  <Value>注册证号或备案凭证号</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>宋体</FontFamily>
@@ -510,14 +510,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox165">
+                        <Textbox Name="Textbox12">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>生产厂商</Value>
+                                  <Value>生产企业</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -526,7 +526,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox165</rd:DefaultName>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
