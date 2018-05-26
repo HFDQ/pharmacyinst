@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace BugsBox.Pharmacy.AppClient.UI.Report {
+namespace BugsBox.Pharmacy.AppClient.UI.Reports {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DsSalesOrder")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SaleOrderRefund")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DsSalesOrder : global::System.Data.DataSet {
+    public partial class SaleOrderRefund : global::System.Data.DataSet {
         
-        private tableDataTable tabletable;
+        private RefundTableDataTable tableRefundTable;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DsSalesOrder() {
+        public SaleOrderRefund() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DsSalesOrder(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SaleOrderRefund(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["table"] != null)) {
-                    base.Tables.Add(new tableDataTable(ds.Tables["table"]));
+                if ((ds.Tables["RefundTable"] != null)) {
+                    base.Tables.Add(new RefundTableDataTable(ds.Tables["RefundTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tableDataTable table {
+        public RefundTableDataTable RefundTable {
             get {
-                return this.tabletable;
+                return this.tableRefundTable;
             }
         }
         
@@ -127,7 +127,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DsSalesOrder cln = ((DsSalesOrder)(base.Clone()));
+            SaleOrderRefund cln = ((SaleOrderRefund)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["table"] != null)) {
-                    base.Tables.Add(new tableDataTable(ds.Tables["table"]));
+                if ((ds.Tables["RefundTable"] != null)) {
+                    base.Tables.Add(new RefundTableDataTable(ds.Tables["RefundTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabletable = ((tableDataTable)(base.Tables["table"]));
+            this.tableRefundTable = ((RefundTableDataTable)(base.Tables["RefundTable"]));
             if ((initTable == true)) {
-                if ((this.tabletable != null)) {
-                    this.tabletable.InitVars();
+                if ((this.tableRefundTable != null)) {
+                    this.tableRefundTable.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DsSalesOrder";
+            this.DataSetName = "SaleOrderRefund";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DsSalesOrder.xsd";
+            this.Namespace = "http://tempuri.org/SaleOrderRefund.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabletable = new tableDataTable();
-            base.Tables.Add(this.tabletable);
+            this.tableRefundTable = new RefundTableDataTable();
+            base.Tables.Add(this.tableRefundTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializetable() {
+        private bool ShouldSerializeRefundTable() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DsSalesOrder ds = new DsSalesOrder();
+            SaleOrderRefund ds = new SaleOrderRefund();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,24 +270,22 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void tableRowChangeEventHandler(object sender, tableRowChangeEvent e);
+        public delegate void RefundTableRowChangeEventHandler(object sender, RefundTableRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tableDataTable : global::System.Data.TypedTableBase<tableRow> {
+        public partial class RefundTableDataTable : global::System.Data.TypedTableBase<RefundTableRow> {
             
-            private global::System.Data.DataColumn column品名;
+            private global::System.Data.DataColumn column商品名称;
             
             private global::System.Data.DataColumn column剂型;
             
             private global::System.Data.DataColumn column规格;
             
             private global::System.Data.DataColumn column生产厂商;
-            
-            private global::System.Data.DataColumn column产地;
             
             private global::System.Data.DataColumn column批号;
             
@@ -299,22 +297,18 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             
             private global::System.Data.DataColumn column单价;
             
-            private global::System.Data.DataColumn column金额;
+            private global::System.Data.DataColumn column实际单价;
             
-            private global::System.Data.DataColumn column质量状况;
+            private global::System.Data.DataColumn column原金额;
             
-            private global::System.Data.DataColumn column批准文号;
+            private global::System.Data.DataColumn column实际金额;
             
-            private global::System.Data.DataColumn column存储条件;
-            
-            private global::System.Data.DataColumn column生产许可证编号;
-            
-            private global::System.Data.DataColumn column库区;
+            private global::System.Data.DataColumn column差额;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tableDataTable() {
-                this.TableName = "table";
+            public RefundTableDataTable() {
+                this.TableName = "RefundTable";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -322,7 +316,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tableDataTable(global::System.Data.DataTable table) {
+            internal RefundTableDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -339,16 +333,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected tableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected RefundTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 品名Column {
+            public global::System.Data.DataColumn 商品名称Column {
                 get {
-                    return this.column品名;
+                    return this.column商品名称;
                 }
             }
             
@@ -373,14 +367,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public global::System.Data.DataColumn 生产厂商Column {
                 get {
                     return this.column生产厂商;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 产地Column {
-                get {
-                    return this.column产地;
                 }
             }
             
@@ -426,49 +412,33 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 金额Column {
+            public global::System.Data.DataColumn 实际单价Column {
                 get {
-                    return this.column金额;
+                    return this.column实际单价;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 质量状况Column {
+            public global::System.Data.DataColumn 原金额Column {
                 get {
-                    return this.column质量状况;
+                    return this.column原金额;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 批准文号Column {
+            public global::System.Data.DataColumn 实际金额Column {
                 get {
-                    return this.column批准文号;
+                    return this.column实际金额;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 存储条件Column {
+            public global::System.Data.DataColumn 差额Column {
                 get {
-                    return this.column存储条件;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 生产许可证编号Column {
-                get {
-                    return this.column生产许可证编号;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 库区Column {
-                get {
-                    return this.column库区;
+                    return this.column差额;
                 }
             }
             
@@ -483,76 +453,57 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tableRow this[int index] {
+            public RefundTableRow this[int index] {
                 get {
-                    return ((tableRow)(this.Rows[index]));
+                    return ((RefundTableRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tableRowChangeEventHandler tableRowChanging;
+            public event RefundTableRowChangeEventHandler RefundTableRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tableRowChangeEventHandler tableRowChanged;
+            public event RefundTableRowChangeEventHandler RefundTableRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tableRowChangeEventHandler tableRowDeleting;
+            public event RefundTableRowChangeEventHandler RefundTableRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tableRowChangeEventHandler tableRowDeleted;
+            public event RefundTableRowChangeEventHandler RefundTableRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddtableRow(tableRow row) {
+            public void AddRefundTableRow(RefundTableRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tableRow AddtableRow(
-                        string 品名, 
-                        string 剂型, 
-                        string 规格, 
-                        string 生产厂商, 
-                        string 产地, 
-                        string 批号, 
-                        string 有效期至, 
-                        string 单位, 
-                        decimal 数量, 
-                        decimal 单价, 
-                        decimal 金额, 
-                        string 质量状况, 
-                        string 批准文号, 
-                        string 存储条件, 
-                        string 生产许可证编号, 
-                        string 库区) {
-                tableRow rowtableRow = ((tableRow)(this.NewRow()));
+            public RefundTableRow AddRefundTableRow(string 商品名称, string 剂型, string 规格, string 生产厂商, string 批号, string 有效期至, string 单位, decimal 数量, decimal 单价, decimal 实际单价, decimal 原金额, decimal 实际金额, decimal 差额) {
+                RefundTableRow rowRefundTableRow = ((RefundTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        品名,
+                        商品名称,
                         剂型,
                         规格,
                         生产厂商,
-                        产地,
                         批号,
                         有效期至,
                         单位,
                         数量,
                         单价,
-                        金额,
-                        质量状况,
-                        批准文号,
-                        存储条件,
-                        生产许可证编号,
-                        库区};
-                rowtableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtableRow);
-                return rowtableRow;
+                        实际单价,
+                        原金额,
+                        实际金额,
+                        差额};
+                rowRefundTableRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRefundTableRow);
+                return rowRefundTableRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tableDataTable cln = ((tableDataTable)(base.Clone()));
+                RefundTableDataTable cln = ((RefundTableDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -560,43 +511,38 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tableDataTable();
+                return new RefundTableDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.column品名 = base.Columns["品名"];
+                this.column商品名称 = base.Columns["商品名称"];
                 this.column剂型 = base.Columns["剂型"];
                 this.column规格 = base.Columns["规格"];
                 this.column生产厂商 = base.Columns["生产厂商"];
-                this.column产地 = base.Columns["产地"];
                 this.column批号 = base.Columns["批号"];
                 this.column有效期至 = base.Columns["有效期至"];
                 this.column单位 = base.Columns["单位"];
                 this.column数量 = base.Columns["数量"];
                 this.column单价 = base.Columns["单价"];
-                this.column金额 = base.Columns["金额"];
-                this.column质量状况 = base.Columns["质量状况"];
-                this.column批准文号 = base.Columns["批准文号"];
-                this.column存储条件 = base.Columns["存储条件"];
-                this.column生产许可证编号 = base.Columns["生产许可证编号"];
-                this.column库区 = base.Columns["库区"];
+                this.column实际单价 = base.Columns["实际单价"];
+                this.column原金额 = base.Columns["原金额"];
+                this.column实际金额 = base.Columns["实际金额"];
+                this.column差额 = base.Columns["差额"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.column品名 = new global::System.Data.DataColumn("品名", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column品名);
+                this.column商品名称 = new global::System.Data.DataColumn("商品名称", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column商品名称);
                 this.column剂型 = new global::System.Data.DataColumn("剂型", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column剂型);
                 this.column规格 = new global::System.Data.DataColumn("规格", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column规格);
                 this.column生产厂商 = new global::System.Data.DataColumn("生产厂商", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column生产厂商);
-                this.column产地 = new global::System.Data.DataColumn("产地", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column产地);
                 this.column批号 = new global::System.Data.DataColumn("批号", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column批号);
                 this.column有效期至 = new global::System.Data.DataColumn("有效期至", typeof(string), null, global::System.Data.MappingType.Element);
@@ -607,45 +553,40 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
                 base.Columns.Add(this.column数量);
                 this.column单价 = new global::System.Data.DataColumn("单价", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column单价);
-                this.column金额 = new global::System.Data.DataColumn("金额", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column金额);
-                this.column质量状况 = new global::System.Data.DataColumn("质量状况", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column质量状况);
-                this.column批准文号 = new global::System.Data.DataColumn("批准文号", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column批准文号);
-                this.column存储条件 = new global::System.Data.DataColumn("存储条件", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column存储条件);
-                this.column生产许可证编号 = new global::System.Data.DataColumn("生产许可证编号", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column生产许可证编号);
-                this.column库区 = new global::System.Data.DataColumn("库区", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column库区);
-                this.column生产厂商.Caption = "生产企业";
+                this.column实际单价 = new global::System.Data.DataColumn("实际单价", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column实际单价);
+                this.column原金额 = new global::System.Data.DataColumn("原金额", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column原金额);
+                this.column实际金额 = new global::System.Data.DataColumn("实际金额", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column实际金额);
+                this.column差额 = new global::System.Data.DataColumn("差额", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column差额);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tableRow NewtableRow() {
-                return ((tableRow)(this.NewRow()));
+            public RefundTableRow NewRefundTableRow() {
+                return ((RefundTableRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tableRow(builder);
+                return new RefundTableRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tableRow);
+                return typeof(RefundTableRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tableRowChanged != null)) {
-                    this.tableRowChanged(this, new tableRowChangeEvent(((tableRow)(e.Row)), e.Action));
+                if ((this.RefundTableRowChanged != null)) {
+                    this.RefundTableRowChanged(this, new RefundTableRowChangeEvent(((RefundTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -653,8 +594,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tableRowChanging != null)) {
-                    this.tableRowChanging(this, new tableRowChangeEvent(((tableRow)(e.Row)), e.Action));
+                if ((this.RefundTableRowChanging != null)) {
+                    this.RefundTableRowChanging(this, new RefundTableRowChangeEvent(((RefundTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -662,8 +603,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tableRowDeleted != null)) {
-                    this.tableRowDeleted(this, new tableRowChangeEvent(((tableRow)(e.Row)), e.Action));
+                if ((this.RefundTableRowDeleted != null)) {
+                    this.RefundTableRowDeleted(this, new RefundTableRowChangeEvent(((RefundTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -671,14 +612,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tableRowDeleting != null)) {
-                    this.tableRowDeleting(this, new tableRowChangeEvent(((tableRow)(e.Row)), e.Action));
+                if ((this.RefundTableRowDeleting != null)) {
+                    this.RefundTableRowDeleting(this, new RefundTableRowChangeEvent(((RefundTableRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovetableRow(tableRow row) {
+            public void RemoveRefundTableRow(RefundTableRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -687,7 +628,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DsSalesOrder ds = new DsSalesOrder();
+                SaleOrderRefund ds = new SaleOrderRefund();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -705,7 +646,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tableDataTable";
+                attribute2.FixedValue = "RefundTableDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -749,30 +690,30 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tableRow : global::System.Data.DataRow {
+        public partial class RefundTableRow : global::System.Data.DataRow {
             
-            private tableDataTable tabletable;
+            private RefundTableDataTable tableRefundTable;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tableRow(global::System.Data.DataRowBuilder rb) : 
+            internal RefundTableRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletable = ((tableDataTable)(this.Table));
+                this.tableRefundTable = ((RefundTableDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string 品名 {
+            public string 商品名称 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.品名Column]));
+                        return ((string)(this[this.tableRefundTable.商品名称Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“品名”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“商品名称”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.品名Column] = value;
+                    this[this.tableRefundTable.商品名称Column] = value;
                 }
             }
             
@@ -781,14 +722,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public string 剂型 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.剂型Column]));
+                        return ((string)(this[this.tableRefundTable.剂型Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“剂型”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“剂型”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.剂型Column] = value;
+                    this[this.tableRefundTable.剂型Column] = value;
                 }
             }
             
@@ -797,14 +738,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public string 规格 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.规格Column]));
+                        return ((string)(this[this.tableRefundTable.规格Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“规格”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“规格”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.规格Column] = value;
+                    this[this.tableRefundTable.规格Column] = value;
                 }
             }
             
@@ -813,30 +754,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public string 生产厂商 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.生产厂商Column]));
+                        return ((string)(this[this.tableRefundTable.生产厂商Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“生产厂商”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“生产厂商”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.生产厂商Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string 产地 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletable.产地Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“产地”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletable.产地Column] = value;
+                    this[this.tableRefundTable.生产厂商Column] = value;
                 }
             }
             
@@ -845,14 +770,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public string 批号 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.批号Column]));
+                        return ((string)(this[this.tableRefundTable.批号Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“批号”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“批号”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.批号Column] = value;
+                    this[this.tableRefundTable.批号Column] = value;
                 }
             }
             
@@ -861,14 +786,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public string 有效期至 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.有效期至Column]));
+                        return ((string)(this[this.tableRefundTable.有效期至Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“有效期至”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“有效期至”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.有效期至Column] = value;
+                    this[this.tableRefundTable.有效期至Column] = value;
                 }
             }
             
@@ -877,14 +802,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public string 单位 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.单位Column]));
+                        return ((string)(this[this.tableRefundTable.单位Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“单位”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“单位”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.单位Column] = value;
+                    this[this.tableRefundTable.单位Column] = value;
                 }
             }
             
@@ -893,14 +818,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public decimal 数量 {
                 get {
                     try {
-                        return ((decimal)(this[this.tabletable.数量Column]));
+                        return ((decimal)(this[this.tableRefundTable.数量Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“数量”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“数量”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.数量Column] = value;
+                    this[this.tableRefundTable.数量Column] = value;
                 }
             }
             
@@ -909,303 +834,235 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
             public decimal 单价 {
                 get {
                     try {
-                        return ((decimal)(this[this.tabletable.单价Column]));
+                        return ((decimal)(this[this.tableRefundTable.单价Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“单价”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“单价”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.单价Column] = value;
+                    this[this.tableRefundTable.单价Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal 金额 {
+            public decimal 实际单价 {
                 get {
                     try {
-                        return ((decimal)(this[this.tabletable.金额Column]));
+                        return ((decimal)(this[this.tableRefundTable.实际单价Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“金额”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“实际单价”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.金额Column] = value;
+                    this[this.tableRefundTable.实际单价Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string 质量状况 {
+            public decimal 原金额 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.质量状况Column]));
+                        return ((decimal)(this[this.tableRefundTable.原金额Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“质量状况”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“原金额”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.质量状况Column] = value;
+                    this[this.tableRefundTable.原金额Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string 批准文号 {
+            public decimal 实际金额 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.批准文号Column]));
+                        return ((decimal)(this[this.tableRefundTable.实际金额Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“批准文号”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“实际金额”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.批准文号Column] = value;
+                    this[this.tableRefundTable.实际金额Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string 存储条件 {
+            public decimal 差额 {
                 get {
                     try {
-                        return ((string)(this[this.tabletable.存储条件Column]));
+                        return ((decimal)(this[this.tableRefundTable.差额Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“存储条件”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“RefundTable”中列“差额”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletable.存储条件Column] = value;
+                    this[this.tableRefundTable.差额Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string 生产许可证编号 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletable.生产许可证编号Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“生产许可证编号”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletable.生产许可证编号Column] = value;
-                }
+            public bool Is商品名称Null() {
+                return this.IsNull(this.tableRefundTable.商品名称Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string 库区 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletable.库区Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“table”中列“库区”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletable.库区Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is品名Null() {
-                return this.IsNull(this.tabletable.品名Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set品名Null() {
-                this[this.tabletable.品名Column] = global::System.Convert.DBNull;
+            public void Set商品名称Null() {
+                this[this.tableRefundTable.商品名称Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is剂型Null() {
-                return this.IsNull(this.tabletable.剂型Column);
+                return this.IsNull(this.tableRefundTable.剂型Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set剂型Null() {
-                this[this.tabletable.剂型Column] = global::System.Convert.DBNull;
+                this[this.tableRefundTable.剂型Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is规格Null() {
-                return this.IsNull(this.tabletable.规格Column);
+                return this.IsNull(this.tableRefundTable.规格Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set规格Null() {
-                this[this.tabletable.规格Column] = global::System.Convert.DBNull;
+                this[this.tableRefundTable.规格Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is生产厂商Null() {
-                return this.IsNull(this.tabletable.生产厂商Column);
+                return this.IsNull(this.tableRefundTable.生产厂商Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set生产厂商Null() {
-                this[this.tabletable.生产厂商Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is产地Null() {
-                return this.IsNull(this.tabletable.产地Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set产地Null() {
-                this[this.tabletable.产地Column] = global::System.Convert.DBNull;
+                this[this.tableRefundTable.生产厂商Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is批号Null() {
-                return this.IsNull(this.tabletable.批号Column);
+                return this.IsNull(this.tableRefundTable.批号Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set批号Null() {
-                this[this.tabletable.批号Column] = global::System.Convert.DBNull;
+                this[this.tableRefundTable.批号Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is有效期至Null() {
-                return this.IsNull(this.tabletable.有效期至Column);
+                return this.IsNull(this.tableRefundTable.有效期至Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set有效期至Null() {
-                this[this.tabletable.有效期至Column] = global::System.Convert.DBNull;
+                this[this.tableRefundTable.有效期至Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is单位Null() {
-                return this.IsNull(this.tabletable.单位Column);
+                return this.IsNull(this.tableRefundTable.单位Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set单位Null() {
-                this[this.tabletable.单位Column] = global::System.Convert.DBNull;
+                this[this.tableRefundTable.单位Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is数量Null() {
-                return this.IsNull(this.tabletable.数量Column);
+                return this.IsNull(this.tableRefundTable.数量Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set数量Null() {
-                this[this.tabletable.数量Column] = global::System.Convert.DBNull;
+                this[this.tableRefundTable.数量Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is单价Null() {
-                return this.IsNull(this.tabletable.单价Column);
+                return this.IsNull(this.tableRefundTable.单价Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set单价Null() {
-                this[this.tabletable.单价Column] = global::System.Convert.DBNull;
+                this[this.tableRefundTable.单价Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is金额Null() {
-                return this.IsNull(this.tabletable.金额Column);
+            public bool Is实际单价Null() {
+                return this.IsNull(this.tableRefundTable.实际单价Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set金额Null() {
-                this[this.tabletable.金额Column] = global::System.Convert.DBNull;
+            public void Set实际单价Null() {
+                this[this.tableRefundTable.实际单价Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is质量状况Null() {
-                return this.IsNull(this.tabletable.质量状况Column);
+            public bool Is原金额Null() {
+                return this.IsNull(this.tableRefundTable.原金额Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set质量状况Null() {
-                this[this.tabletable.质量状况Column] = global::System.Convert.DBNull;
+            public void Set原金额Null() {
+                this[this.tableRefundTable.原金额Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is批准文号Null() {
-                return this.IsNull(this.tabletable.批准文号Column);
+            public bool Is实际金额Null() {
+                return this.IsNull(this.tableRefundTable.实际金额Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set批准文号Null() {
-                this[this.tabletable.批准文号Column] = global::System.Convert.DBNull;
+            public void Set实际金额Null() {
+                this[this.tableRefundTable.实际金额Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is存储条件Null() {
-                return this.IsNull(this.tabletable.存储条件Column);
+            public bool Is差额Null() {
+                return this.IsNull(this.tableRefundTable.差额Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set存储条件Null() {
-                this[this.tabletable.存储条件Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is生产许可证编号Null() {
-                return this.IsNull(this.tabletable.生产许可证编号Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set生产许可证编号Null() {
-                this[this.tabletable.生产许可证编号Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is库区Null() {
-                return this.IsNull(this.tabletable.库区Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set库区Null() {
-                this[this.tabletable.库区Column] = global::System.Convert.DBNull;
+            public void Set差额Null() {
+                this[this.tableRefundTable.差额Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1213,22 +1070,22 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class tableRowChangeEvent : global::System.EventArgs {
+        public class RefundTableRowChangeEvent : global::System.EventArgs {
             
-            private tableRow eventRow;
+            private RefundTableRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tableRowChangeEvent(tableRow row, global::System.Data.DataRowAction action) {
+            public RefundTableRowChangeEvent(RefundTableRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tableRow Row {
+            public RefundTableRow Row {
                 get {
                     return this.eventRow;
                 }

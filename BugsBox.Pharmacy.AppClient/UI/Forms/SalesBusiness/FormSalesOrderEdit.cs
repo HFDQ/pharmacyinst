@@ -1328,11 +1328,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         decimal price = qty * unitPrice;
                         string Quanlity = detail.Description;
 
-                        var drug = inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo;
+                        var invenRecord = inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault();
+                        var drug = invenRecord.DrugInfo;
                         string PermitNumber = drug.LicensePermissionNumber;
                         var storagecode = drug.DrugStorageTypeCode;
                         var InstEntpermitNumber = drug.InstEntProductLiscencePermitNumber;
-
+                        var warehouseName = invenRecord.WarehouseZone.Warehouse.Name;
 
                         if (this.GoodsType == GoodsTypeClass.医疗器械)
                         {
@@ -1341,7 +1342,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                             //PermitNumber += "^" + inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo.DrugStorageTypeCode;
                         }
 
-                        OrderDetailTable.Rows.Add(new object[] { part, _partType, specialCode, productUnit, Origin, batchNumber, ValidDate, unit, qty, unitPrice, price, Quanlity, PermitNumber, storagecode, InstEntpermitNumber });
+                        OrderDetailTable.Rows.Add(new object[] { part, _partType, specialCode, productUnit, Origin, batchNumber, ValidDate, unit, qty, unitPrice, price, Quanlity, PermitNumber, storagecode, InstEntpermitNumber, warehouseName });
                         OrderDetailTable.AcceptChanges();
                     }
                     ds.Tables.Add(OrderDetailTable);

@@ -12,7 +12,7 @@
   <xs:element name="DsSalesOrder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsSalesOrder" msprop:Generator_UserDSName="DsSalesOrder">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="table" msprop:Generator_TableClassName="tableDataTable" msprop:Generator_TableVarName="tabletable" msprop:Generator_RowChangedName="tableRowChanged" msprop:Generator_TablePropName="table" msprop:Generator_RowDeletingName="tableRowDeleting" msprop:Generator_RowChangingName="tableRowChanging" msprop:Generator_RowEvHandlerName="tableRowChangeEventHandler" msprop:Generator_RowDeletedName="tableRowDeleted" msprop:Generator_RowClassName="tableRow" msprop:Generator_UserTableName="table" msprop:Generator_RowEvArgName="tableRowChangeEvent">
+        <xs:element name="table" msprop:Generator_TableClassName="tableDataTable" msprop:Generator_TableVarName="tabletable" msprop:Generator_TablePropName="table" msprop:Generator_RowDeletingName="tableRowDeleting" msprop:Generator_RowChangingName="tableRowChanging" msprop:Generator_RowEvHandlerName="tableRowChangeEventHandler" msprop:Generator_RowDeletedName="tableRowDeleted" msprop:Generator_UserTableName="table" msprop:Generator_RowChangedName="tableRowChanged" msprop:Generator_RowEvArgName="tableRowChangeEvent" msprop:Generator_RowClassName="tableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="品名" msprop:Generator_ColumnVarNameInTable="column品名" msprop:Generator_ColumnPropNameInRow="品名" msprop:Generator_ColumnPropNameInTable="品名Column" msprop:Generator_UserColumnName="品名" type="xs:string" minOccurs="0" />
@@ -30,6 +30,7 @@
               <xs:element name="批准文号" msprop:Generator_ColumnVarNameInTable="column批准文号" msprop:Generator_ColumnPropNameInRow="批准文号" msprop:Generator_ColumnPropNameInTable="批准文号Column" msprop:Generator_UserColumnName="批准文号" type="xs:string" minOccurs="0" />
               <xs:element name="存储条件" msprop:Generator_ColumnVarNameInTable="column存储条件" msprop:Generator_ColumnPropNameInRow="存储条件" msprop:Generator_ColumnPropNameInTable="存储条件Column" msprop:Generator_UserColumnName="存储条件" type="xs:string" minOccurs="0" />
               <xs:element name="生产许可证编号" msprop:Generator_ColumnVarNameInTable="column生产许可证编号" msprop:Generator_ColumnPropNameInRow="生产许可证编号" msprop:Generator_ColumnPropNameInTable="生产许可证编号Column" msprop:Generator_UserColumnName="生产许可证编号" type="xs:string" minOccurs="0" />
+              <xs:element name="库区" msprop:Generator_ColumnVarNameInTable="column库区" msprop:Generator_ColumnPropNameInRow="库区" msprop:Generator_ColumnPropNameInTable="库区Column" msprop:Generator_UserColumnName="库区" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
