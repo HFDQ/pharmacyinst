@@ -19,7 +19,7 @@ namespace BugsBox.Pharmacy.AppClient
         [STAThread]
         static void Main(string[] args)
         {
-            Mutex mutex = new Mutex(false, "qwaaaaaertyuiol,mnbvghyuk,");
+            Mutex mutex = new Mutex(false, "qwaaaaaertyuiol,mnbvghyuk,111111111111");
 
             if (!mutex.WaitOne(0, false))
             {
