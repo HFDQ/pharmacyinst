@@ -355,5 +355,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             if (this.dataGridView1.Rows.Count <= 0) return;
             MyExcelUtls.DataGridview2Sheet(this.dataGridView1, "采购入库单");
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            List<object> reportData = new List<object>();
+            List<object> orderList = new List<object>();
+
+            orderList.Add(_order);
+            reportData.Add(orderList);
+            reportData.Add(_orderDetails);
+            List<Microsoft.Reporting.WinForms.ReportParameter> ListPar = new List<Microsoft.Reporting.WinForms.ReportParameter>();
+            using (PrintHelper printHelper = new PrintHelper("Reports\\RptPurchaseInInventoryOrder.rdlc", reportData, ListPar))
+            {
+                printHelper.Print();
+            }
+        }
+      
     }
 }

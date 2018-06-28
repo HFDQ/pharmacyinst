@@ -450,6 +450,12 @@
     <Compile Include="UI\Forms\BaseDataManage\FormModuleCategory.Designer.cs">
       <DependentUpon>FormModuleCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormPurchasePerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormPurchasePerson.Designer.cs">
+      <DependentUpon>FormPurchasePerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1400,6 +1406,12 @@
     <Compile Include="UI\Forms\PurchaseBusiness\PurchaseOrderDetailModify.Designer.cs">
       <DependentUpon>PurchaseOrderDetailModify.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormPurchasePersonEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormPurchasePersonEdit.Designer.cs">
+      <DependentUpon>FormPurchasePersonEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderCenter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1992,6 +2004,9 @@
     <EmbeddedResource Include="UI\Forms\BaseDataManage\FormModuleCategory.resx">
       <DependentUpon>FormModuleCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\RetailBusiness\FormPurchasePerson.resx">
+      <DependentUpon>FormPurchasePerson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\BaseDataManage\FormPurchaseUnit.resx">
       <DependentUpon>FormPurchaseUnit.cs</DependentUpon>
     </EmbeddedResource>
@@ -2427,6 +2442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\PurchaseBusiness\PurchaseOrderDetailModify.resx">
       <DependentUpon>PurchaseOrderDetailModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\RetailBusiness\FormPurchasePersonEdit.resx">
+      <DependentUpon>FormPurchasePersonEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\RetailBusiness\FormRetailOrderEdit.resx">
       <DependentUpon>FormRetailOrderEdit.cs</DependentUpon>

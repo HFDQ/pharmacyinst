@@ -18,6 +18,7 @@
       <Menu id="0311" Title="首营信息管理" Hotkeys="P" Name="" Image="" Params="" DockState="" ModuleKey="">
         <Menu id="01020101" Title="首营供货商录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormSupplyUnit" Image="" Params="0" DockState="" ModuleKey="首营供货商录入[窗体]"></Menu>
         <Menu id="01030101" Title="首营客户录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormPurchaseUnit" Image="" Params="0" DockState="" ModuleKey="首营客户录入[窗体]"></Menu>
+        <Menu id="01030101" Title="首营个人客户录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormPurchasePerson" Image="" Params="0" DockState="" ModuleKey="首营个人客户录入[窗体]"></Menu>
         <Menu id="010501" Title="首营医疗器械录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormInstrument" Image="" Params="" DockState="" ModuleKey="首营医疗器械录入[窗体]"></Menu>
         <Menu id="01030202" Title="购货单位采购员审核" Hotkeys="" Name="UI.Forms.BaseDataManage.FormPurchaseUnitBuyerList" Image="" Params="32" DockState="" ModuleKey="客户采购员审核[窗体"></Menu>
         <Menu id="01030201" Title="购货单位采购员管理" Hotkeys="" Name="UI.Forms.BaseDataManage.FormPurchaseUnitBuyerList" Image="" Params="" DockState="" ModuleKey="客户采购员[窗体]"></Menu>

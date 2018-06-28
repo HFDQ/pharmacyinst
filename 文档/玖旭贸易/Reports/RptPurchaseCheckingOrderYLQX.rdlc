@@ -297,6 +297,10 @@
           <DataField>QualifiedAmount</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="WarehouseZone">
+          <DataField>WarehouseZone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>BugsBoxPharmacyBusinessModels</DataSourceName>
@@ -315,7 +319,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>9.25789in</Width>
+              <Width>9.63475in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -364,6 +368,9 @@
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.59397in</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>0.44285in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.36298in</Width>
@@ -1049,6 +1056,61 @@
                                   </TablixCell>
                                   <TablixCell>
                                     <CellContents>
+                                      <Textbox Name="Textbox8">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>库区</Value>
+                                                <Style>
+                                                  <FontFamily>宋体</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox8</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
                                       <Textbox Name="Textbox172">
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
@@ -1506,6 +1568,41 @@
                                   </TablixCell>
                                   <TablixCell>
                                     <CellContents>
+                                      <Textbox Name="WarehouseZone">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!WarehouseZone.Value</Value>
+                                                <Style>
+                                                  <FontFamily>宋体</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>WarehouseZone</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
                                       <Textbox Name="CheckResult">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
@@ -1558,6 +1655,7 @@
                               <TablixMember />
                               <TablixMember />
                               <TablixMember />
+                              <TablixMember />
                             </TablixMembers>
                           </TablixColumnHierarchy>
                           <TablixRowHierarchy>
@@ -1575,7 +1673,7 @@
                           </TablixRowHierarchy>
                           <DataSetName>DSOrderDetail</DataSetName>
                           <Height>1.59101cm</Height>
-                          <Width>23.16289cm</Width>
+                          <Width>24.28774cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1618,7 +1716,7 @@
         <DataSetName>DSOrderDetail</DataSetName>
         <Left>0.948cm</Left>
         <Height>1.59103cm</Height>
-        <Width>23.51504cm</Width>
+        <Width>24.47227cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1704,7 +1802,7 @@
   End If 
 End Function
 </Code>
-  <Width>24.46305cm</Width>
+  <Width>25.42027cm</Width>
   <Page>
     <PageHeader>
       <Height>1.47313cm</Height>
@@ -2414,6 +2512,7 @@ End Function
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox59</rd:DefaultName>
+          <Top>0cm</Top>
           <Left>16.40922cm</Left>
           <Height>0.6cm</Height>
           <Width>2.41182cm</Width>

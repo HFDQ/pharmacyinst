@@ -29,13 +29,27 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPurchaseOrderEdit));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clmDrugId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDrugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DictionaryDosageCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmSupplyUnitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LicensePermissionNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmActualPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmSupplyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDrugNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPurchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountOfTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colmoneyofTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBoxApprovedRecords = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -93,20 +107,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.dataGridViewNumericUpDownColumn1 = new BugsBox.Windows.Forms.DataGridViewNumericUpDownColumn();
             this.dataGridViewNumericUpDownColumn2 = new BugsBox.Windows.Forms.DataGridViewNumericUpDownColumn();
             this.dataGridViewNumericUpDownColumn3 = new BugsBox.Windows.Forms.DataGridViewNumericUpDownColumn();
-            this.clmDrugId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDrugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DictionaryDosageCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmSupplyUnitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LicensePermissionNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmActualPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmSupplyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDrugNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPurchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountOfTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colmoneyofTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -168,6 +169,119 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(1009, 230);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // clmDrugId
+            // 
+            this.clmDrugId.DataPropertyName = "DrugInfoId";
+            this.clmDrugId.HeaderText = "DrugId";
+            this.clmDrugId.Name = "clmDrugId";
+            this.clmDrugId.Visible = false;
+            this.clmDrugId.Width = 64;
+            // 
+            // clmDrugName
+            // 
+            this.clmDrugName.DataPropertyName = "ProductGeneralName";
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.clmDrugName.DefaultCellStyle = dataGridViewCellStyle10;
+            this.clmDrugName.HeaderText = "品名";
+            this.clmDrugName.Name = "clmDrugName";
+            this.clmDrugName.Width = 56;
+            // 
+            // DictionaryDosageCode
+            // 
+            this.DictionaryDosageCode.DataPropertyName = "DictionaryDosageCode";
+            this.DictionaryDosageCode.HeaderText = "型号";
+            this.DictionaryDosageCode.Name = "DictionaryDosageCode";
+            this.DictionaryDosageCode.Width = 56;
+            // 
+            // clmSupplyUnitId
+            // 
+            this.clmSupplyUnitId.DataPropertyName = "DictionarySpecificationCode";
+            this.clmSupplyUnitId.HeaderText = "规格";
+            this.clmSupplyUnitId.Name = "clmSupplyUnitId";
+            this.clmSupplyUnitId.Width = 56;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "factoryName";
+            this.Column2.HeaderText = "产地";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            this.Column2.Width = 56;
+            // 
+            // LicensePermissionNumber
+            // 
+            this.LicensePermissionNumber.DataPropertyName = "LicensePermissionNumber";
+            this.LicensePermissionNumber.HeaderText = "批准文号";
+            this.LicensePermissionNumber.Name = "LicensePermissionNumber";
+            this.LicensePermissionNumber.Width = 80;
+            // 
+            // clmActualPrice
+            // 
+            this.clmActualPrice.DataPropertyName = "ActualPrice";
+            this.clmActualPrice.HeaderText = "实际价";
+            this.clmActualPrice.Name = "clmActualPrice";
+            this.clmActualPrice.Visible = false;
+            this.clmActualPrice.Width = 68;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "FactoryName";
+            this.Column1.HeaderText = "生产厂商";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 80;
+            // 
+            // clmSupplyName
+            // 
+            this.clmSupplyName.DataPropertyName = "DictionaryMeasurementUnitCode";
+            this.clmSupplyName.HeaderText = "单位";
+            this.clmSupplyName.Name = "clmSupplyName";
+            this.clmSupplyName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmSupplyName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clmSupplyName.Width = 37;
+            // 
+            // clmDrugNumber
+            // 
+            this.clmDrugNumber.DataPropertyName = "Amount";
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Yellow;
+            this.clmDrugNumber.DefaultCellStyle = dataGridViewCellStyle11;
+            this.clmDrugNumber.HeaderText = "数量";
+            this.clmDrugNumber.Name = "clmDrugNumber";
+            this.clmDrugNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmDrugNumber.Width = 56;
+            // 
+            // clmPurchasePrice
+            // 
+            this.clmPurchasePrice.DataPropertyName = "PurchasePrice";
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle12.Format = "N4";
+            dataGridViewCellStyle12.NullValue = null;
+            this.clmPurchasePrice.DefaultCellStyle = dataGridViewCellStyle12;
+            this.clmPurchasePrice.HeaderText = "单价";
+            this.clmPurchasePrice.Name = "clmPurchasePrice";
+            this.clmPurchasePrice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmPurchasePrice.Width = 56;
+            // 
+            // TotalMoney
+            // 
+            this.TotalMoney.HeaderText = "金额";
+            this.TotalMoney.Name = "TotalMoney";
+            this.TotalMoney.Width = 56;
+            // 
+            // AmountOfTax
+            // 
+            this.AmountOfTax.DataPropertyName = "AmountOfTax";
+            this.AmountOfTax.HeaderText = "税率%";
+            this.AmountOfTax.Name = "AmountOfTax";
+            this.AmountOfTax.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AmountOfTax.Width = 64;
+            // 
+            // colmoneyofTax
+            // 
+            this.colmoneyofTax.HeaderText = "含税金额";
+            this.colmoneyofTax.Name = "colmoneyofTax";
+            this.colmoneyofTax.Visible = false;
+            this.colmoneyofTax.Width = 80;
             // 
             // panel4
             // 
@@ -549,7 +663,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.tlbtn结算,
             this.toolStripSeparator3,
             this.tsbtnPrint,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1015, 31);
@@ -731,118 +846,15 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.dataGridViewNumericUpDownColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewNumericUpDownColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // clmDrugId
+            // toolStripButton2
             // 
-            this.clmDrugId.DataPropertyName = "DrugInfoId";
-            this.clmDrugId.HeaderText = "DrugId";
-            this.clmDrugId.Name = "clmDrugId";
-            this.clmDrugId.Visible = false;
-            this.clmDrugId.Width = 64;
-            // 
-            // clmDrugName
-            // 
-            this.clmDrugName.DataPropertyName = "ProductGeneralName";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.clmDrugName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.clmDrugName.HeaderText = "品名";
-            this.clmDrugName.Name = "clmDrugName";
-            this.clmDrugName.Width = 56;
-            // 
-            // DictionaryDosageCode
-            // 
-            this.DictionaryDosageCode.DataPropertyName = "DictionaryDosageCode";
-            this.DictionaryDosageCode.HeaderText = "型号";
-            this.DictionaryDosageCode.Name = "DictionaryDosageCode";
-            this.DictionaryDosageCode.Width = 56;
-            // 
-            // clmSupplyUnitId
-            // 
-            this.clmSupplyUnitId.DataPropertyName = "DictionarySpecificationCode";
-            this.clmSupplyUnitId.HeaderText = "规格";
-            this.clmSupplyUnitId.Name = "clmSupplyUnitId";
-            this.clmSupplyUnitId.Width = 56;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "factoryName";
-            this.Column2.HeaderText = "产地";
-            this.Column2.Name = "Column2";
-            this.Column2.Visible = false;
-            this.Column2.Width = 56;
-            // 
-            // LicensePermissionNumber
-            // 
-            this.LicensePermissionNumber.DataPropertyName = "LicensePermissionNumber";
-            this.LicensePermissionNumber.HeaderText = "批准文号";
-            this.LicensePermissionNumber.Name = "LicensePermissionNumber";
-            this.LicensePermissionNumber.Width = 80;
-            // 
-            // clmActualPrice
-            // 
-            this.clmActualPrice.DataPropertyName = "ActualPrice";
-            this.clmActualPrice.HeaderText = "实际价";
-            this.clmActualPrice.Name = "clmActualPrice";
-            this.clmActualPrice.Visible = false;
-            this.clmActualPrice.Width = 68;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "FactoryName";
-            this.Column1.HeaderText = "生产厂商";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
-            // 
-            // clmSupplyName
-            // 
-            this.clmSupplyName.DataPropertyName = "DictionaryMeasurementUnitCode";
-            this.clmSupplyName.HeaderText = "单位";
-            this.clmSupplyName.Name = "clmSupplyName";
-            this.clmSupplyName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmSupplyName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.clmSupplyName.Width = 37;
-            // 
-            // clmDrugNumber
-            // 
-            this.clmDrugNumber.DataPropertyName = "Amount";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Yellow;
-            this.clmDrugNumber.DefaultCellStyle = dataGridViewCellStyle5;
-            this.clmDrugNumber.HeaderText = "数量";
-            this.clmDrugNumber.Name = "clmDrugNumber";
-            this.clmDrugNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmDrugNumber.Width = 56;
-            // 
-            // clmPurchasePrice
-            // 
-            this.clmPurchasePrice.DataPropertyName = "PurchasePrice";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle6.Format = "N4";
-            dataGridViewCellStyle6.NullValue = null;
-            this.clmPurchasePrice.DefaultCellStyle = dataGridViewCellStyle6;
-            this.clmPurchasePrice.HeaderText = "单价";
-            this.clmPurchasePrice.Name = "clmPurchasePrice";
-            this.clmPurchasePrice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmPurchasePrice.Width = 56;
-            // 
-            // TotalMoney
-            // 
-            this.TotalMoney.HeaderText = "金额";
-            this.TotalMoney.Name = "TotalMoney";
-            this.TotalMoney.Width = 56;
-            // 
-            // AmountOfTax
-            // 
-            this.AmountOfTax.DataPropertyName = "AmountOfTax";
-            this.AmountOfTax.HeaderText = "税率%";
-            this.AmountOfTax.Name = "AmountOfTax";
-            this.AmountOfTax.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.AmountOfTax.Width = 64;
-            // 
-            // colmoneyofTax
-            // 
-            this.colmoneyofTax.HeaderText = "含税金额";
-            this.colmoneyofTax.Name = "colmoneyofTax";
-            this.colmoneyofTax.Visible = false;
-            this.colmoneyofTax.Width = 80;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(84, 28);
+            this.toolStripButton2.Text = "设计打印模板";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // FormPurchaseOrderEdit
             // 
@@ -953,5 +965,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalMoney;
         private System.Windows.Forms.DataGridViewTextBoxColumn AmountOfTax;
         private System.Windows.Forms.DataGridViewTextBoxColumn colmoneyofTax;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

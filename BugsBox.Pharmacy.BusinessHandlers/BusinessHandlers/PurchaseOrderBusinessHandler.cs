@@ -71,8 +71,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                     PurchaseDate = purchaseDetail.CreateTime,
                                     Origin = drup.Origin,
                                     FactoryName = drup.FactoryName,
-                                    LicensePermissionNumber = drup.LicensePermissionNumber ,
-                                    MeasureUnit= drup.DictionaryMeasurementUnitCode
+                                    LicensePermissionNumber = drup.LicensePermissionNumber,
+                                    MeasureUnit = drup.DictionaryMeasurementUnitCode
                                 };
                     records = query.Where(p => p.DictionarySpecificationCode.Contains(specific) && p.FactoryName.Contains(factoryName) && p.Origin.Contains(origin)).OrderByDescending(p => p.PurchaseDate).ToList();
                 }
@@ -634,8 +634,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                 PurchaseOrderId = i.PurchaseOrderId,
                                 LicensePermissionNumber = d.LicensePermissionNumber,
                                 sequence = i.sequence,
-                                SupplyBusinessScope = d.BusinessScopeCode,
-
+                                SupplyBusinessScope = d.BusinessScopeCode
                             };
 
                 return query.OrderBy(r => r.sequence).ToList();
@@ -1367,36 +1366,58 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 .Equals(c => c.PurchaseCheckingOrderId, orderId);
 
                 var orderDetails = BusinessHandlerFactory.RepositoryProvider.Db.PurchaseCheckingOrderDetails.Where(queryBuilder.Expression);
-                var query = from i in orderDetails
-                            join r in BusinessHandlerFactory.RepositoryProvider.Db.PurchaseCheckingOrders on i.PurchaseCheckingOrderId equals r.Id
-                            join d in BusinessHandlerFactory.RepositoryProvider.Db.DrugInfos on i.DrugInfoId equals d.Id
-                            select new PurchaseCheckingOrderDetailEntity
-                            {
-                                Id = i.Id,
-                                Decription = i.Decription,
-                                ArrivalAmount = i.ArrivalAmount,
-                                ArrivalDateTime = i.ArrivalDateTime,
-                                BatchNumber = i.BatchNumber,
-                                CheckResult = i.CheckResult,
-                                OutValidDate = i.OutValidDate,
-                                PruductDate = i.PruductDate,
-                                QualifiedAmount = i.QualifiedAmount,
-                                DictionaryMeasurementUnitCode = d.DictionaryMeasurementUnitCode,
-                                DictionarySpecificationCode = d.DictionarySpecificationCode,
-                                FactoryName = d.FactoryName,
-                                DictionaryDosageCode = d.DictionaryDosageCode,
-                                ProductGeneralName = d.ProductGeneralName,
-                                DrugInfoId = i.DrugInfoId,
-                                PurchasePrice = i.PurchasePrice,
-                                LicensePermissionNumber = d.LicensePermissionNumber,
-                                UnQualifiedAmount = i.UnQualifiedAmount,
-                                ReceiveAmount = i.ReceivedAmount,
-                                sequence = i.sequence,
-                                BusinessScopeCode = d.BusinessScopeCode,
-                                IsSpecialCategory = d.IsSpecialDrugCategory,
-                                StorageType = d.DrugStorageTypeCode
-                            };
+                var query = (from i in orderDetails
+                             join r in BusinessHandlerFactory.RepositoryProvider.Db.PurchaseCheckingOrders on i.PurchaseCheckingOrderId equals r.Id
+                             join d in BusinessHandlerFactory.RepositoryProvider.Db.DrugInfos on i.DrugInfoId equals d.Id
+                             select new PurchaseCheckingOrderDetailEntity
+                             {
+                                 Id = i.Id,
+                                 Decription = i.Decription,
+                                 ArrivalAmount = i.ArrivalAmount,
+                                 ArrivalDateTime = i.ArrivalDateTime,
+                                 BatchNumber = i.BatchNumber,
+                                 CheckResult = i.CheckResult,
+                                 OutValidDate = i.OutValidDate,
+                                 PruductDate = i.PruductDate,
+                                 QualifiedAmount = i.QualifiedAmount,
+                                 DictionaryMeasurementUnitCode = d.DictionaryMeasurementUnitCode,
+                                 DictionarySpecificationCode = d.DictionarySpecificationCode,
+                                 FactoryName = d.FactoryName,
+                                 DictionaryDosageCode = d.DictionaryDosageCode,
+                                 ProductGeneralName = d.ProductGeneralName,
+                                 DrugInfoId = i.DrugInfoId,
+                                 PurchasePrice = i.PurchasePrice,
+                                 LicensePermissionNumber = d.LicensePermissionNumber,
+                                 UnQualifiedAmount = i.UnQualifiedAmount,
+                                 ReceiveAmount = i.ReceivedAmount,
+                                 sequence = i.sequence,
+                                 BusinessScopeCode = d.BusinessScopeCode,
+                                 IsSpecialCategory = d.IsSpecialDrugCategory,
+                                 StorageType = d.DrugStorageTypeCode
+                             }).ToList();
 
+                var PurchaseInInventeryOrder = BusinessHandlerFactory.RepositoryProvider.Db.PurchaseInInventeryOrders.FirstOrDefault(o => o.RelatedOrderId == orderId);
+
+                foreach (var item in query)
+                {
+                    if (PurchaseInInventeryOrder == null)
+                    {
+                        item.WarehouseZone = "";
+                    }
+                    else
+                    {
+                        var detailItem = BusinessHandlerFactory.RepositoryProvider.Db.PurchaseInInventeryOrderDetails.FirstOrDefault(o => o.PurchaseInInventeryOrderId == PurchaseInInventeryOrder.Id & o.DrugInfoId == item.DrugInfoId);
+                        if (detailItem != null)
+                        {
+                            var warehousezone = BusinessHandlerFactory.RepositoryProvider.Db.WarehouseZones.FirstOrDefault(o => o.Id == detailItem.WarehouseZoneId);
+                            if (warehousezone != null)
+                            {
+                                item.WarehouseZone = warehousezone.Name;
+                            }
+                        }
+                    }
+
+                }
                 return query.OrderBy(p => p.sequence).ToList();
             }
             catch (Exception ex)

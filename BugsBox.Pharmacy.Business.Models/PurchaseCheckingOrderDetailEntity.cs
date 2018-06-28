@@ -119,5 +119,16 @@ namespace BugsBox.Pharmacy.Business.Models
         public string BusinessScopeCode { get; set; }
         [DataMember]
         public bool IsSpecialCategory{get;set;}
+
+
+        /// <summary>
+        /// 库区
+        /// </summary>
+        [DataMember]
+        public string WarehouseZone
+        {
+            get;
+            set;
+        }
     }
 }

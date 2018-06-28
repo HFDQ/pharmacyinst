@@ -153,7 +153,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         private void BindComboBoxSupply()
         {
             string msg = string.Empty;
-            SupplyUnit []  listSupply = PharmacyDatabaseService.AllSupplyUnits(out msg);
+            SupplyUnit[] listSupply = PharmacyDatabaseService.AllSupplyUnits(out msg);
             this.cmbSupply.DataSource = listSupply;
             this.cmbSupply.DisplayMember = "Name";
             this.cmbSupply.ValueMember = "Id";
